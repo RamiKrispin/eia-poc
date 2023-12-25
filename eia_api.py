@@ -104,6 +104,9 @@ def eia_get(api_key,
 
     df = pd.DataFrame(d['response']['data'])
 
+    df["period"] = pd.to_datetime(df["period"])
+    df = df.sort_values(by = ["period"])
+
     parameters = {
         "api_path": api_path,
         "data" : data,
@@ -164,7 +167,10 @@ def eia_backfile(start, end, offset, api_key, api_path, facets):
     
     for i in range(len(time_vec_seq[:-1])):
         start = time_vec_seq[i]
-        end = time_vec_seq[i + 1] -  datetime.timedelta(hours = 1)
+        if i < len(time_vec_seq[:-1]) - 1:
+            end = time_vec_seq[i + 1] -  datetime.timedelta(hours = 1)
+        elif i == len(time_vec_seq[:-1]) - 1:
+            end = time_vec_seq[i + 1]
         temp = eia_get(api_key = api_key, 
                        api_path = api_path, 
                        facets= facets, 
@@ -190,3 +196,37 @@ def eia_backfile(start, end, offset, api_key, api_path, facets):
     return output
 
         
+
+def eia_metadata(api_key, api_path = None):
+    
+    class response:
+        def __init__(output, meta, url, parameters):
+            output.meta = meta
+            output.url = url
+            output.parameters = parameters
+
+
+    if type(api_key) is not str:
+        print("Error: The api_key argument is not a valid string")
+        return
+    elif len(api_key) != 40:
+        print("Error: The length of the api_key is not valid, must be 40 characters")
+        return
+    
+    if api_path is None:
+        url = "https://api.eia.gov/v2/" + "?api_key="
+    else:
+        if api_path[-1] != "/":
+            api_path = api_path + "/"
+        url = "https://api.eia.gov/v2/" + api_path + "?api_key="
+
+    d = requests.get(url + api_key).json()
+
+    parameters = {
+        "api_path": api_path
+    }
+
+    output = response(url = url, meta = d["response"], parameters= parameters)
+
+    return output 
+
