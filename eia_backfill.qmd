@@ -1,0 +1,209 @@
+---
+title: "EIA API - US48 Demand for Electricity Backfill"
+format:
+  html:
+    code-fold: false
+jupyter: python3 
+---
+
+The goal of this doc is to execute an initial data pull of the demand for electricity in the US (lower 48) from the EIA API. This includes the following functionality:
+
+- Setting parameters and pulling the data
+- Data quality checks
+- Saving the data and creating a log file
+- Data profiling
+
+## Load libraries
+
+We will pull the data from the EIA API using a set of functions on the `eia_api.py` file. This includes the following functions:
+
+- `eia_get` - A function for query data from the API. Can pull up to 5000 rows per call
+- `eia_backfile` - A wrapper function, using batches requests from the API using the `eia_get` function to serve large requests (more than 5000 rows)
+- `day_offset` - A helper function creates a vector of dates equally spaced by days
+- `hour_offset` - A helper function creates a vector of dates equally spaced by days
+
+
+```{python}
+import eia_api
+```
+
+The `eia_api.py` file imports the following libraries:
+
+- `pandas` - for data processing
+- `datetime` - to work with dates and time objects
+- `requests` - to send `GET` requests to the EIA API
+
+In addition, we will use the following libraries:
+
+- `os` - load environment variables
+- `numpy` - to create sequences (vectors)
+- `plotly` - visualize the data
+- `pathlib` - set file path
+- `ydata_profiling` - for data profiling
+
+
+```{python}
+import os
+import datetime
+import numpy as np
+import pandas as pd
+import plotly.graph_objects as go
+from pathlib import Path
+from ydata_profiling import ProfileReport
+```
+
+
+## Setting Parameters
+
+Next, we will set the backfile parameters:
+```{python}
+api_path = "electricity/rto/region-data/data"
+facets = {
+    "respondent": "US48",
+    "type": "D"
+}
+
+start = datetime.datetime(2015, 7, 1, 5)
+end = datetime.datetime(2023, 12, 24, 12)
+
+offset = 2250
+
+```
+
+We will use the `getenv` function from the `os` library to pull the EIA API key, which is stored as an environment variable named `EIA_API_KEY`:
+
+```{python}
+eia_api_key = os.getenv('EIA_API_KEY')
+```
+
+We will use the `eia_metadata` function to pull the series metadata. Note that to pull metadata from the API, we will use as the `api_path` the series routh path and drop the `/data` extension (which is used to pull data):
+
+```{python}
+metadata = eia_api.eia_metadata(api_key = eia_api_key, api_path = "electricity/rto/region-data/")
+```
+
+Depending on the API path, the API returns some useful information about the series available on the path:
+
+```{python}
+metadata.meta.keys()
+```
+
+One useful data point is the start and end period of the series:
+
+```{python}
+print(metadata.meta["startPeriod"])
+print(metadata.meta["endPeriod"])
+```
+
+## Pulling the Data
+
+By default, the API has a 5000-row limitation per pull. The eia_backfill function enables the handling of a larger data request by sending a batch request and appending back the data:
+
+```{python}
+df = eia_api.eia_backfile(api_key = eia_api_key, 
+        api_path = api_path, 
+        facets = facets, 
+        start = start,
+        end = end,
+        offset = offset) 
+```
+
+
+The DataFrame head:
+```{python}
+df.data.head(10)
+```
+
+And, the DataFrame tail:
+```{python}
+df.data.tail(10)
+```
+
+
+## Data Quality checks
+
+We will runn the following data quality checks:
+
+- Check that the series timestamp is regular (e.g., equaliy spaced)
+- Check for missing values
+- Check for match between the start and end of the series and the request settings
+- Create a log file 
+
+### Check the Series Timestamp
+
+```{python}
+ts_obj = pd.DataFrame(np.arange(start = start, stop = end + datetime.timedelta(hours = 1), step = datetime.timedelta(hours = 1)).astype(datetime.datetime), columns=["index"])
+ts_obj  = ts_obj.merge(df.data, left_on = "index", right_on = "period", how="left")
+```
+
+### Plot the Series
+
+We will use Plotly to visualize the series:
+
+```{python}
+d = df.data.sort_values(by = ["period"])
+d = d[d["respondent"] == "US48"]
+p = go.Figure()
+p.add_trace(go.Scatter(x = d["period"], y = d["value"],
+                       mode='lines',
+                    name='data',
+                    line=dict(color='royalblue', width=2)))
+p.show()
+```
+
+
+### Create Log and Check for Missing values
+
+```{python}
+log = {
+    "index": 1,
+    "respondent": "US48",
+    "respondent_type": "Demand",
+    "time": datetime.datetime.now(),
+    "start": start,
+    "end": end,
+    "start_act": ts_obj["period"].min(),
+    "end_act": ts_obj["period"].max(),
+    "start_match": ts_obj["period"].min() == start, 
+    "end_match": ts_obj["period"].max() == end, 
+     "n_obs": len(ts_obj),
+    "na": ts_obj["value"].isna().sum(),
+    "type": "backfill",
+    "update": False,
+    "success": False
+
+}
+
+log_file = pd.DataFrame([log])
+
+log_file
+```
+
+
+Last but not least, we will check if the start and end of the series match the GET request settings and save the data and log:
+```{python}
+if (log_file.iloc[0]["end"] == log_file.iloc[0]["end_act"] and 
+    log_file.iloc[0]["start"] == log_file.iloc[0]["start_act"] and
+    log_file.iloc[0]["na"] == 0):
+    log_file.loc[0, "success"] = True
+    print("Save the data into CSV file")
+    df.data.to_csv("data/us48.csv", index = False)
+    log_file.loc[0, "update"] = True
+    print("Save the metadata into CSV file")
+    log_file.to_csv("data/us48_metadata.csv", index = False)
+
+    
+else:
+    log_file.iloc[0]["success"] = False
+    log_file.iloc[0]["update"] = False
+```
+
+
+## Data Profiling
+
+The ydata-profiling library provides a detailed report about the data structure with the `ProfileReport` function:
+
+```{python}
+profile = ProfileReport(df.data, title="Profiling Report")
+profile
+```
