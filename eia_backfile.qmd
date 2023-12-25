@@ -1,8 +1,0 @@
----
-title: "EIA API - US48 Demand for Electricity Backfill"
-format:
-    html: 
-    code-fold: true
- jupyter: python3   
----
-
