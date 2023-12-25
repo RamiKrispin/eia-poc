@@ -4,7 +4,8 @@
         "dockerfile": "Dockerfile",
         "context": ".",
         "args": {
-            "VENV_NAME": "forecasting-poc"
+            "VENV_NAME": "forecasting-poc",
+            "QUARTO_VER": "1.3.450"
         }
     },
     "settings": {
