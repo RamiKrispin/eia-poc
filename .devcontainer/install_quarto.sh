@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-QUARTO_VERSION=$1
+QUARTO_VERSION=$1 
 
 echo "Installing Quarto version $QUARTO_VERSION"
 
