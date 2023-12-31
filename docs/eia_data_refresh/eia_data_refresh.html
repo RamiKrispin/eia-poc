@@ -224,7 +224,7 @@ Name: end_act, dtype: datetime64[ns]</code></pre>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>end_api <span class="op">=</span> datetime.datetime.strptime(metadata.meta[<span class="st">"endPeriod"</span>], <span class="st">"%Y-%m-</span><span class="sc">%d</span><span class="st">T%H"</span>)</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(end_api)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>2023-12-31T10</code></pre>
+<pre><code>2023-12-31T11</code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>datetime.datetime</code></pre>
@@ -237,7 +237,7 @@ Name: end_act, dtype: datetime64[ns]</code></pre>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(end_api)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>2023-12-24 13:00:00
-2023-12-31 10:00:00</code></pre>
+2023-12-31 11:00:00</code></pre>
 </div>
 </div>
 <p>We will initiat a GET request of the <code>end_api</code> time is greater than the <code>start</code> time:</p>
@@ -297,32 +297,32 @@ Refresh successed</code></pre>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(df.data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                 period respondent         respondent-name type type-name   
-77  2023-12-24 13:00:00       US48  United States Lower 48    D    Demand  \
-76  2023-12-24 14:00:00       US48  United States Lower 48    D    Demand   
-70  2023-12-24 15:00:00       US48  United States Lower 48    D    Demand   
-78  2023-12-24 16:00:00       US48  United States Lower 48    D    Demand   
-71  2023-12-24 17:00:00       US48  United States Lower 48    D    Demand   
+0   2023-12-24 13:00:00       US48  United States Lower 48    D    Demand  \
+1   2023-12-24 14:00:00       US48  United States Lower 48    D    Demand   
+2   2023-12-24 15:00:00       US48  United States Lower 48    D    Demand   
+3   2023-12-24 16:00:00       US48  United States Lower 48    D    Demand   
+4   2023-12-24 17:00:00       US48  United States Lower 48    D    Demand   
 ..                  ...        ...                     ...  ...       ...   
-155 2023-12-31 06:00:00       US48  United States Lower 48    D    Demand   
-158 2023-12-31 07:00:00       US48  United States Lower 48    D    Demand   
-16  2023-12-31 08:00:00       US48  United States Lower 48    D    Demand   
-17  2023-12-31 09:00:00       US48  United States Lower 48    D    Demand   
-159 2023-12-31 10:00:00       US48  United States Lower 48    D    Demand   
+162 2023-12-31 07:00:00       US48  United States Lower 48    D    Demand   
+163 2023-12-31 08:00:00       US48  United States Lower 48    D    Demand   
+164 2023-12-31 09:00:00       US48  United States Lower 48    D    Demand   
+165 2023-12-31 10:00:00       US48  United States Lower 48    D    Demand   
+166 2023-12-31 11:00:00       US48  United States Lower 48    D    Demand   
 
       value    value-units  
-77   339796  megawatthours  
-76   351148  megawatthours  
-70   358415  megawatthours  
-78   360214  megawatthours  
-71   350645  megawatthours  
+0    339796  megawatthours  
+1    351148  megawatthours  
+2    358415  megawatthours  
+3    360214  megawatthours  
+4    350645  megawatthours  
 ..      ...            ...  
-155  444321  megawatthours  
-158  435689  megawatthours  
-16   428208  megawatthours  
-17   427167  megawatthours  
-159  426021  megawatthours  
+162  435689  megawatthours  
+163  428206  megawatthours  
+164  427171  megawatthours  
+165  427756  megawatthours  
+166  430233  megawatthours  
 
-[166 rows x 7 columns]</code></pre>
+[167 rows x 7 columns]</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="11">
@@ -379,14 +379,14 @@ Refresh successed</code></pre>
 <td>2</td>
 <td>US48</td>
 <td>Demand</td>
-<td>2023-12-31 11:49:39.981131</td>
+<td>2023-12-31 12:04:59.398516</td>
 <td>2023-12-24 13:00:00</td>
-<td>2023-12-31 10:00:00</td>
+<td>2023-12-31 11:00:00</td>
 <td>2023-12-24 13:00:00</td>
-<td>2023-12-31 10:00:00</td>
+<td>2023-12-31 11:00:00</td>
 <td>True</td>
 <td>True</td>
-<td>166</td>
+<td>167</td>
 <td>0</td>
 <td>refresh</td>
 <td>True</td>
@@ -470,14 +470,14 @@ Save the metadata into CSV file</code></pre>
 <td>2</td>
 <td>US48</td>
 <td>Demand</td>
-<td>2023-12-31 11:49:39.981131</td>
+<td>2023-12-31 12:04:59.398516</td>
 <td>2023-12-24 13:00:00</td>
-<td>2023-12-31 10:00:00</td>
+<td>2023-12-31 11:00:00</td>
 <td>2023-12-24 13:00:00</td>
-<td>2023-12-31 10:00:00</td>
+<td>2023-12-31 11:00:00</td>
 <td>True</td>
 <td>True</td>
-<td>166</td>
+<td>167</td>
 <td>0</td>
 <td>refresh</td>
 <td>True</td>
