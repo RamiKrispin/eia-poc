@@ -25,7 +25,7 @@ if [[ "$(git status --porcelain)" != "" ]]; then
     git config --global user.email 'ramkrisp@umich.edu'
     git add docs/*
     git commit -m "Auto update of the data"
-    # git push origin main
+    git push origin main
 else
 echo "Nothing to commit..."
 fi
