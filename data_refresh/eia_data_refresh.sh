@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+source /opt/$VENV_NAME/bin/activate 
+
 rm -rf ./eia_data_refresh_files
 rm eia_data_refresh.html
 quarto render eia_data_refresh.qmd --to html
@@ -23,7 +25,7 @@ if [[ "$(git status --porcelain)" != "" ]]; then
     git config --global user.email 'ramkrisp@umich.edu'
     git add docs/*
     git commit -m "Auto update of the data"
-    git push origin stg
+    # git push origin main
 else
 echo "Nothing to commit..."
 fi
