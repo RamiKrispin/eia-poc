@@ -1,7 +1,7 @@
 FROM python:3.10
 
 ARG QUARTO_VER="1.3.450"
-ARG VENV_NAME=my_project
+ARG VENV_NAME="my_project"
 ENV QUARTO_VER=$QUARTO_VER
 ENV VENV_NAME=$VENV_NAME
 RUN mkdir requirements
