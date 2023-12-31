@@ -1,13 +1,14 @@
 {
     "name": "Python Dev",
-    "build": {
-        "dockerfile": "Dockerfile",
-        "context": ".",
-        "args": {
-            "VENV_NAME": "forecasting-poc",
-            "QUARTO_VER": "1.3.450"
-        }
-    },
+    "image": "docker.io/rkrispin/forecast-poc:0.0.0.9001",
+    // "build": {
+    //     "dockerfile": "Dockerfile",
+    //     "context": ".",
+    //     "args": {
+    //         "VENV_NAME": "forecasting-poc",
+    //         "QUARTO_VER": "1.3.450"
+    //     }
+    // },
     "settings": {
         "python.defaultInterpreterPath": "/opt/forecasting-poc/bin/python3",
         "python.selectInterpreter": "/opt/forecasting-poc/bin/python3"
