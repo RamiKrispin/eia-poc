@@ -8,4 +8,4 @@ python3 -m venv /opt/$VENV_NAME  \
 
 source /opt/$VENV_NAME/bin/activate 
 
-pip3 install -r ./requirements/requirements.txt
+pip3 install  --no-cache-dir -r ./requirements/requirements.txt

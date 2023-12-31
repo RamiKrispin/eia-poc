@@ -1,6 +1,6 @@
 {
     "name": "Python Dev",
-    "image": "docker.io/rkrispin/forecast-poc:0.0.0.9001",
+    "image": "docker.io/rkrispin/forecast-poc:0.0.0.9002",
     // "build": {
     //     "dockerfile": "Dockerfile",
     //     "context": ".",

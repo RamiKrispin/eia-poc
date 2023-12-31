@@ -2,8 +2,7 @@
 
 echo "Build the docker"
 
-docker buildx build . -f Dockerfile \
-               --platform linux/amd64, linux/arm64 \
+docker build . -f Dockerfile \
                --progress=plain \
                --build-arg QUARTO_VER="1.3.450" \
                --build-arg VENV_NAME="forecasting-poc" \
