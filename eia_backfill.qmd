@@ -2,8 +2,8 @@
 title: "EIA API - US48 Demand for Electricity Backfill"
 format:
   html:
-    code-fold: false
-jupyter: python3 
+    code-fold: true
+jupyter: python3
 ---
 
 The goal of this doc is to execute an initial data pull of the demand for electricity in the US (lower 48) from the EIA API. This includes the following functionality:
