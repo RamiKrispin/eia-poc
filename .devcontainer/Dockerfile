@@ -5,10 +5,11 @@ ARG VENV_NAME="my_project"
 ENV QUARTO_VER=$QUARTO_VER
 ENV VENV_NAME=$VENV_NAME
 RUN mkdir requirements
-COPY requirements.txt install_requirements.sh install_quarto.sh install_dependencies.sh requirements/
+COPY install_requirements.sh install_quarto.sh install_dependencies.sh requirements/
 
 RUN bash ./requirements/install_dependencies.sh
-RUN bash ./requirements/install_requirements.sh $VENV_NAME
 RUN bash ./requirements/install_quarto.sh $QUARTO_VER
+COPY requirements.txt requirements/
+RUN bash ./requirements/install_requirements.sh $VENV_NAME
 
 

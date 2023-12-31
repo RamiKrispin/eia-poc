@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 VENV_NAME=$1
-echo $VENV_NAME
+
 python3 -m venv /opt/$VENV_NAME  \
     && export PATH=/opt/$VENV_NAME/bin:$PATH \
     && echo "source /opt/$VENV_NAME/bin/activate" >> ~/.bashrc

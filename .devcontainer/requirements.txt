@@ -1,12 +1,9 @@
 pandas==2.0.0
 numpy
 matplotlib
-scikit-learn
 gensim
 ipykernel
 requests
-darts
-sktime
 plotly
 nbformat
 ydata-profiling
