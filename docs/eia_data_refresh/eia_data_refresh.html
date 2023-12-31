@@ -170,20 +170,16 @@ dtype: object</code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>&lt;bound method NDFrame.head of    index respondent respondent_type                       time   
-0      1       US48          Demand 2023-12-31 05:56:20.117262  \
-1      2       US48          Demand 2023-12-31 06:17:33.067407   
+0      1       US48          Demand 2023-12-31 09:26:33.320023  \
 
                 start                 end           start_act   
 0 2015-07-01 05:00:00 2023-12-24 12:00:00 2015-07-01 05:00:00  \
-1 2023-12-24 13:00:00 2023-12-31 08:00:00 2023-12-24 13:00:00   
 
               end_act  start_match  end_match  n_obs  na      type  update   
 0 2023-12-24 12:00:00         True       True  74360   0  backfill    True  \
-1 2023-12-31 05:00:00         True      False    161   0   refresh    True   
 
    success  
-0     True  
-1    False  &gt;</code></pre>
+0     True  &gt;</code></pre>
 </div>
 </div>
 <p>Next, we will extract from the log file the infromation of the most recent data refresh:</p>
@@ -228,7 +224,7 @@ Name: end_act, dtype: datetime64[ns]</code></pre>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>end_api <span class="op">=</span> datetime.datetime.strptime(metadata.meta[<span class="st">"endPeriod"</span>], <span class="st">"%Y-%m-</span><span class="sc">%d</span><span class="st">T%H"</span>)</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(end_api)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>2023-12-31T08</code></pre>
+<pre><code>2023-12-31T10</code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>datetime.datetime</code></pre>
@@ -241,7 +237,7 @@ Name: end_act, dtype: datetime64[ns]</code></pre>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(end_api)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>2023-12-24 13:00:00
-2023-12-31 08:00:00</code></pre>
+2023-12-31 10:00:00</code></pre>
 </div>
 </div>
 <p>We will initiat a GET request of the <code>end_api</code> time is greater than the <code>start</code> time:</p>
@@ -301,32 +297,32 @@ Refresh successed</code></pre>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(df.data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                 period respondent         respondent-name type type-name   
-34  2023-12-24 13:00:00       US48  United States Lower 48    D    Demand  \
-33  2023-12-24 14:00:00       US48  United States Lower 48    D    Demand   
-27  2023-12-24 15:00:00       US48  United States Lower 48    D    Demand   
-35  2023-12-24 16:00:00       US48  United States Lower 48    D    Demand   
-28  2023-12-24 17:00:00       US48  United States Lower 48    D    Demand   
+77  2023-12-24 13:00:00       US48  United States Lower 48    D    Demand  \
+76  2023-12-24 14:00:00       US48  United States Lower 48    D    Demand   
+70  2023-12-24 15:00:00       US48  United States Lower 48    D    Demand   
+78  2023-12-24 16:00:00       US48  United States Lower 48    D    Demand   
+71  2023-12-24 17:00:00       US48  United States Lower 48    D    Demand   
 ..                  ...        ...                     ...  ...       ...   
-73  2023-12-31 04:00:00       US48  United States Lower 48    D    Demand   
-106 2023-12-31 05:00:00       US48  United States Lower 48    D    Demand   
-127 2023-12-31 06:00:00       US48  United States Lower 48    D    Demand   
-123 2023-12-31 07:00:00       US48  United States Lower 48    D    Demand   
-144 2023-12-31 08:00:00       US48  United States Lower 48    D    Demand   
+155 2023-12-31 06:00:00       US48  United States Lower 48    D    Demand   
+158 2023-12-31 07:00:00       US48  United States Lower 48    D    Demand   
+16  2023-12-31 08:00:00       US48  United States Lower 48    D    Demand   
+17  2023-12-31 09:00:00       US48  United States Lower 48    D    Demand   
+159 2023-12-31 10:00:00       US48  United States Lower 48    D    Demand   
 
       value    value-units  
-34   339796  megawatthours  
-33   351148  megawatthours  
-27   358415  megawatthours  
-35   360214  megawatthours  
-28   350645  megawatthours  
+77   339796  megawatthours  
+76   351148  megawatthours  
+70   358415  megawatthours  
+78   360214  megawatthours  
+71   350645  megawatthours  
 ..      ...            ...  
-73   465985  megawatthours  
-106  454923  megawatthours  
-127  444352  megawatthours  
-123  435728  megawatthours  
-144  428089  megawatthours  
+155  444321  megawatthours  
+158  435689  megawatthours  
+16   428208  megawatthours  
+17   427167  megawatthours  
+159  426021  megawatthours  
 
-[164 rows x 7 columns]</code></pre>
+[166 rows x 7 columns]</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="11">
@@ -380,17 +376,17 @@ Refresh successed</code></pre>
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">0</td>
-<td>3</td>
+<td>2</td>
 <td>US48</td>
 <td>Demand</td>
-<td>2023-12-31 09:25:08.444065</td>
+<td>2023-12-31 11:49:39.981131</td>
 <td>2023-12-24 13:00:00</td>
-<td>2023-12-31 08:00:00</td>
+<td>2023-12-31 10:00:00</td>
 <td>2023-12-24 13:00:00</td>
-<td>2023-12-31 08:00:00</td>
+<td>2023-12-31 10:00:00</td>
 <td>True</td>
 <td>True</td>
-<td>164</td>
+<td>166</td>
 <td>0</td>
 <td>refresh</td>
 <td>True</td>
@@ -456,7 +452,7 @@ Save the metadata into CSV file</code></pre>
 <td>1</td>
 <td>US48</td>
 <td>Demand</td>
-<td>2023-12-31 05:56:20.117262</td>
+<td>2023-12-31 09:26:33.320023</td>
 <td>2015-07-01 05:00:00</td>
 <td>2023-12-24 12:00:00</td>
 <td>2015-07-01 05:00:00</td>
@@ -470,36 +466,18 @@ Save the metadata into CSV file</code></pre>
 <td>True</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
+<td data-quarto-table-cell-role="th">0</td>
 <td>2</td>
 <td>US48</td>
 <td>Demand</td>
-<td>2023-12-31 06:17:33.067407</td>
+<td>2023-12-31 11:49:39.981131</td>
 <td>2023-12-24 13:00:00</td>
-<td>2023-12-31 08:00:00</td>
+<td>2023-12-31 10:00:00</td>
 <td>2023-12-24 13:00:00</td>
-<td>2023-12-31 05:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>161</td>
-<td>0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>3</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2023-12-31 09:25:08.444065</td>
-<td>2023-12-24 13:00:00</td>
-<td>2023-12-31 08:00:00</td>
-<td>2023-12-24 13:00:00</td>
-<td>2023-12-31 08:00:00</td>
+<td>2023-12-31 10:00:00</td>
 <td>True</td>
 <td>True</td>
-<td>164</td>
+<td>166</td>
 <td>0</td>
 <td>refresh</td>
 <td>True</td>
