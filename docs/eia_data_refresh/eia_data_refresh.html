@@ -159,10 +159,10 @@ start              datetime64[ns]
 end                datetime64[ns]
 start_act          datetime64[ns]
 end_act            datetime64[ns]
-start_match                  bool
-end_match                    bool
-n_obs                       int64
-na                          int64
+start_match                object
+end_match                  object
+n_obs                     float64
+na                        float64
 type                       object
 update                       bool
 success                      bool
@@ -172,18 +172,22 @@ dtype: object</code></pre>
 <pre><code>&lt;bound method NDFrame.head of    index respondent respondent_type                       time   
 0      1       US48          Demand 2023-12-31 09:26:33.320023  \
 1      2       US48          Demand 2023-12-31 12:04:59.398516   
+2      3       US48          Demand 2023-12-31 12:17:11.597780   
 
                 start                 end           start_act   
 0 2015-07-01 05:00:00 2023-12-24 12:00:00 2015-07-01 05:00:00  \
 1 2023-12-24 13:00:00 2023-12-31 11:00:00 2023-12-24 13:00:00   
+2 2023-12-31 12:00:00 2023-12-31 11:00:00                 NaT   
 
-              end_act  start_match  end_match  n_obs  na      type  update   
-0 2023-12-24 12:00:00         True       True  74360   0  backfill    True  \
-1 2023-12-31 11:00:00         True       True    167   0   refresh    True   
+              end_act start_match end_match    n_obs   na      type  update   
+0 2023-12-24 12:00:00        True      True  74360.0  0.0  backfill    True  \
+1 2023-12-31 11:00:00        True      True    167.0  0.0   refresh    True   
+2                 NaT         NaN       NaN      NaN  NaN   refresh   False   
 
    success  
 0     True  
-1     True  &gt;</code></pre>
+1     True  
+2    False  &gt;</code></pre>
 </div>
 </div>
 <p>Next, we will extract from the log file the infromation of the most recent data refresh:</p>
@@ -228,7 +232,7 @@ Name: end_act, dtype: datetime64[ns]</code></pre>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>end_api <span class="op">=</span> datetime.datetime.strptime(metadata.meta[<span class="st">"endPeriod"</span>], <span class="st">"%Y-%m-</span><span class="sc">%d</span><span class="st">T%H"</span>)</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(end_api)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>2023-12-31T11</code></pre>
+<pre><code>2023-12-31T12</code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>datetime.datetime</code></pre>
@@ -241,7 +245,7 @@ Name: end_act, dtype: datetime64[ns]</code></pre>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(end_api)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>2023-12-31 12:00:00
-2023-12-31 11:00:00</code></pre>
+2023-12-31 12:00:00</code></pre>
 </div>
 </div>
 <p>We will initiat a GET request of the <code>end_api</code> time is greater than the <code>start</code> time:</p>
@@ -350,12 +354,12 @@ Name: end_act, dtype: datetime64[ns]</code></pre>
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">0</td>
-<td>3</td>
+<td>4</td>
 <td>US48</td>
 <td>Demand</td>
-<td>2023-12-31 12:17:11.597780</td>
+<td>2023-12-31 13:10:50.045117</td>
 <td>2023-12-31 12:00:00</td>
-<td>2023-12-31 11:00:00</td>
+<td>2023-12-31 12:00:00</td>
 <td>None</td>
 <td>None</td>
 <td>None</td>
@@ -432,8 +436,8 @@ Name: end_act, dtype: datetime64[ns]</code></pre>
 <td>2023-12-24 12:00:00</td>
 <td>True</td>
 <td>True</td>
-<td>74360</td>
-<td>0</td>
+<td>74360.0</td>
+<td>0.0</td>
 <td>backfill</td>
 <td>True</td>
 <td>True</td>
@@ -450,20 +454,38 @@ Name: end_act, dtype: datetime64[ns]</code></pre>
 <td>2023-12-31 11:00:00</td>
 <td>True</td>
 <td>True</td>
-<td>167</td>
-<td>0</td>
+<td>167.0</td>
+<td>0.0</td>
 <td>refresh</td>
 <td>True</td>
 <td>True</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
+<td data-quarto-table-cell-role="th">2</td>
 <td>3</td>
 <td>US48</td>
 <td>Demand</td>
 <td>2023-12-31 12:17:11.597780</td>
 <td>2023-12-31 12:00:00</td>
 <td>2023-12-31 11:00:00</td>
+<td>NaT</td>
+<td>NaT</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>refresh</td>
+<td>False</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">0</td>
+<td>4</td>
+<td>US48</td>
+<td>Demand</td>
+<td>2023-12-31 13:10:50.045117</td>
+<td>2023-12-31 12:00:00</td>
+<td>2023-12-31 12:00:00</td>
 <td>None</td>
 <td>None</td>
 <td>None</td>
