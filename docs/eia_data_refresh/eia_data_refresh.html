@@ -176,11 +176,11 @@ dtype: object</code></pre>
 3       4       US48          Demand 2023-12-31 13:10:50.045117   
 4       5       US48          Demand 2023-12-31 15:09:40.191596   
 ..    ...        ...             ...                        ...   
-64     65       US48          Demand 2024-01-03 06:13:45.290831   
 65     66       US48          Demand 2024-01-03 07:09:55.839186   
 66     67       US48          Demand 2024-01-03 08:13:09.447292   
 67     68       US48          Demand 2024-01-03 09:11:46.754512   
 68     69       US48          Demand 2024-01-03 10:11:26.250609   
+69     70       US48          Demand 2024-01-03 11:09:21.549898   
 
                  start                 end           start_act   
 0  2015-07-01 05:00:00 2023-12-24 12:00:00 2015-07-01 05:00:00  \
@@ -189,11 +189,11 @@ dtype: object</code></pre>
 3  2023-12-31 12:00:00 2023-12-31 12:00:00                 NaT   
 4  2023-12-31 12:00:00 2024-01-01 08:00:00 2023-12-31 12:00:00   
 ..                 ...                 ...                 ...   
-64 2024-01-02 13:00:00 2024-01-03 08:00:00 2024-01-02 13:00:00   
 65 2024-01-02 13:00:00 2024-01-03 08:00:00 2024-01-02 13:00:00   
 66 2024-01-02 13:00:00 2024-01-03 08:00:00 2024-01-02 13:00:00   
 67 2024-01-02 13:00:00 2024-01-03 08:00:00 2024-01-02 13:00:00   
 68 2024-01-03 09:00:00 2024-01-03 09:00:00                 NaT   
+69 2024-01-03 09:00:00 2024-01-03 10:00:00 2024-01-03 09:00:00   
 
                end_act start_match end_match    n_obs   na      type  update   
 0  2023-12-24 12:00:00        True      True  74360.0  0.0  backfill    True  \
@@ -202,11 +202,11 @@ dtype: object</code></pre>
 3                  NaT         NaN       NaN      NaN  NaN   refresh   False   
 4  2023-12-31 12:00:00        True     False      1.0  0.0   refresh    True   
 ..                 ...         ...       ...      ...  ...       ...     ...   
-64 2024-01-03 05:00:00        True     False     17.0  0.0   refresh    True   
 65 2024-01-03 06:00:00        True     False     18.0  0.0   refresh    True   
 66 2024-01-03 07:00:00        True     False     19.0  0.0   refresh    True   
 67 2024-01-03 08:00:00        True      True     20.0  0.0   refresh    True   
 68                 NaT         NaN       NaN      NaN  NaN   refresh   False   
+69 2024-01-03 10:00:00        True      True      2.0  0.0   refresh    True   
 
     success  
 0      True  
@@ -215,13 +215,13 @@ dtype: object</code></pre>
 3     False  
 4     False  
 ..      ...  
-64    False  
 65    False  
 66    False  
 67     True  
 68    False  
+69     True  
 
-[69 rows x 15 columns]&gt;</code></pre>
+[70 rows x 15 columns]&gt;</code></pre>
 </div>
 </div>
 <p>Next, we will extract from the log file the infromation of the most recent data refresh:</p>
@@ -232,7 +232,7 @@ dtype: object</code></pre>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>end_act <span class="op">=</span> meta_file[<span class="st">"end_act"</span>]</span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(end_act)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>67   2024-01-03 08:00:00
+<pre><code>69   2024-01-03 10:00:00
 Name: end_act, dtype: datetime64[ns]</code></pre>
 </div>
 </div>
@@ -242,7 +242,7 @@ Name: end_act, dtype: datetime64[ns]</code></pre>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>start <span class="op">=</span> datetime.datetime.strptime(<span class="bu">str</span>(start.iloc[<span class="dv">0</span>]), <span class="st">"%Y-%m-</span><span class="sc">%d</span><span class="st"> %H:%M:%S"</span>)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>start</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
-<pre><code>datetime.datetime(2024, 1, 3, 9, 0)</code></pre>
+<pre><code>datetime.datetime(2024, 1, 3, 11, 0)</code></pre>
 </div>
 </div>
 <p>Setting the GET request parameters:</p>
@@ -266,7 +266,7 @@ Name: end_act, dtype: datetime64[ns]</code></pre>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>end_api <span class="op">=</span> datetime.datetime.strptime(metadata.meta[<span class="st">"endPeriod"</span>], <span class="st">"%Y-%m-</span><span class="sc">%d</span><span class="st">T%H"</span>)</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(end_api)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>2024-01-03T10</code></pre>
+<pre><code>2024-01-03T11</code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>datetime.datetime</code></pre>
@@ -278,8 +278,8 @@ Name: end_act, dtype: datetime64[ns]</code></pre>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(start)</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(end_api)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>2024-01-03 09:00:00
-2024-01-03 10:00:00</code></pre>
+<pre><code>2024-01-03 11:00:00
+2024-01-03 11:00:00</code></pre>
 </div>
 </div>
 <p>We will initiat a GET request of the <code>end_api</code> time is greater than the <code>start</code> time:</p>
@@ -326,8 +326,7 @@ Name: end_act, dtype: datetime64[ns]</code></pre>
 <span id="cb16-40"><a href="#cb16-40" aria-hidden="true" tabindex="-1"></a>    n_obs <span class="op">=</span> <span class="va">None</span></span>
 <span id="cb16-41"><a href="#cb16-41" aria-hidden="true" tabindex="-1"></a>    na <span class="op">=</span> <span class="va">None</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Updates available
-Refresh successed</code></pre>
+<pre><code>No updates are available...</code></pre>
 </div>
 </div>
 </section>
@@ -337,39 +336,30 @@ Refresh successed</code></pre>
 <div class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> success_flag:</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(df.data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>               period respondent         respondent-name type type-name   
-0 2024-01-03 09:00:00       US48  United States Lower 48    D    Demand  \
-1 2024-01-03 10:00:00       US48  United States Lower 48    D    Demand   
-
-    value    value-units  
-0  460373  megawatthours  
-1  460099  megawatthours  </code></pre>
-</div>
 </div>
 <div class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>log <span class="op">=</span> {</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"index"</span>: log_file[<span class="st">"index"</span>].<span class="bu">max</span>() <span class="op">+</span> <span class="dv">1</span>,</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"respondent"</span>: <span class="st">"US48"</span>,</span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"respondent_type"</span>: <span class="st">"Demand"</span>,</span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"time"</span>: datetime.datetime.now(),</span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"start"</span>: start,</span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"end"</span>: end_api,</span>
-<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"start_act"</span>: start_act,</span>
-<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"end_act"</span>: end_act,</span>
-<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"start_match"</span>: start_match_flag, </span>
-<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"end_match"</span>: end_match_flag, </span>
-<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"n_obs"</span>: n_obs,</span>
-<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"na"</span>: na,</span>
-<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"type"</span>: <span class="st">"refresh"</span>,</span>
-<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">"update"</span>: update_flag,</span>
-<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">"success"</span>: success_flag</span>
-<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a>log_file_new <span class="op">=</span> pd.DataFrame([log])</span>
-<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a>log_file_new</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>log <span class="op">=</span> {</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"index"</span>: log_file[<span class="st">"index"</span>].<span class="bu">max</span>() <span class="op">+</span> <span class="dv">1</span>,</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"respondent"</span>: <span class="st">"US48"</span>,</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"respondent_type"</span>: <span class="st">"Demand"</span>,</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"time"</span>: datetime.datetime.now(),</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"start"</span>: start,</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"end"</span>: end_api,</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"start_act"</span>: start_act,</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"end_act"</span>: end_act,</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"start_match"</span>: start_match_flag, </span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"end_match"</span>: end_match_flag, </span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"n_obs"</span>: n_obs,</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"na"</span>: na,</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"type"</span>: <span class="st">"refresh"</span>,</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">"update"</span>: update_flag,</span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">"success"</span>: success_flag</span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>log_file_new <span class="op">=</span> pd.DataFrame([log])</span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>log_file_new</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="11">
 <div>
 
@@ -398,21 +388,21 @@ Refresh successed</code></pre>
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">0</td>
-<td>70</td>
+<td>71</td>
 <td>US48</td>
 <td>Demand</td>
-<td>2024-01-03 11:09:21.549898</td>
-<td>2024-01-03 09:00:00</td>
-<td>2024-01-03 10:00:00</td>
-<td>2024-01-03 09:00:00</td>
-<td>2024-01-03 10:00:00</td>
-<td>True</td>
-<td>True</td>
-<td>2</td>
-<td>0</td>
+<td>2024-01-03 12:18:28.318993</td>
+<td>2024-01-03 11:00:00</td>
+<td>2024-01-03 11:00:00</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
 <td>refresh</td>
-<td>True</td>
-<td>True</td>
+<td>False</td>
+<td>False</td>
 </tr>
 </tbody>
 </table>
@@ -421,28 +411,27 @@ Refresh successed</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (success_flag):</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Save the data into CSV file"</span>)</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    data <span class="op">=</span> pd.read_csv(<span class="st">"data/us48.csv"</span>)</span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    new_data <span class="op">=</span> data._append(df.data)</span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    new_data.to_csv(<span class="st">"data/us48.csv"</span>, index <span class="op">=</span> <span class="va">False</span>)</span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Save the metadata into CSV file"</span>)</span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    new_log <span class="op">=</span> log_file._append(log_file_new)</span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    new_log.to_csv(<span class="st">"data/us48_metadata.csv"</span>, index <span class="op">=</span> <span class="va">False</span>)</span>
-<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> update_flag:</span>
-<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>       <span class="bu">print</span>(<span class="st">"Updates are not available"</span>)</span>
-<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> update_flag <span class="kw">and</span> <span class="kw">not</span> success_flag:</span>
-<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Fail to refresh the data, check the log..."</span>)</span>
-<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>    new_log <span class="op">=</span> log_file._append(log_file_new)</span>
-<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>    new_log.to_csv(<span class="st">"data/us48_metadata.csv"</span>, index <span class="op">=</span> <span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (success_flag):</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Save the data into CSV file"</span>)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    data <span class="op">=</span> pd.read_csv(<span class="st">"data/us48.csv"</span>)</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    new_data <span class="op">=</span> data._append(df.data)</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    new_data.to_csv(<span class="st">"data/us48.csv"</span>, index <span class="op">=</span> <span class="va">False</span>)</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Save the metadata into CSV file"</span>)</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>    new_log <span class="op">=</span> log_file._append(log_file_new)</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>    new_log.to_csv(<span class="st">"data/us48_metadata.csv"</span>, index <span class="op">=</span> <span class="va">False</span>)</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> update_flag:</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>       <span class="bu">print</span>(<span class="st">"Updates are not available"</span>)</span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> update_flag <span class="kw">and</span> <span class="kw">not</span> success_flag:</span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Fail to refresh the data, check the log..."</span>)</span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>    new_log <span class="op">=</span> log_file._append(log_file_new)</span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>    new_log.to_csv(<span class="st">"data/us48_metadata.csv"</span>, index <span class="op">=</span> <span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Save the data into CSV file
-Save the metadata into CSV file</code></pre>
+<pre><code>Updates are not available</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>new_log</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>new_log</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="13">
 <div>
 
@@ -578,24 +567,6 @@ Save the metadata into CSV file</code></pre>
 <td>...</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">65</td>
-<td>66</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-03 07:09:55.839186</td>
-<td>2024-01-02 13:00:00</td>
-<td>2024-01-03 08:00:00</td>
-<td>2024-01-02 13:00:00</td>
-<td>2024-01-03 06:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>18.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
 <td data-quarto-table-cell-role="th">66</td>
 <td>67</td>
 <td>US48</td>
@@ -613,7 +584,7 @@ Save the metadata into CSV file</code></pre>
 <td>True</td>
 <td>False</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td data-quarto-table-cell-role="th">67</td>
 <td>68</td>
 <td>US48</td>
@@ -631,7 +602,7 @@ Save the metadata into CSV file</code></pre>
 <td>True</td>
 <td>True</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td data-quarto-table-cell-role="th">68</td>
 <td>69</td>
 <td>US48</td>
@@ -649,8 +620,8 @@ Save the metadata into CSV file</code></pre>
 <td>False</td>
 <td>False</td>
 </tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
+<tr class="even">
+<td data-quarto-table-cell-role="th">69</td>
 <td>70</td>
 <td>US48</td>
 <td>Demand</td>
@@ -667,10 +638,28 @@ Save the metadata into CSV file</code></pre>
 <td>True</td>
 <td>True</td>
 </tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>71</td>
+<td>US48</td>
+<td>Demand</td>
+<td>2024-01-03 12:18:28.318993</td>
+<td>2024-01-03 11:00:00</td>
+<td>2024-01-03 11:00:00</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+<td>None</td>
+<td>refresh</td>
+<td>False</td>
+<td>False</td>
+</tr>
 </tbody>
 </table>
 
-<p>70 rows × 15 columns</p>
+<p>71 rows × 15 columns</p>
 </div>
 </div>
 </div>
