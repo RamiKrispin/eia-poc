@@ -176,11 +176,11 @@ dtype: object</code></pre>
 3       4       US48          Demand 2023-12-31 13:10:50.045117   
 4       5       US48          Demand 2023-12-31 15:09:40.191596   
 ..    ...        ...             ...                        ...   
-73     74       US48          Demand 2024-01-03 16:13:01.149858   
 74     75       US48          Demand 2024-01-03 17:10:17.322662   
 75     76       US48          Demand 2024-01-03 18:13:32.789844   
 76     77       US48          Demand 2024-01-03 19:09:02.291885   
 77     78       US48          Demand 2024-01-03 20:11:32.864391   
+78     79       US48          Demand 2024-01-03 21:09:49.739691   
 
                  start                 end           start_act   
 0  2015-07-01 05:00:00 2023-12-24 12:00:00 2015-07-01 05:00:00  \
@@ -189,11 +189,11 @@ dtype: object</code></pre>
 3  2023-12-31 12:00:00 2023-12-31 12:00:00                 NaT   
 4  2023-12-31 12:00:00 2024-01-01 08:00:00 2023-12-31 12:00:00   
 ..                 ...                 ...                 ...   
-73 2024-01-03 13:00:00 2024-01-04 08:00:00 2024-01-03 13:00:00   
 74 2024-01-03 13:00:00 2024-01-04 08:00:00 2024-01-03 13:00:00   
 75 2024-01-03 13:00:00 2024-01-04 08:00:00 2024-01-03 13:00:00   
 76 2024-01-03 13:00:00 2024-01-04 08:00:00 2024-01-03 13:00:00   
 77 2024-01-03 13:00:00 2024-01-04 08:00:00 2024-01-03 13:00:00   
+78 2024-01-03 13:00:00 2024-01-04 08:00:00 2024-01-03 13:00:00   
 
                end_act start_match end_match    n_obs   na      type  update   
 0  2023-12-24 12:00:00        True      True  74360.0  0.0  backfill    True  \
@@ -202,11 +202,11 @@ dtype: object</code></pre>
 3                  NaT         NaN       NaN      NaN  NaN   refresh   False   
 4  2023-12-31 12:00:00        True     False      1.0  0.0   refresh    True   
 ..                 ...         ...       ...      ...  ...       ...     ...   
-73 2024-01-03 15:00:00        True     False      3.0  0.0   refresh    True   
 74 2024-01-03 16:00:00        True     False      4.0  0.0   refresh    True   
 75 2024-01-03 17:00:00        True     False      5.0  0.0   refresh    True   
 76 2024-01-03 18:00:00        True     False      6.0  0.0   refresh    True   
 77 2024-01-03 19:00:00        True     False      7.0  0.0   refresh    True   
+78 2024-01-03 20:00:00        True     False      8.0  0.0   refresh    True   
 
     success  
 0      True  
@@ -215,13 +215,13 @@ dtype: object</code></pre>
 3     False  
 4     False  
 ..      ...  
-73    False  
 74    False  
 75    False  
 76    False  
 77    False  
+78    False  
 
-[78 rows x 15 columns]&gt;</code></pre>
+[79 rows x 15 columns]&gt;</code></pre>
 </div>
 </div>
 <p>Next, we will extract from the log file the infromation of the most recent data refresh:</p>
@@ -389,17 +389,17 @@ Refresh failed</code></pre>
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">0</td>
-<td>79</td>
+<td>80</td>
 <td>US48</td>
 <td>Demand</td>
-<td>2024-01-03 21:09:49.739691</td>
+<td>2024-01-03 22:10:15.383030</td>
 <td>2024-01-03 13:00:00</td>
 <td>2024-01-04 08:00:00</td>
 <td>2024-01-03 13:00:00</td>
-<td>2024-01-03 20:00:00</td>
+<td>2024-01-03 21:00:00</td>
 <td>True</td>
 <td>False</td>
-<td>8</td>
+<td>9</td>
 <td>0</td>
 <td>refresh</td>
 <td>True</td>
@@ -568,24 +568,6 @@ Refresh failed</code></pre>
 <td>...</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">74</td>
-<td>75</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-03 17:10:17.322662</td>
-<td>2024-01-03 13:00:00</td>
-<td>2024-01-04 08:00:00</td>
-<td>2024-01-03 13:00:00</td>
-<td>2024-01-03 16:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>4.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
 <td data-quarto-table-cell-role="th">75</td>
 <td>76</td>
 <td>US48</td>
@@ -603,7 +585,7 @@ Refresh failed</code></pre>
 <td>True</td>
 <td>False</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td data-quarto-table-cell-role="th">76</td>
 <td>77</td>
 <td>US48</td>
@@ -621,7 +603,7 @@ Refresh failed</code></pre>
 <td>True</td>
 <td>False</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td data-quarto-table-cell-role="th">77</td>
 <td>78</td>
 <td>US48</td>
@@ -639,8 +621,8 @@ Refresh failed</code></pre>
 <td>True</td>
 <td>False</td>
 </tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
+<tr class="even">
+<td data-quarto-table-cell-role="th">78</td>
 <td>79</td>
 <td>US48</td>
 <td>Demand</td>
@@ -657,10 +639,28 @@ Refresh failed</code></pre>
 <td>True</td>
 <td>False</td>
 </tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>80</td>
+<td>US48</td>
+<td>Demand</td>
+<td>2024-01-03 22:10:15.383030</td>
+<td>2024-01-03 13:00:00</td>
+<td>2024-01-04 08:00:00</td>
+<td>2024-01-03 13:00:00</td>
+<td>2024-01-03 21:00:00</td>
+<td>True</td>
+<td>False</td>
+<td>9.0</td>
+<td>0.0</td>
+<td>refresh</td>
+<td>True</td>
+<td>False</td>
+</tr>
 </tbody>
 </table>
 
-<p>79 rows × 15 columns</p>
+<p>80 rows × 15 columns</p>
 </div>
 </div>
 </div>
