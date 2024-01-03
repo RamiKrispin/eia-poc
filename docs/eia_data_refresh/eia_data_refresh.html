@@ -229,6 +229,7 @@ dtype: object</code></pre>
 56     57       US48          Demand 2024-01-02 22:09:55.649773   
 57     58       US48          Demand 2024-01-02 23:10:40.808688   
 58     59       US48          Demand 2024-01-03 00:46:07.181741   
+59     60       US48          Demand 2024-01-03 01:51:59.206848   
 
                  start                 end           start_act   
 0  2015-07-01 05:00:00 2023-12-24 12:00:00 2015-07-01 05:00:00  \
@@ -290,6 +291,7 @@ dtype: object</code></pre>
 56 2024-01-02 13:00:00 2024-01-03 08:00:00 2024-01-02 13:00:00   
 57 2024-01-02 13:00:00 2024-01-03 08:00:00 2024-01-02 13:00:00   
 58 2024-01-02 13:00:00 2024-01-03 08:00:00 2024-01-02 13:00:00   
+59 2024-01-02 13:00:00 2024-01-03 08:00:00 2024-01-02 13:00:00   
 
                end_act start_match end_match    n_obs   na      type  update   
 0  2023-12-24 12:00:00        True      True  74360.0  0.0  backfill    True  \
@@ -351,6 +353,7 @@ dtype: object</code></pre>
 56 2024-01-02 21:00:00        True     False      9.0  0.0   refresh    True   
 57 2024-01-02 22:00:00        True     False     10.0  0.0   refresh    True   
 58 2024-01-02 23:00:00        True     False     11.0  0.0   refresh    True   
+59 2024-01-03 00:00:00        True     False     12.0  0.0   refresh    True   
 
     success  
 0      True  
@@ -411,7 +414,8 @@ dtype: object</code></pre>
 55    False  
 56    False  
 57    False  
-58    False  &gt;</code></pre>
+58    False  
+59    False  &gt;</code></pre>
 </div>
 </div>
 <p>Next, we will extract from the log file the infromation of the most recent data refresh:</p>
@@ -579,17 +583,17 @@ Refresh failed</code></pre>
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">0</td>
-<td>60</td>
+<td>61</td>
 <td>US48</td>
 <td>Demand</td>
-<td>2024-01-03 01:51:59.206848</td>
+<td>2024-01-03 02:22:24.989496</td>
 <td>2024-01-02 13:00:00</td>
 <td>2024-01-03 08:00:00</td>
 <td>2024-01-02 13:00:00</td>
-<td>2024-01-03</td>
+<td>2024-01-03 01:00:00</td>
 <td>True</td>
 <td>False</td>
-<td>12</td>
+<td>13</td>
 <td>0</td>
 <td>refresh</td>
 <td>True</td>
@@ -740,922 +744,22 @@ Refresh failed</code></pre>
 <td>False</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">5</td>
-<td>6</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2023-12-31 17:09:02.679403</td>
-<td>2023-12-31 12:00:00</td>
-<td>2024-01-01 08:00:00</td>
-<td>2023-12-31 12:00:00</td>
-<td>2023-12-31 16:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>5.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">6</td>
-<td>7</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2023-12-31 18:11:57.917512</td>
-<td>2023-12-31 12:00:00</td>
-<td>2024-01-01 08:00:00</td>
-<td>2023-12-31 12:00:00</td>
-<td>2023-12-31 17:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>6.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">7</td>
-<td>8</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2023-12-31 19:08:10.276018</td>
-<td>2023-12-31 12:00:00</td>
-<td>2024-01-01 08:00:00</td>
-<td>2023-12-31 12:00:00</td>
-<td>2023-12-31 18:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>7.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">8</td>
-<td>9</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2023-12-31 20:10:40.633359</td>
-<td>2023-12-31 12:00:00</td>
-<td>2024-01-01 08:00:00</td>
-<td>2023-12-31 12:00:00</td>
-<td>2023-12-31 19:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>8.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">9</td>
-<td>10</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2023-12-31 21:08:55.196655</td>
-<td>2023-12-31 12:00:00</td>
-<td>2024-01-01 08:00:00</td>
-<td>2023-12-31 12:00:00</td>
-<td>2023-12-31 20:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>9.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">10</td>
-<td>11</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2023-12-31 22:09:29.577372</td>
-<td>2023-12-31 12:00:00</td>
-<td>2024-01-01 08:00:00</td>
-<td>2023-12-31 12:00:00</td>
-<td>2023-12-31 21:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>10.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">11</td>
-<td>12</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2023-12-31 23:10:59.121349</td>
-<td>2023-12-31 12:00:00</td>
-<td>2024-01-01 08:00:00</td>
-<td>2023-12-31 12:00:00</td>
-<td>2023-12-31 22:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>11.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">12</td>
-<td>13</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-01 00:51:56.469661</td>
-<td>2023-12-31 12:00:00</td>
-<td>2024-01-01 08:00:00</td>
-<td>2023-12-31 12:00:00</td>
-<td>2023-12-31 23:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>12.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">13</td>
-<td>14</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-01 01:59:35.481718</td>
-<td>2023-12-31 12:00:00</td>
-<td>2024-01-01 08:00:00</td>
-<td>2023-12-31 12:00:00</td>
-<td>2024-01-01 01:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>14.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">14</td>
-<td>15</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-01 02:34:04.860176</td>
-<td>2023-12-31 12:00:00</td>
-<td>2024-01-01 08:00:00</td>
-<td>2023-12-31 12:00:00</td>
-<td>2024-01-01 01:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>14.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">15</td>
-<td>16</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-01 03:12:11.090169</td>
-<td>2023-12-31 12:00:00</td>
-<td>2024-01-01 08:00:00</td>
-<td>2023-12-31 12:00:00</td>
-<td>2024-01-01 02:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>15.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">16</td>
-<td>17</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-01 04:13:18.535488</td>
-<td>2023-12-31 12:00:00</td>
-<td>2024-01-01 08:00:00</td>
-<td>2023-12-31 12:00:00</td>
-<td>2024-01-01 03:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>16.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">17</td>
-<td>18</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-01 05:11:06.679161</td>
-<td>2023-12-31 12:00:00</td>
-<td>2024-01-01 08:00:00</td>
-<td>2023-12-31 12:00:00</td>
-<td>2024-01-01 04:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>17.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">18</td>
-<td>19</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-01 06:14:46.636802</td>
-<td>2023-12-31 12:00:00</td>
-<td>2024-01-01 08:00:00</td>
-<td>2023-12-31 12:00:00</td>
-<td>2024-01-01 05:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>18.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">19</td>
-<td>20</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-01 07:10:37.376368</td>
-<td>2023-12-31 12:00:00</td>
-<td>2024-01-01 08:00:00</td>
-<td>2023-12-31 12:00:00</td>
-<td>2024-01-01 06:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>19.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">20</td>
-<td>21</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-01 08:13:42.822691</td>
-<td>2023-12-31 12:00:00</td>
-<td>2024-01-01 08:00:00</td>
-<td>2023-12-31 12:00:00</td>
-<td>2024-01-01 07:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>20.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">21</td>
-<td>22</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-01 09:11:14.332332</td>
-<td>2023-12-31 12:00:00</td>
-<td>2024-01-01 08:00:00</td>
-<td>2023-12-31 12:00:00</td>
-<td>2024-01-01 08:00:00</td>
-<td>True</td>
-<td>True</td>
-<td>21.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>True</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">22</td>
-<td>23</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-01 10:11:32.534093</td>
-<td>2024-01-01 09:00:00</td>
-<td>2024-01-01 09:00:00</td>
-<td>NaT</td>
-<td>NaT</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>refresh</td>
-<td>False</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">23</td>
-<td>24</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-01 11:09:05.618118</td>
-<td>2024-01-01 09:00:00</td>
-<td>2024-01-01 10:00:00</td>
-<td>2024-01-01 09:00:00</td>
-<td>2024-01-01 10:00:00</td>
-<td>True</td>
-<td>True</td>
-<td>2.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>True</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">24</td>
-<td>25</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-01 12:18:22.465965</td>
-<td>2024-01-01 11:00:00</td>
-<td>2024-01-01 11:00:00</td>
-<td>NaT</td>
-<td>NaT</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>refresh</td>
-<td>False</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">25</td>
-<td>26</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-01 13:12:43.318952</td>
-<td>2024-01-01 11:00:00</td>
-<td>2024-01-01 12:00:00</td>
-<td>2024-01-01 11:00:00</td>
-<td>2024-01-01 12:00:00</td>
-<td>True</td>
-<td>True</td>
-<td>2.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>True</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">26</td>
-<td>27</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-01 14:09:54.450679</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-01 12:00:00</td>
-<td>NaT</td>
-<td>NaT</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>refresh</td>
-<td>False</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">27</td>
-<td>28</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-01 16:12:37.497234</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-02 08:00:00</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-01 15:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>3.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">28</td>
-<td>29</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-01 17:09:49.769448</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-02 08:00:00</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-01 16:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>4.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">29</td>
-<td>30</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-01 18:13:15.795825</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-02 08:00:00</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-01 17:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>5.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">30</td>
-<td>31</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-01 19:08:25.402038</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-02 08:00:00</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-01 18:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>6.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">31</td>
-<td>32</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-01 20:10:53.272560</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-02 08:00:00</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-01 19:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>7.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">32</td>
-<td>33</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-01 21:09:28.112249</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-02 08:00:00</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-01 20:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>8.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">33</td>
-<td>34</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-01 22:10:18.431314</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-02 08:00:00</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-01 21:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>9.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">34</td>
-<td>35</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-01 23:10:43.783865</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-02 08:00:00</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-01 22:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>10.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">35</td>
-<td>36</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-02 00:44:49.220699</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-02 08:00:00</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-01 23:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>11.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">36</td>
-<td>37</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-02 01:53:40.205185</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-02 08:00:00</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-02 01:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>13.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">37</td>
-<td>38</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-02 02:24:29.216338</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-02 08:00:00</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-02 01:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>13.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">38</td>
-<td>39</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-02 03:11:08.330055</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-02 08:00:00</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-02 02:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>14.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">39</td>
-<td>40</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-02 04:13:02.391820</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-02 08:00:00</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-02 03:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>15.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">40</td>
-<td>41</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-02 05:10:34.035710</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-02 08:00:00</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-02 04:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>16.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">41</td>
-<td>42</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-02 06:13:52.839581</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-02 08:00:00</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-02 05:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>17.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">42</td>
-<td>43</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-02 07:10:10.827991</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-02 08:00:00</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-02 06:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>18.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">43</td>
-<td>44</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-02 08:13:39.864228</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-02 08:00:00</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-02 06:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>18.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">44</td>
-<td>45</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-02 09:10:43.320277</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-02 08:00:00</td>
-<td>2024-01-01 13:00:00</td>
-<td>2024-01-02 08:00:00</td>
-<td>True</td>
-<td>True</td>
-<td>20.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>True</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">45</td>
-<td>46</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-02 10:11:27.952533</td>
-<td>2024-01-02 09:00:00</td>
-<td>2024-01-02 09:00:00</td>
-<td>NaT</td>
-<td>NaT</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>refresh</td>
-<td>False</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">46</td>
-<td>47</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-02 11:09:10.217147</td>
-<td>2024-01-02 09:00:00</td>
-<td>2024-01-02 10:00:00</td>
-<td>2024-01-02 09:00:00</td>
-<td>2024-01-02 10:00:00</td>
-<td>True</td>
-<td>True</td>
-<td>2.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>True</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">47</td>
-<td>48</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-02 12:18:04.073733</td>
-<td>2024-01-02 11:00:00</td>
-<td>2024-01-02 11:00:00</td>
-<td>NaT</td>
-<td>NaT</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>refresh</td>
-<td>False</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">48</td>
-<td>49</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-02 13:12:32.219654</td>
-<td>2024-01-02 11:00:00</td>
-<td>2024-01-02 12:00:00</td>
-<td>2024-01-02 11:00:00</td>
-<td>2024-01-02 12:00:00</td>
-<td>True</td>
-<td>True</td>
-<td>2.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>True</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">49</td>
-<td>50</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-02 14:10:04.724596</td>
-<td>2024-01-02 13:00:00</td>
-<td>2024-01-02 12:00:00</td>
-<td>NaT</td>
-<td>NaT</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>refresh</td>
-<td>False</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">50</td>
-<td>51</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-02 16:11:46.847617</td>
-<td>2024-01-02 13:00:00</td>
-<td>2024-01-03 08:00:00</td>
-<td>2024-01-02 13:00:00</td>
-<td>2024-01-02 15:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>3.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">51</td>
-<td>52</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-02 17:10:12.675120</td>
-<td>2024-01-02 13:00:00</td>
-<td>2024-01-03 08:00:00</td>
-<td>2024-01-02 13:00:00</td>
-<td>2024-01-02 16:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>4.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">52</td>
-<td>53</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-02 18:13:36.366617</td>
-<td>2024-01-02 13:00:00</td>
-<td>2024-01-03 08:00:00</td>
-<td>2024-01-02 13:00:00</td>
-<td>2024-01-02 17:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>5.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">53</td>
-<td>54</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-02 19:08:33.518780</td>
-<td>2024-01-02 13:00:00</td>
-<td>2024-01-03 08:00:00</td>
-<td>2024-01-02 13:00:00</td>
-<td>2024-01-02 18:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>6.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">54</td>
-<td>55</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-02 20:11:02.744976</td>
-<td>2024-01-02 13:00:00</td>
-<td>2024-01-03 08:00:00</td>
-<td>2024-01-02 13:00:00</td>
-<td>2024-01-02 19:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>7.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">55</td>
-<td>56</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-02 21:09:44.668301</td>
-<td>2024-01-02 13:00:00</td>
-<td>2024-01-03 08:00:00</td>
-<td>2024-01-02 13:00:00</td>
-<td>2024-01-02 20:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>8.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">56</td>
@@ -1712,7 +816,7 @@ Refresh failed</code></pre>
 <td>False</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">0</td>
+<td data-quarto-table-cell-role="th">59</td>
 <td>60</td>
 <td>US48</td>
 <td>Demand</td>
@@ -1729,9 +833,28 @@ Refresh failed</code></pre>
 <td>True</td>
 <td>False</td>
 </tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>61</td>
+<td>US48</td>
+<td>Demand</td>
+<td>2024-01-03 02:22:24.989496</td>
+<td>2024-01-02 13:00:00</td>
+<td>2024-01-03 08:00:00</td>
+<td>2024-01-02 13:00:00</td>
+<td>2024-01-03 01:00:00</td>
+<td>True</td>
+<td>False</td>
+<td>13.0</td>
+<td>0.0</td>
+<td>refresh</td>
+<td>True</td>
+<td>False</td>
+</tr>
 </tbody>
 </table>
 
+<p>61 rows × 15 columns</p>
 </div>
 </div>
 </div>
