@@ -24,8 +24,7 @@ if [[ "$(git status --porcelain)" != "" ]]; then
     quarto render dashboard/index.qmd
     cp dashboard/index.html docs/index.html
     rm -rf docs/index_files
-    mkdir docs/index_files
-    cp -R dashboard/index_files/ docs/index_files
+    cp -R dashboard/index_files/ docs/
     rm dashboard/index.html
     rm -rf dashboard/index_files
     git config --global user.name 'RamiKrispin'
