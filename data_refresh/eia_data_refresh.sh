@@ -21,6 +21,13 @@ p=$(pwd)
 git config --global --add safe.directory $p
 
 if [[ "$(git status --porcelain)" != "" ]]; then
+    quarto render dashboard/dashboard.qmd
+    cp dashboard/dashboard.html docs/index.html
+    rm -rf docs/index_files
+    mkdir docs/index_files
+    cp -R dashboard/dashboard_files/ docs/index_files/
+    rm dashboard/dashboard.html
+    rm -rf dashboard/dashboard_files
     git config --global user.name 'RamiKrispin'
     git config --global user.email 'ramkrisp@umich.edu'
     git add docs/*
