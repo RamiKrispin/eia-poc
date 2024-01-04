@@ -176,11 +176,11 @@ dtype: object</code></pre>
 3       4       US48          Demand 2023-12-31 13:10:50.045117   
 4       5       US48          Demand 2023-12-31 15:09:40.191596   
 ..    ...        ...             ...                        ...   
-88     89       US48          Demand 2024-01-04 07:10:07.834206   
 89     90       US48          Demand 2024-01-04 08:13:27.120703   
 90     91       US48          Demand 2024-01-04 09:10:46.911484   
 91     92       US48          Demand 2024-01-04 10:11:33.632584   
 92     93       US48          Demand 2024-01-04 11:09:34.910831   
+93     94       US48          Demand 2024-01-04 12:18:19.605279   
 
                  start                 end           start_act   
 0  2015-07-01 05:00:00 2023-12-24 12:00:00 2015-07-01 05:00:00  \
@@ -189,11 +189,11 @@ dtype: object</code></pre>
 3  2023-12-31 12:00:00 2023-12-31 12:00:00                 NaT   
 4  2023-12-31 12:00:00 2024-01-01 08:00:00 2023-12-31 12:00:00   
 ..                 ...                 ...                 ...   
-88 2024-01-03 13:00:00 2024-01-04 08:00:00 2024-01-03 13:00:00   
 89 2024-01-03 13:00:00 2024-01-04 08:00:00 2024-01-03 13:00:00   
 90 2024-01-03 13:00:00 2024-01-04 08:00:00 2024-01-03 13:00:00   
 91 2024-01-04 09:00:00 2024-01-04 09:00:00                 NaT   
 92 2024-01-04 09:00:00 2024-01-04 10:00:00 2024-01-04 09:00:00   
+93 2024-01-04 11:00:00 2024-01-04 11:00:00 2024-01-04 11:00:00   
 
                end_act start_match end_match    n_obs   na      type  update   
 0  2023-12-24 12:00:00        True      True  74360.0  0.0  backfill    True  \
@@ -202,11 +202,11 @@ dtype: object</code></pre>
 3                  NaT         NaN       NaN      NaN  NaN   refresh   False   
 4  2023-12-31 12:00:00        True     False      1.0  0.0   refresh    True   
 ..                 ...         ...       ...      ...  ...       ...     ...   
-88 2024-01-04 06:00:00        True     False     18.0  0.0   refresh    True   
 89 2024-01-04 07:00:00        True     False     19.0  0.0   refresh    True   
 90 2024-01-04 08:00:00        True      True     20.0  0.0   refresh    True   
 91                 NaT         NaN       NaN      NaN  NaN   refresh   False   
 92 2024-01-04 10:00:00        True      True      2.0  0.0   refresh    True   
+93 2024-01-04 11:00:00        True      True      1.0  0.0   refresh    True   
 
     success  
 0      True  
@@ -215,13 +215,13 @@ dtype: object</code></pre>
 3     False  
 4     False  
 ..      ...  
-88    False  
 89    False  
 90     True  
 91    False  
 92     True  
+93     True  
 
-[93 rows x 15 columns]&gt;</code></pre>
+[94 rows x 15 columns]&gt;</code></pre>
 </div>
 </div>
 <p>Next, we will extract from the log file the infromation of the most recent data refresh:</p>
@@ -232,7 +232,7 @@ dtype: object</code></pre>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>end_act <span class="op">=</span> meta_file[<span class="st">"end_act"</span>]</span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(end_act)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>92   2024-01-04 10:00:00
+<pre><code>93   2024-01-04 11:00:00
 Name: end_act, dtype: datetime64[ns]</code></pre>
 </div>
 </div>
@@ -242,7 +242,7 @@ Name: end_act, dtype: datetime64[ns]</code></pre>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>start <span class="op">=</span> datetime.datetime.strptime(<span class="bu">str</span>(start.iloc[<span class="dv">0</span>]), <span class="st">"%Y-%m-</span><span class="sc">%d</span><span class="st"> %H:%M:%S"</span>)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>start</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
-<pre><code>datetime.datetime(2024, 1, 4, 11, 0)</code></pre>
+<pre><code>datetime.datetime(2024, 1, 4, 12, 0)</code></pre>
 </div>
 </div>
 <p>Setting the GET request parameters:</p>
@@ -266,7 +266,7 @@ Name: end_act, dtype: datetime64[ns]</code></pre>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>end_api <span class="op">=</span> datetime.datetime.strptime(metadata.meta[<span class="st">"endPeriod"</span>], <span class="st">"%Y-%m-</span><span class="sc">%d</span><span class="st">T%H"</span>)</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(end_api)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>2024-01-04T11</code></pre>
+<pre><code>2024-01-04T12</code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>datetime.datetime</code></pre>
@@ -278,8 +278,8 @@ Name: end_act, dtype: datetime64[ns]</code></pre>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(start)</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(end_api)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>2024-01-04 11:00:00
-2024-01-04 11:00:00</code></pre>
+<pre><code>2024-01-04 12:00:00
+2024-01-04 12:00:00</code></pre>
 </div>
 </div>
 <p>We will initiat a GET request of the <code>end_api</code> time is greater than the <code>start</code> time:</p>
@@ -339,10 +339,10 @@ Refresh successed</code></pre>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(df.data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>               period respondent         respondent-name type type-name   
-0 2024-01-04 11:00:00       US48  United States Lower 48    D    Demand  \
+0 2024-01-04 12:00:00       US48  United States Lower 48    D    Demand  \
 
     value    value-units  
-0  459880  megawatthours  </code></pre>
+0  481295  megawatthours  </code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="11">
@@ -396,14 +396,14 @@ Refresh successed</code></pre>
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">0</td>
-<td>94</td>
+<td>95</td>
 <td>US48</td>
 <td>Demand</td>
-<td>2024-01-04 12:18:19.605279</td>
-<td>2024-01-04 11:00:00</td>
-<td>2024-01-04 11:00:00</td>
-<td>2024-01-04 11:00:00</td>
-<td>2024-01-04 11:00:00</td>
+<td>2024-01-04 13:12:39.657315</td>
+<td>2024-01-04 12:00:00</td>
+<td>2024-01-04 12:00:00</td>
+<td>2024-01-04 12:00:00</td>
+<td>2024-01-04 12:00:00</td>
 <td>True</td>
 <td>True</td>
 <td>1</td>
@@ -576,24 +576,6 @@ Save the metadata into CSV file</code></pre>
 <td>...</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">89</td>
-<td>90</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-04 08:13:27.120703</td>
-<td>2024-01-03 13:00:00</td>
-<td>2024-01-04 08:00:00</td>
-<td>2024-01-03 13:00:00</td>
-<td>2024-01-04 07:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>19.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
 <td data-quarto-table-cell-role="th">90</td>
 <td>91</td>
 <td>US48</td>
@@ -611,7 +593,7 @@ Save the metadata into CSV file</code></pre>
 <td>True</td>
 <td>True</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td data-quarto-table-cell-role="th">91</td>
 <td>92</td>
 <td>US48</td>
@@ -629,7 +611,7 @@ Save the metadata into CSV file</code></pre>
 <td>False</td>
 <td>False</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td data-quarto-table-cell-role="th">92</td>
 <td>93</td>
 <td>US48</td>
@@ -647,8 +629,8 @@ Save the metadata into CSV file</code></pre>
 <td>True</td>
 <td>True</td>
 </tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
+<tr class="even">
+<td data-quarto-table-cell-role="th">93</td>
 <td>94</td>
 <td>US48</td>
 <td>Demand</td>
@@ -665,10 +647,28 @@ Save the metadata into CSV file</code></pre>
 <td>True</td>
 <td>True</td>
 </tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>95</td>
+<td>US48</td>
+<td>Demand</td>
+<td>2024-01-04 13:12:39.657315</td>
+<td>2024-01-04 12:00:00</td>
+<td>2024-01-04 12:00:00</td>
+<td>2024-01-04 12:00:00</td>
+<td>2024-01-04 12:00:00</td>
+<td>True</td>
+<td>True</td>
+<td>1.0</td>
+<td>0.0</td>
+<td>refresh</td>
+<td>True</td>
+<td>True</td>
+</tr>
 </tbody>
 </table>
 
-<p>94 rows × 15 columns</p>
+<p>95 rows × 15 columns</p>
 </div>
 </div>
 </div>
