@@ -125,7 +125,7 @@ print(end_api)
 We will initiat a GET request of the `end_api` time is greater than the `start` time: 
 
 ```{python}
-if start < end_api:
+if start <= end_api:
     print("Updates available")
     df = eia_api.eia_get(api_key = eia_api_key, 
         api_path = api_path, 
