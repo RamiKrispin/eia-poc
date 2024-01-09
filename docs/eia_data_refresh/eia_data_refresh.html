@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.534">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -57,7 +57,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="eia_data_refresh_files/libs/clipboard/clipboard.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="eia_data_refresh_files/libs/clipboard/clipboard.min.js"></script>
 <script src="eia_data_refresh_files/libs/quarto-html/quarto.js"></script>
 <script src="eia_data_refresh_files/libs/quarto-html/popper.min.js"></script>
 <script src="eia_data_refresh_files/libs/quarto-html/tippy.umd.min.js"></script>
@@ -68,7 +68,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="eia_data_refresh_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="eia_data_refresh_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
@@ -95,7 +95,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header>
+
 
 <p>This doc run the data refresh process for the US48 demand for electricity dataset from the EIA API. It includes the following functionality:</p>
 <ul>
@@ -142,7 +144,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="load-the-log-file-and-api-metadata" class="level2">
 <h2 class="anchored" data-anchor-id="load-the-log-file-and-api-metadata">Load the Log File and API Metadata</h2>
 <p>We will load the log file from the <code>data</code> folder:</p>
-<div class="cell" data-execution_count="2">
+<div id="ff6a0e0a" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>log_file <span class="op">=</span> pd.read_csv(<span class="st">"data/us48_metadata.csv"</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>cols_time <span class="op">=</span> log_file.columns[<span class="dv">3</span>:<span class="dv">8</span>]</span>
@@ -176,11 +178,11 @@ dtype: object</code></pre>
 3        4       US48          Demand 2023-12-31 13:10:50.045117   
 4        5       US48          Demand 2023-12-31 15:09:40.191596   
 ..     ...        ...             ...                        ...   
-102    103       US48          Demand 2024-01-04 22:10:30.036753   
 103    104       US48          Demand 2024-01-04 23:10:44.673739   
 104    105       US48          Demand 2024-01-05 00:46:23.603633   
 105    106       US48          Demand 2024-01-05 01:53:02.125097   
 106    107       US48          Demand 2024-01-05 02:24:25.629530   
+107    108       US48          Demand 2024-01-05 03:11:22.282183   
 
                   start                 end           start_act   
 0   2015-07-01 05:00:00 2023-12-24 12:00:00 2015-07-01 05:00:00  \
@@ -189,11 +191,11 @@ dtype: object</code></pre>
 3   2023-12-31 12:00:00 2023-12-31 12:00:00                 NaT   
 4   2023-12-31 12:00:00 2024-01-01 08:00:00 2023-12-31 12:00:00   
 ..                  ...                 ...                 ...   
-102 2024-01-04 13:00:00 2024-01-05 08:00:00 2024-01-04 13:00:00   
 103 2024-01-04 13:00:00 2024-01-05 08:00:00 2024-01-04 13:00:00   
 104 2024-01-04 13:00:00 2024-01-05 08:00:00 2024-01-04 13:00:00   
 105 2024-01-04 13:00:00 2024-01-05 08:00:00 2024-01-04 13:00:00   
 106 2024-01-04 13:00:00 2024-01-05 08:00:00 2024-01-04 13:00:00   
+107 2024-01-04 13:00:00 2024-01-05 08:00:00 2024-01-04 13:00:00   
 
                 end_act start_match end_match    n_obs   na      type  update   
 0   2023-12-24 12:00:00        True      True  74360.0  0.0  backfill    True  \
@@ -202,11 +204,11 @@ dtype: object</code></pre>
 3                   NaT         NaN       NaN      NaN  NaN   refresh   False   
 4   2023-12-31 12:00:00        True     False      1.0  0.0   refresh    True   
 ..                  ...         ...       ...      ...  ...       ...     ...   
-102 2024-01-04 21:00:00        True     False      9.0  0.0   refresh    True   
 103 2024-01-04 22:00:00        True     False     10.0  0.0   refresh    True   
 104 2024-01-04 22:00:00        True     False     10.0  0.0   refresh    True   
 105 2024-01-04 22:00:00        True     False     10.0  0.0   refresh    True   
 106 2024-01-04 22:00:00        True     False     10.0  0.0   refresh    True   
+107 2024-01-04 22:00:00        True     False     10.0  0.0   refresh    True   
 
      success  
 0       True  
@@ -215,17 +217,17 @@ dtype: object</code></pre>
 3      False  
 4      False  
 ..       ...  
-102    False  
 103    False  
 104    False  
 105    False  
 106    False  
+107    False  
 
-[107 rows x 15 columns]&gt;</code></pre>
+[108 rows x 15 columns]&gt;</code></pre>
 </div>
 </div>
 <p>Next, we will extract from the log file the infromation of the most recent data refresh:</p>
-<div class="cell" data-execution_count="3">
+<div id="be2256b4" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>meta_file <span class="op">=</span> log_file[log_file[<span class="st">"success"</span>] <span class="op">==</span> <span class="va">True</span>] </span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>meta_file <span class="op">=</span> meta_file[meta_file[<span class="st">"index"</span>] <span class="op">==</span> meta_file[<span class="st">"index"</span>].<span class="bu">max</span>()]</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -237,7 +239,7 @@ Name: end_act, dtype: datetime64[ns]</code></pre>
 </div>
 </div>
 <p>The <code>end_act</code> reprecent the series ending timestamp, we will use it to check if new data is available on the API and set the <code>start</code> argument:</p>
-<div class="cell" data-execution_count="4">
+<div id="fdb957c8" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>start <span class="op">=</span> end_act <span class="op">+</span> datetime.timedelta(hours <span class="op">=</span> <span class="dv">1</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>start <span class="op">=</span> datetime.datetime.strptime(<span class="bu">str</span>(start.iloc[<span class="dv">0</span>]), <span class="st">"%Y-%m-</span><span class="sc">%d</span><span class="st"> %H:%M:%S"</span>)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>start</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -246,7 +248,7 @@ Name: end_act, dtype: datetime64[ns]</code></pre>
 </div>
 </div>
 <p>Setting the GET request parameters:</p>
-<div class="cell" data-execution_count="5">
+<div id="06cee5f4" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>api_path <span class="op">=</span> <span class="st">"electricity/rto/region-data/data"</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>facets <span class="op">=</span> {</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"respondent"</span>: <span class="st">"US48"</span>,</span>
@@ -258,15 +260,15 @@ Name: end_act, dtype: datetime64[ns]</code></pre>
 <span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>eia_api_key <span class="op">=</span> os.getenv(<span class="st">'EIA_API_KEY'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Pulling the series metadata from the API. We will use it to check if new data is available on the API using the <code>endPeriod</code> variable:</p>
-<div class="cell" data-execution_count="6">
+<div id="8f9c515d" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>metadata <span class="op">=</span> eia_api.eia_metadata(api_key <span class="op">=</span> eia_api_key, api_path <span class="op">=</span> <span class="st">"electricity/rto/region-data/"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="7">
+<div id="092759fc" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(metadata.meta[<span class="st">"endPeriod"</span>])</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>end_api <span class="op">=</span> datetime.datetime.strptime(metadata.meta[<span class="st">"endPeriod"</span>], <span class="st">"%Y-%m-</span><span class="sc">%d</span><span class="st">T%H"</span>)</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(end_api)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>2024-01-05T08</code></pre>
+<pre><code>2024-01-09T08</code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>datetime.datetime</code></pre>
@@ -274,16 +276,16 @@ Name: end_act, dtype: datetime64[ns]</code></pre>
 </div>
 <p>The <code>start</code> variable represents the data request starting timestamp (calculated as most recent timestamp on the current dataset plus one hour). The <code>end_api</code> variable represents the timestamp of the most recent data point available on the API:</p>
 <p>Comparing between the start and</p>
-<div class="cell" data-execution_count="8">
+<div id="81de30d8" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(start)</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(end_api)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>2024-01-04 13:00:00
-2024-01-05 08:00:00</code></pre>
+2024-01-09 08:00:00</code></pre>
 </div>
 </div>
 <p>We will initiat a GET request of the <code>end_api</code> time is greater than the <code>start</code> time:</p>
-<div class="cell" data-execution_count="9">
+<div id="e118e68c" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> start <span class="op">&lt;=</span> end_api:</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Updates available"</span>)</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> eia_api.eia_get(api_key <span class="op">=</span> eia_api_key, </span>
@@ -334,11 +336,11 @@ Refresh failed</code></pre>
 <section id="updating-the-dataset-and-log-file" class="level2">
 <h2 class="anchored" data-anchor-id="updating-the-dataset-and-log-file">Updating the Dataset and Log File</h2>
 <p>If the pull was successful, we will append the new data to the current one. In any case, we will update log file with the results of the GET request:</p>
-<div class="cell" data-execution_count="10">
+<div id="cde798a6" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> success_flag:</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(df.data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="11">
+<div id="0c0f035c" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>log <span class="op">=</span> {</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"index"</span>: log_file[<span class="st">"index"</span>].<span class="bu">max</span>() <span class="op">+</span> <span class="dv">1</span>,</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"respondent"</span>: <span class="st">"US48"</span>,</span>
@@ -389,17 +391,17 @@ Refresh failed</code></pre>
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">0</td>
-<td>108</td>
+<td>109</td>
 <td>US48</td>
 <td>Demand</td>
-<td>2024-01-05 03:11:22.282183</td>
+<td>2024-01-09 07:11:52.406452</td>
 <td>2024-01-04 13:00:00</td>
-<td>2024-01-05 08:00:00</td>
+<td>2024-01-09 08:00:00</td>
 <td>2024-01-04 13:00:00</td>
-<td>2024-01-04 22:00:00</td>
+<td>2024-01-09 06:00:00</td>
 <td>True</td>
 <td>False</td>
-<td>10</td>
+<td>114</td>
 <td>0</td>
 <td>refresh</td>
 <td>True</td>
@@ -411,7 +413,7 @@ Refresh failed</code></pre>
 </div>
 </div>
 </div>
-<div class="cell" data-execution_count="12">
+<div id="051b51ea" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (success_flag):</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Save the data into CSV file"</span>)</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    data <span class="op">=</span> pd.read_csv(<span class="st">"data/us48.csv"</span>)</span>
@@ -431,7 +433,7 @@ Refresh failed</code></pre>
 <pre><code>Fail to refresh the data, check the log...</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="13">
+<div id="499bf609" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>new_log</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="13">
 <div>
@@ -568,24 +570,6 @@ Refresh failed</code></pre>
 <td>...</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">103</td>
-<td>104</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-01-04 23:10:44.673739</td>
-<td>2024-01-04 13:00:00</td>
-<td>2024-01-05 08:00:00</td>
-<td>2024-01-04 13:00:00</td>
-<td>2024-01-04 22:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>10.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
 <td data-quarto-table-cell-role="th">104</td>
 <td>105</td>
 <td>US48</td>
@@ -603,7 +587,7 @@ Refresh failed</code></pre>
 <td>True</td>
 <td>False</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td data-quarto-table-cell-role="th">105</td>
 <td>106</td>
 <td>US48</td>
@@ -621,7 +605,7 @@ Refresh failed</code></pre>
 <td>True</td>
 <td>False</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td data-quarto-table-cell-role="th">106</td>
 <td>107</td>
 <td>US48</td>
@@ -639,8 +623,8 @@ Refresh failed</code></pre>
 <td>True</td>
 <td>False</td>
 </tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
+<tr class="even">
+<td data-quarto-table-cell-role="th">107</td>
 <td>108</td>
 <td>US48</td>
 <td>Demand</td>
@@ -657,10 +641,28 @@ Refresh failed</code></pre>
 <td>True</td>
 <td>False</td>
 </tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>109</td>
+<td>US48</td>
+<td>Demand</td>
+<td>2024-01-09 07:11:52.406452</td>
+<td>2024-01-04 13:00:00</td>
+<td>2024-01-09 08:00:00</td>
+<td>2024-01-04 13:00:00</td>
+<td>2024-01-09 06:00:00</td>
+<td>True</td>
+<td>False</td>
+<td>114.0</td>
+<td>0.0</td>
+<td>refresh</td>
+<td>True</td>
+<td>False</td>
+</tr>
 </tbody>
 </table>
 
-<p>108 rows × 15 columns</p>
+<p>109 rows × 15 columns</p>
 </div>
 </div>
 </div>
@@ -747,10 +749,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -760,8 +761,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -774,6 +784,120 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -817,6 +941,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -842,6 +967,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -902,6 +1053,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 
