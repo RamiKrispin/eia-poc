@@ -2,6 +2,7 @@ import eia_api
 import datetime
 import os
 import requests
+import pandas as pd
 
 api_path = "electricity/rto/region-data/data"
 facets = {
