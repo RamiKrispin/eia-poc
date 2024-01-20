@@ -1,4 +1,5 @@
-pandas==2.0.0
+wheel
+pandas
 numpy
 matplotlib
 gensim
@@ -9,3 +10,4 @@ nbformat
 ydata-profiling
 ipywidgets
 jupyter 
+darts
