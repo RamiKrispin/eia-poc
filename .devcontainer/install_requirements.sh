@@ -13,4 +13,6 @@ apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 source /opt/$VENV_NAME/bin/activate 
 
+pip install --upgrade pip
+
 pip3 install  --no-cache-dir -r ./requirements/requirements.txt

@@ -11,3 +11,5 @@ ydata-profiling
 ipywidgets
 jupyter 
 darts
+sktime
+optuna
