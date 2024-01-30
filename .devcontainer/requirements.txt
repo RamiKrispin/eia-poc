@@ -13,3 +13,4 @@ jupyter
 darts
 sktime
 optuna
+u8darts
