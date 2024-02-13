@@ -103,8 +103,9 @@ def eia_get(api_key,
     d = requests.get(url + "&api_key=" + api_key).json()
 
     df = pd.DataFrame(d['response']['data'])
-
+    # Reformating the output
     df["period"] = pd.to_datetime(df["period"])
+    df["value"] = pd.to_numeric(df["value"])
     df = df.sort_values(by = ["period"])
 
     parameters = {
