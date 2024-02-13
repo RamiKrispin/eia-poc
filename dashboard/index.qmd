@@ -41,7 +41,7 @@ f = fc[fc["label"] ==label]
 
 last_time = data["period"].max().floor(freq = "d")
 
-start_time = last_time - datetime.timedelta(hours = 24 * 365 * 1)
+start_time = last_time - datetime.timedelta(hours = 24 * 30 * 3)
 d = data.sort_values(by = ["period"])
 
 
