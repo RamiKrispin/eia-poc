@@ -12,3 +12,4 @@ ipywidgets
 jupyter 
 optuna
 u8darts
+mlflow==2.10.2
