@@ -210,18 +210,21 @@ log_file_new
 ```{python}
 if (success_flag):
     print("Save the data into CSV file")
-    data = pd.read_csv("data/us48.csv")
-    data["period"] = pd.to_datetime(data["period"])
-    data["value"] = pd.to_numeric(data["value"])
-    new_data = data._append(df.data)
-    new_data = new_data.sort_values("period")
-    new_data.to_csv("data/us48.csv", index = False)
+    pre_data = pd.read_csv("data/us48.csv")
+    pre_data["period"] = pd.to_datetime(pre_data["period"])
+    pre_data["value"] = pd.to_numeric(pre_data["value"])
+    data = pre_data._append(df.data)
+    data = data.sort_values("period")
+    data.to_csv("data/us48.csv", index = False)
     print("Save the metadata into CSV file")
     new_log = log_file._append(log_file_new)
     new_log.to_csv("data/us48_metadata.csv", index = False)
 else:
     if not update_flag:
        print("Updates are not available")
+       data = pd.read_csv("data/us48.csv")
+       data["period"] = pd.to_datetime(data["period"])
+       data["value"] = pd.to_numeric(data["value"])
     elif update_flag and not success_flag:
         print("Fail to refresh the data, check the log...")
     new_log = log_file._append(log_file_new)
@@ -279,7 +282,7 @@ fc_meta.head()
 
 Score past models:
 ```{python}
-act_max = new_data["period"].max()
+act_max = data["period"].max()
 
 fc_archive = pd.read_csv("data/fc48.csv")
 fc_archive["period"] = pd.to_datetime(fc_archive["period"])
@@ -289,7 +292,7 @@ for index, row in fc_meta.iterrows():
     if row["start_act"] < act_max:
         label = row["label"]
         n_obs = row["n_obs"]
-        f = fc_archive[(fc_archive["label"] == label) & (fc_archive["period"] <= act_max)].merge(new_data[["period", "value"]], on = "period", how = "left")
+        f = fc_archive[(fc_archive["label"] == label) & (fc_archive["period"] <= act_max)].merge(data[["period", "value"]], on = "period", how = "left")
         fc_meta.at[index, "mape"] = mean(abs(f["value"] - f["mean"]) / f["value"])
         fc_meta.at[index, "rmse"] = (mean((f["value"] - f["mean"]) ** 2 )) ** 0.5
         fc_meta.at[index, "coverage"] =sum((f["value"] <= f["upper"]) & (f["value"] >= f["lower"])) / len(f)
@@ -306,9 +309,9 @@ for index, row in fc_meta.iterrows():
 fc_last = fc_meta["end_act"].max()
 
 if fc_last < act_max:
-    forecast_start = new_data["period"].max().floor(freq = "d")
+    forecast_start = data["period"].max().floor(freq = "d")
     ts_start = forecast_start - datetime.timedelta(hours = freq * 365 * 2)
-    d1 = new_data[(new_data["period"] > ts_start) & (new_data["period"] < forecast_start)]
+    d1 = data[(data["period"] > ts_start) & (data["period"] < forecast_start)]
     ts_obj = pd.DataFrame(np.arange(start = d1["period"].min(), stop = d1["period"].max() + datetime.timedelta(hours = 1), step = datetime.timedelta(hours = 1)).astype(datetime.datetime), columns=["index"])
     ts_obj  = ts_obj.merge(d1, left_on = "index", right_on = "period", how="left")
     input = TimeSeries.from_dataframe(d1,time_col= "period", value_cols= "value")

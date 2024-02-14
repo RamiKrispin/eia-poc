@@ -10,7 +10,5 @@ nbformat
 ydata-profiling
 ipywidgets
 jupyter 
-darts
-sktime
 optuna
 u8darts
