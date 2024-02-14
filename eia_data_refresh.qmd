@@ -116,12 +116,12 @@ end_api = datetime.datetime.strptime(metadata.meta["endPeriod"], "%Y-%m-%dT%H")
 type(end_api)
 ```
 
-The `start` variable represents the data request starting timestamp (calculated as most recent timestamp on the current dataset plus one hour). The `end_api` variable represents the timestamp of the most recent data point available on the API. There is some issue on the API timestampe, a gap of 12 hours between the value of the last data point and the actual, therefore, creating a fix with the `end_fix` variable:
+The `start` variable represents the data request starting timestamp (calculated as most recent timestamp on the current dataset plus one hour). The `end_api` variable represents the timestamp of the most recent data point available on the API. There is some issue on the API timestampe, a gap of 6 hours between the value of the last data point and the actual, therefore, creating a fix with the `end_fix` variable:
 
 
 Comparing between the start and 
 ```{python}
-end_fix = end_api -  datetime.timedelta(hours = 12)
+end_fix = end_api -  datetime.timedelta(hours = 6)
 
 print(start)
 print(end_fix)
@@ -353,12 +353,12 @@ if fc_last < act_max:
     print("Save the forecast metadata into CSV file")
     fc_log_df = pd.DataFrame([fc_log])
     fc_log_new = fc_meta._append(fc_log_df)
-    fc_log_new.to_csv("data/fc48_metadata.csv", index = False)
+    # fc_log_new.to_csv("data/fc48_metadata.csv", index = False)
    
     print("Save the forecast into CSV file")
     fc_archive = pd.read_csv("data/fc48.csv")
     fc_archive["period"] = pd.to_datetime(fc_archive["period"])
     new_fc_file = fc_archive._append(fc)
-    new_fc_file.to_csv("data/fc48.csv", index = False)
+    # new_fc_file.to_csv("data/fc48.csv", index = False)
      
 ```
