@@ -155,7 +155,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="load-the-log-file-and-api-metadata" class="level2">
 <h2 class="anchored" data-anchor-id="load-the-log-file-and-api-metadata">Load the Log File and API Metadata</h2>
 <p>We will load the log file from the <code>data</code> folder:</p>
-<div id="1de7f275" class="cell" data-execution_count="2">
+<div id="6c8d022e" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>log_file <span class="op">=</span> pd.read_csv(<span class="st">"data/us48_metadata.csv"</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>cols_time <span class="op">=</span> log_file.columns[<span class="dv">3</span>:<span class="dv">8</span>]</span>
@@ -172,172 +172,56 @@ start              datetime64[ns]
 end                datetime64[ns]
 start_act          datetime64[ns]
 end_act            datetime64[ns]
-start_match                object
-end_match                  object
-n_obs                     float64
-na                        float64
+start_match                  bool
+end_match                    bool
+n_obs                       int64
+na                          int64
 type                       object
 update                       bool
 success                      bool
 dtype: object</code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="2">
-<pre><code>&lt;bound method NDFrame.head of     index respondent respondent_type                       time  \
-0       1       US48          Demand 2024-02-12 22:58:19.904821   
-1       2       US48          Demand 2024-02-12 23:02:27.050996   
-2       3       US48          Demand 2024-02-13 16:57:17.255254   
-3       4       US48          Demand 2024-02-13 17:10:35.872205   
-4       5       US48          Demand 2024-02-13 18:14:51.359850   
-5       6       US48          Demand 2024-02-13 19:09:42.918819   
-6       7       US48          Demand 2024-02-13 20:13:24.543277   
-7       8       US48          Demand 2024-02-14 05:35:05.512191   
-8       9       US48          Demand 2024-02-14 06:13:53.186437   
-9      10       US48          Demand 2024-02-14 07:11:20.375035   
-10     11       US48          Demand 2024-02-14 08:13:16.880164   
-11     12       US48          Demand 2024-02-14 09:10:34.868457   
-12     13       US48          Demand 2024-02-14 10:11:01.200508   
-13     14       US48          Demand 2024-02-14 11:10:00.769793   
-14     15       US48          Demand 2024-02-14 12:17:58.708810   
-15     16       US48          Demand 2024-02-14 13:10:46.502477   
-16     17       US48          Demand 2024-02-14 14:10:21.676475   
-17     18       US48          Demand 2024-02-14 15:10:06.353479   
-18     19       US48          Demand 2024-02-14 16:12:56.189942   
-19     20       US48          Demand 2024-02-14 17:09:51.486672   
-20     21       US48          Demand 2024-02-14 18:12:34.795998   
-21     22       US48          Demand 2024-02-14 19:08:39.430394   
-22     23       US48          Demand 2024-02-14 20:10:48.476413   
-23     24       US48          Demand 2024-02-14 21:09:51.277234   
-24     25       US48          Demand 2024-02-14 22:09:45.640566   
-25     26       US48          Demand 2024-02-14 23:10:33.124173   
-26     27       US48          Demand 2024-02-15 00:43:55.942281   
-27     28       US48          Demand 2024-02-15 01:42:53.680331   
-28     29       US48          Demand 2024-02-15 02:17:03.003146   
-29     30       US48          Demand 2024-02-15 03:11:59.640463   
-30     31       US48          Demand 2024-02-15 04:13:02.800411   
+<pre><code>&lt;bound method NDFrame.head of    index respondent respondent_type                       time  \
+0      1       US48          Demand 2024-02-15 04:42:02.728624   
+1      2       US48          Demand 2024-02-15 04:51:05.511352   
 
-                 start                 end           start_act  \
-0  2015-07-01 05:00:00 2024-02-08 01:00:00 2015-07-01 05:00:00   
-1  2024-02-08 02:00:00 2024-02-12 20:00:00 2024-02-08 02:00:00   
-2  2024-02-12 21:00:00 2024-02-13 20:00:00 2024-02-12 21:00:00   
-3  2024-02-12 21:00:00 2024-02-13 20:00:00 2024-02-12 21:00:00   
-4  2024-02-12 21:00:00 2024-02-13 20:00:00 2024-02-12 21:00:00   
-5  2024-02-12 21:00:00 2024-02-13 20:00:00 2024-02-12 21:00:00   
-6  2024-02-12 21:00:00 2024-02-13 20:00:00 2024-02-12 21:00:00   
-7  2024-02-12 21:00:00 2024-02-13 20:00:00 2024-02-12 21:00:00   
-8  2024-02-13 21:00:00 2024-02-13 20:00:00                 NaT   
-9  2024-02-13 21:00:00 2024-02-13 20:00:00                 NaT   
-10 2024-02-13 21:00:00 2024-02-13 20:00:00                 NaT   
-11 2024-02-13 21:00:00 2024-02-13 20:00:00                 NaT   
-12 2024-02-13 21:00:00 2024-02-13 21:00:00 2024-02-13 21:00:00   
-13 2024-02-13 22:00:00 2024-02-13 22:00:00 2024-02-13 22:00:00   
-14 2024-02-13 23:00:00 2024-02-13 23:00:00 2024-02-13 23:00:00   
-15 2024-02-14 00:00:00 2024-02-14 00:00:00 2024-02-14 00:00:00   
-16 2024-02-14 01:00:00 2024-02-14 00:00:00                 NaT   
-17 2024-02-14 01:00:00 2024-02-15 02:00:00 2024-02-14 01:00:00   
-18 2024-02-14 01:00:00 2024-02-15 02:00:00 2024-02-14 01:00:00   
-19 2024-02-14 01:00:00 2024-02-15 02:00:00 2024-02-14 01:00:00   
-20 2024-02-14 01:00:00 2024-02-15 02:00:00 2024-02-14 01:00:00   
-21 2024-02-14 01:00:00 2024-02-15 02:00:00 2024-02-14 01:00:00   
-22 2024-02-14 01:00:00 2024-02-15 02:00:00 2024-02-14 01:00:00   
-23 2024-02-14 01:00:00 2024-02-15 02:00:00 2024-02-14 01:00:00   
-24 2024-02-14 01:00:00 2024-02-15 02:00:00 2024-02-14 01:00:00   
-25 2024-02-14 01:00:00 2024-02-15 02:00:00 2024-02-14 01:00:00   
-26 2024-02-14 01:00:00 2024-02-15 02:00:00 2024-02-14 01:00:00   
-27 2024-02-14 01:00:00 2024-02-15 02:00:00 2024-02-14 01:00:00   
-28 2024-02-14 01:00:00 2024-02-15 02:00:00 2024-02-14 01:00:00   
-29 2024-02-14 01:00:00 2024-02-15 02:00:00 2024-02-14 01:00:00   
-30 2024-02-15 03:00:00 2024-02-15 02:00:00                 NaT   
+                start                 end           start_act  \
+0 2015-07-01 05:00:00 2024-02-08 01:00:00 2015-07-01 05:00:00   
+1 2024-02-08 02:00:00 2024-02-14 16:00:00 2024-02-08 02:00:00   
 
-               end_act start_match end_match    n_obs   na      type  update  \
-0  2024-02-08 01:00:00        True      True  75453.0  0.0  backfill    True   
-1  2024-02-12 20:00:00        True      True    115.0  0.0   refresh    True   
-2  2024-02-13 16:00:00        True     False     20.0  0.0   refresh    True   
-3  2024-02-13 16:00:00        True     False     20.0  0.0   refresh    True   
-4  2024-02-13 17:00:00        True     False     21.0  0.0   refresh    True   
-5  2024-02-13 18:00:00        True     False     22.0  0.0   refresh    True   
-6  2024-02-13 19:00:00        True     False     23.0  0.0   refresh    True   
-7  2024-02-13 20:00:00        True      True     24.0  0.0   refresh    True   
-8                  NaT         NaN       NaN      NaN  NaN   refresh   False   
-9                  NaT         NaN       NaN      NaN  NaN   refresh   False   
-10                 NaT         NaN       NaN      NaN  NaN   refresh   False   
-11                 NaT         NaN       NaN      NaN  NaN   refresh   False   
-12 2024-02-13 21:00:00        True      True      1.0  0.0   refresh    True   
-13 2024-02-13 22:00:00        True      True      1.0  0.0   refresh    True   
-14 2024-02-13 23:00:00        True      True      1.0  0.0   refresh    True   
-15 2024-02-14 00:00:00        True      True      1.0  0.0   refresh    True   
-16                 NaT         NaN       NaN      NaN  NaN   refresh   False   
-17 2024-02-14 12:00:00        True     False     12.0  0.0   refresh    True   
-18 2024-02-14 15:00:00        True     False     15.0  0.0   refresh    True   
-19 2024-02-14 16:00:00        True     False     16.0  0.0   refresh    True   
-20 2024-02-14 17:00:00        True     False     17.0  0.0   refresh    True   
-21 2024-02-14 18:00:00        True     False     18.0  0.0   refresh    True   
-22 2024-02-14 19:00:00        True     False     19.0  0.0   refresh    True   
-23 2024-02-14 20:00:00        True     False     20.0  0.0   refresh    True   
-24 2024-02-14 21:00:00        True     False     21.0  0.0   refresh    True   
-25 2024-02-14 22:00:00        True     False     22.0  0.0   refresh    True   
-26 2024-02-14 23:00:00        True     False     23.0  0.0   refresh    True   
-27 2024-02-15 00:00:00        True     False     24.0  0.0   refresh    True   
-28 2024-02-15 01:00:00        True     False     25.0  0.0   refresh    True   
-29 2024-02-15 02:00:00        True      True     26.0  0.0   refresh    True   
-30                 NaT         NaN       NaN      NaN  NaN   refresh   False   
+              end_act  start_match  end_match  n_obs  na      type  update  \
+0 2024-02-08 01:00:00         True       True  75453   0  backfill    True   
+1 2024-02-14 16:00:00         True       True    159   0   refresh    True   
 
-    success  
-0      True  
-1      True  
-2     False  
-3     False  
-4     False  
-5     False  
-6     False  
-7      True  
-8     False  
-9     False  
-10    False  
-11    False  
-12     True  
-13     True  
-14     True  
-15     True  
-16    False  
-17    False  
-18    False  
-19    False  
-20    False  
-21    False  
-22    False  
-23    False  
-24    False  
-25    False  
-26    False  
-27    False  
-28    False  
-29     True  
-30    False  &gt;</code></pre>
+   success  
+0     True  
+1     True  &gt;</code></pre>
 </div>
 </div>
 <p>Next, we will extract from the log file the infromation of the most recent data refresh:</p>
-<div id="563da461" class="cell" data-execution_count="3">
+<div id="ecf924ef" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>meta_file <span class="op">=</span> log_file[log_file[<span class="st">"success"</span>] <span class="op">==</span> <span class="va">True</span>] </span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>meta_file <span class="op">=</span> meta_file[meta_file[<span class="st">"index"</span>] <span class="op">==</span> meta_file[<span class="st">"index"</span>].<span class="bu">max</span>()]</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>end_act <span class="op">=</span> meta_file[<span class="st">"end_act"</span>]</span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(end_act)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>29   2024-02-15 02:00:00
+<pre><code>1   2024-02-14 16:00:00
 Name: end_act, dtype: datetime64[ns]</code></pre>
 </div>
 </div>
 <p>The <code>end_act</code> reprecent the series ending timestamp, we will use it to check if new data is available on the API and set the <code>start</code> argument:</p>
-<div id="d4906bb2" class="cell" data-execution_count="4">
+<div id="dab8ba4e" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>start <span class="op">=</span> end_act <span class="op">+</span> datetime.timedelta(hours <span class="op">=</span> <span class="dv">1</span>)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>start <span class="op">=</span> datetime.datetime.strptime(<span class="bu">str</span>(start.iloc[<span class="dv">0</span>]), <span class="st">"%Y-%m-</span><span class="sc">%d</span><span class="st"> %H:%M:%S"</span>)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>start</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
-<pre><code>datetime.datetime(2024, 2, 15, 3, 0)</code></pre>
+<pre><code>datetime.datetime(2024, 2, 14, 17, 0)</code></pre>
 </div>
 </div>
 <p>Setting the GET request parameters:</p>
-<div id="2e15b111" class="cell" data-execution_count="5">
+<div id="d6ce22cd" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>api_path <span class="op">=</span> <span class="st">"electricity/rto/region-data/data"</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>facets <span class="op">=</span> {</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"respondent"</span>: <span class="st">"US48"</span>,</span>
@@ -349,10 +233,10 @@ Name: end_act, dtype: datetime64[ns]</code></pre>
 <span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>eia_api_key <span class="op">=</span> os.getenv(<span class="st">'EIA_API_KEY'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Pulling the series metadata from the API. We will use it to check if new data is available on the API using the <code>endPeriod</code> variable:</p>
-<div id="384c857b" class="cell" data-execution_count="6">
+<div id="192838f5" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>metadata <span class="op">=</span> eia_api.eia_metadata(api_key <span class="op">=</span> eia_api_key, api_path <span class="op">=</span> <span class="st">"electricity/rto/region-data/"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="089e5892" class="cell" data-execution_count="7">
+<div id="83c447ed" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(metadata.meta[<span class="st">"endPeriod"</span>])</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>end_api <span class="op">=</span> datetime.datetime.strptime(metadata.meta[<span class="st">"endPeriod"</span>], <span class="st">"%Y-%m-</span><span class="sc">%d</span><span class="st">T%H"</span>)</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(end_api)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -363,20 +247,20 @@ Name: end_act, dtype: datetime64[ns]</code></pre>
 <pre><code>datetime.datetime</code></pre>
 </div>
 </div>
-<p>The <code>start</code> variable represents the data request starting timestamp (calculated as most recent timestamp on the current dataset plus one hour). The <code>end_api</code> variable represents the timestamp of the most recent data point available on the API. There is some issue on the API timestampe, a gap of 6 hours between the value of the last data point and the actual, therefore, creating a fix with the <code>end_fix</code> variable:</p>
+<p>The <code>start</code> variable represents the data request starting timestamp (calculated as most recent timestamp on the current dataset plus one hour). The <code>end_api</code> variable represents the timestamp of the most recent data point available on the API. There is some issue on the API timestampe, a gap of 16 hours between the value of the last data point and the actual, therefore, creating a fix with the <code>end_fix</code> variable:</p>
 <p>Comparing between the start and</p>
-<div id="c68fe03c" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>end_fix <span class="op">=</span> end_api <span class="op">-</span>  datetime.timedelta(hours <span class="op">=</span> <span class="dv">6</span>)</span>
+<div id="04fe6374" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>end_fix <span class="op">=</span> end_api <span class="op">-</span>  datetime.timedelta(hours <span class="op">=</span> <span class="dv">16</span>)</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(start)</span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(end_fix)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>2024-02-15 03:00:00
-2024-02-15 02:00:00</code></pre>
+<pre><code>2024-02-14 17:00:00
+2024-02-14 16:00:00</code></pre>
 </div>
 </div>
 <p>We will initiat a GET request of the <code>end_fix</code> time is greater than the <code>start</code> time:</p>
-<div id="a5db92b7" class="cell" data-execution_count="9">
+<div id="8e43ed72" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> start <span class="op">&lt;=</span> end_fix:</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Updates available"</span>)</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> eia_api.eia_get(api_key <span class="op">=</span> eia_api_key, </span>
@@ -426,11 +310,11 @@ Name: end_act, dtype: datetime64[ns]</code></pre>
 <section id="updating-the-dataset-and-log-file" class="level2">
 <h2 class="anchored" data-anchor-id="updating-the-dataset-and-log-file">Updating the Dataset and Log File</h2>
 <p>If the pull was successful, we will append the new data to the current one. In any case, we will update log file with the results of the GET request:</p>
-<div id="7fc692dd" class="cell" data-execution_count="10">
+<div id="f699622a" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> success_flag:</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(df.data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="533d048f" class="cell" data-execution_count="11">
+<div id="e9234102" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>log <span class="op">=</span> {</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"index"</span>: log_file[<span class="st">"index"</span>].<span class="bu">max</span>() <span class="op">+</span> <span class="dv">1</span>,</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"respondent"</span>: <span class="st">"US48"</span>,</span>
@@ -481,12 +365,12 @@ Name: end_act, dtype: datetime64[ns]</code></pre>
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">0</td>
-<td>32</td>
+<td>3</td>
 <td>US48</td>
 <td>Demand</td>
-<td>2024-02-15 04:17:25.874410</td>
-<td>2024-02-15 03:00:00</td>
-<td>2024-02-15 02:00:00</td>
+<td>2024-02-15 05:10:50.138050</td>
+<td>2024-02-14 17:00:00</td>
+<td>2024-02-14 16:00:00</td>
 <td>None</td>
 <td>None</td>
 <td>None</td>
@@ -503,7 +387,7 @@ Name: end_act, dtype: datetime64[ns]</code></pre>
 </div>
 </div>
 </div>
-<div id="77d2be58" class="cell" data-execution_count="12">
+<div id="1e537285" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (success_flag):</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Save the data into CSV file"</span>)</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    pre_data <span class="op">=</span> pd.read_csv(<span class="st">"data/us48.csv"</span>)</span>
@@ -518,24 +402,24 @@ Name: end_act, dtype: datetime64[ns]</code></pre>
 <span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
 <span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> update_flag:</span>
 <span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>       <span class="bu">print</span>(<span class="st">"Updates are not available"</span>)</span>
-<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>       data <span class="op">=</span> pd.read_csv(<span class="st">"data/us48.csv"</span>)</span>
-<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>       data[<span class="st">"period"</span>] <span class="op">=</span> pd.to_datetime(data[<span class="st">"period"</span>])</span>
-<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>       data[<span class="st">"value"</span>] <span class="op">=</span> pd.to_numeric(data[<span class="st">"value"</span>])</span>
-<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> update_flag <span class="kw">and</span> <span class="kw">not</span> success_flag:</span>
-<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Fail to refresh the data, check the log..."</span>)</span>
-<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a>    new_log <span class="op">=</span> log_file._append(log_file_new)</span>
-<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a>    new_log.to_csv(<span class="st">"data/us48_metadata.csv"</span>, index <span class="op">=</span> <span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> update_flag <span class="kw">and</span> <span class="kw">not</span> success_flag:</span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Fail to refresh the data, check the log..."</span>)</span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>    new_log <span class="op">=</span> log_file._append(log_file_new)</span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>    new_log.to_csv(<span class="st">"data/us48_metadata.csv"</span>, index <span class="op">=</span> <span class="va">False</span>)</span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a>    data <span class="op">=</span> pd.read_csv(<span class="st">"data/us48.csv"</span>)</span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a>    data[<span class="st">"period"</span>] <span class="op">=</span> pd.to_datetime(data[<span class="st">"period"</span>])</span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a>    data[<span class="st">"value"</span>] <span class="op">=</span> pd.to_numeric(data[<span class="st">"value"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Updates are not available</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/tmp/ipykernel_142/3379530255.py:20: FutureWarning:
+<pre><code>/tmp/ipykernel_144/2879346539.py:17: FutureWarning:
 
 The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
 </code></pre>
 </div>
 </div>
-<div id="2762d02d" class="cell" data-execution_count="13">
+<div id="7c70df95" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>new_log</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="13">
 <div>
@@ -568,15 +452,15 @@ The behavior of DataFrame concatenation with empty or all-NA entries is deprecat
 <td>1</td>
 <td>US48</td>
 <td>Demand</td>
-<td>2024-02-12 22:58:19.904821</td>
+<td>2024-02-15 04:42:02.728624</td>
 <td>2015-07-01 05:00:00</td>
 <td>2024-02-08 01:00:00</td>
 <td>2015-07-01 05:00:00</td>
 <td>2024-02-08 01:00:00</td>
 <td>True</td>
 <td>True</td>
-<td>75453.0</td>
-<td>0.0</td>
+<td>75453</td>
+<td>0</td>
 <td>backfill</td>
 <td>True</td>
 <td>True</td>
@@ -586,555 +470,33 @@ The behavior of DataFrame concatenation with empty or all-NA entries is deprecat
 <td>2</td>
 <td>US48</td>
 <td>Demand</td>
-<td>2024-02-12 23:02:27.050996</td>
+<td>2024-02-15 04:51:05.511352</td>
 <td>2024-02-08 02:00:00</td>
-<td>2024-02-12 20:00:00</td>
+<td>2024-02-14 16:00:00</td>
 <td>2024-02-08 02:00:00</td>
-<td>2024-02-12 20:00:00</td>
+<td>2024-02-14 16:00:00</td>
 <td>True</td>
 <td>True</td>
-<td>115.0</td>
-<td>0.0</td>
+<td>159</td>
+<td>0</td>
 <td>refresh</td>
 <td>True</td>
 <td>True</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
+<td data-quarto-table-cell-role="th">0</td>
 <td>3</td>
 <td>US48</td>
 <td>Demand</td>
-<td>2024-02-13 16:57:17.255254</td>
-<td>2024-02-12 21:00:00</td>
-<td>2024-02-13 20:00:00</td>
-<td>2024-02-12 21:00:00</td>
-<td>2024-02-13 16:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>20.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
-<td>4</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-02-13 17:10:35.872205</td>
-<td>2024-02-12 21:00:00</td>
-<td>2024-02-13 20:00:00</td>
-<td>2024-02-12 21:00:00</td>
-<td>2024-02-13 16:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>20.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
-<td>5</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-02-13 18:14:51.359850</td>
-<td>2024-02-12 21:00:00</td>
-<td>2024-02-13 20:00:00</td>
-<td>2024-02-12 21:00:00</td>
-<td>2024-02-13 17:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>21.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">5</td>
-<td>6</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-02-13 19:09:42.918819</td>
-<td>2024-02-12 21:00:00</td>
-<td>2024-02-13 20:00:00</td>
-<td>2024-02-12 21:00:00</td>
-<td>2024-02-13 18:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>22.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">6</td>
-<td>7</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-02-13 20:13:24.543277</td>
-<td>2024-02-12 21:00:00</td>
-<td>2024-02-13 20:00:00</td>
-<td>2024-02-12 21:00:00</td>
-<td>2024-02-13 19:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>23.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">7</td>
-<td>8</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-02-14 05:35:05.512191</td>
-<td>2024-02-12 21:00:00</td>
-<td>2024-02-13 20:00:00</td>
-<td>2024-02-12 21:00:00</td>
-<td>2024-02-13 20:00:00</td>
-<td>True</td>
-<td>True</td>
-<td>24.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>True</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">8</td>
-<td>9</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-02-14 06:13:53.186437</td>
-<td>2024-02-13 21:00:00</td>
-<td>2024-02-13 20:00:00</td>
-<td>NaT</td>
-<td>NaT</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>refresh</td>
-<td>False</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">9</td>
-<td>10</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-02-14 07:11:20.375035</td>
-<td>2024-02-13 21:00:00</td>
-<td>2024-02-13 20:00:00</td>
-<td>NaT</td>
-<td>NaT</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>refresh</td>
-<td>False</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">10</td>
-<td>11</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-02-14 08:13:16.880164</td>
-<td>2024-02-13 21:00:00</td>
-<td>2024-02-13 20:00:00</td>
-<td>NaT</td>
-<td>NaT</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>refresh</td>
-<td>False</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">11</td>
-<td>12</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-02-14 09:10:34.868457</td>
-<td>2024-02-13 21:00:00</td>
-<td>2024-02-13 20:00:00</td>
-<td>NaT</td>
-<td>NaT</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>refresh</td>
-<td>False</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">12</td>
-<td>13</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-02-14 10:11:01.200508</td>
-<td>2024-02-13 21:00:00</td>
-<td>2024-02-13 21:00:00</td>
-<td>2024-02-13 21:00:00</td>
-<td>2024-02-13 21:00:00</td>
-<td>True</td>
-<td>True</td>
-<td>1.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>True</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">13</td>
-<td>14</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-02-14 11:10:00.769793</td>
-<td>2024-02-13 22:00:00</td>
-<td>2024-02-13 22:00:00</td>
-<td>2024-02-13 22:00:00</td>
-<td>2024-02-13 22:00:00</td>
-<td>True</td>
-<td>True</td>
-<td>1.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>True</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">14</td>
-<td>15</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-02-14 12:17:58.708810</td>
-<td>2024-02-13 23:00:00</td>
-<td>2024-02-13 23:00:00</td>
-<td>2024-02-13 23:00:00</td>
-<td>2024-02-13 23:00:00</td>
-<td>True</td>
-<td>True</td>
-<td>1.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>True</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">15</td>
-<td>16</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-02-14 13:10:46.502477</td>
-<td>2024-02-14 00:00:00</td>
-<td>2024-02-14 00:00:00</td>
-<td>2024-02-14 00:00:00</td>
-<td>2024-02-14 00:00:00</td>
-<td>True</td>
-<td>True</td>
-<td>1.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>True</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">16</td>
-<td>17</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-02-14 14:10:21.676475</td>
-<td>2024-02-14 01:00:00</td>
-<td>2024-02-14 00:00:00</td>
-<td>NaT</td>
-<td>NaT</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>refresh</td>
-<td>False</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">17</td>
-<td>18</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-02-14 15:10:06.353479</td>
-<td>2024-02-14 01:00:00</td>
-<td>2024-02-15 02:00:00</td>
-<td>2024-02-14 01:00:00</td>
-<td>2024-02-14 12:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>12.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">18</td>
-<td>19</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-02-14 16:12:56.189942</td>
-<td>2024-02-14 01:00:00</td>
-<td>2024-02-15 02:00:00</td>
-<td>2024-02-14 01:00:00</td>
-<td>2024-02-14 15:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>15.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">19</td>
-<td>20</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-02-14 17:09:51.486672</td>
-<td>2024-02-14 01:00:00</td>
-<td>2024-02-15 02:00:00</td>
-<td>2024-02-14 01:00:00</td>
-<td>2024-02-14 16:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>16.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">20</td>
-<td>21</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-02-14 18:12:34.795998</td>
-<td>2024-02-14 01:00:00</td>
-<td>2024-02-15 02:00:00</td>
-<td>2024-02-14 01:00:00</td>
+<td>2024-02-15 05:10:50.138050</td>
 <td>2024-02-14 17:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>17.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">21</td>
-<td>22</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-02-14 19:08:39.430394</td>
-<td>2024-02-14 01:00:00</td>
-<td>2024-02-15 02:00:00</td>
-<td>2024-02-14 01:00:00</td>
-<td>2024-02-14 18:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>18.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">22</td>
-<td>23</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-02-14 20:10:48.476413</td>
-<td>2024-02-14 01:00:00</td>
-<td>2024-02-15 02:00:00</td>
-<td>2024-02-14 01:00:00</td>
-<td>2024-02-14 19:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>19.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">23</td>
-<td>24</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-02-14 21:09:51.277234</td>
-<td>2024-02-14 01:00:00</td>
-<td>2024-02-15 02:00:00</td>
-<td>2024-02-14 01:00:00</td>
-<td>2024-02-14 20:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>20.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">24</td>
-<td>25</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-02-14 22:09:45.640566</td>
-<td>2024-02-14 01:00:00</td>
-<td>2024-02-15 02:00:00</td>
-<td>2024-02-14 01:00:00</td>
-<td>2024-02-14 21:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>21.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">25</td>
-<td>26</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-02-14 23:10:33.124173</td>
-<td>2024-02-14 01:00:00</td>
-<td>2024-02-15 02:00:00</td>
-<td>2024-02-14 01:00:00</td>
-<td>2024-02-14 22:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>22.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">26</td>
-<td>27</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-02-15 00:43:55.942281</td>
-<td>2024-02-14 01:00:00</td>
-<td>2024-02-15 02:00:00</td>
-<td>2024-02-14 01:00:00</td>
-<td>2024-02-14 23:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>23.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">27</td>
-<td>28</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-02-15 01:42:53.680331</td>
-<td>2024-02-14 01:00:00</td>
-<td>2024-02-15 02:00:00</td>
-<td>2024-02-14 01:00:00</td>
-<td>2024-02-15 00:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>24.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">28</td>
-<td>29</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-02-15 02:17:03.003146</td>
-<td>2024-02-14 01:00:00</td>
-<td>2024-02-15 02:00:00</td>
-<td>2024-02-14 01:00:00</td>
-<td>2024-02-15 01:00:00</td>
-<td>True</td>
-<td>False</td>
-<td>25.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">29</td>
-<td>30</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-02-15 03:11:59.640463</td>
-<td>2024-02-14 01:00:00</td>
-<td>2024-02-15 02:00:00</td>
-<td>2024-02-14 01:00:00</td>
-<td>2024-02-15 02:00:00</td>
-<td>True</td>
-<td>True</td>
-<td>26.0</td>
-<td>0.0</td>
-<td>refresh</td>
-<td>True</td>
-<td>True</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">30</td>
-<td>31</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-02-15 04:13:02.800411</td>
-<td>2024-02-15 03:00:00</td>
-<td>2024-02-15 02:00:00</td>
-<td>NaT</td>
-<td>NaT</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>NaN</td>
-<td>refresh</td>
-<td>False</td>
-<td>False</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">0</td>
-<td>32</td>
-<td>US48</td>
-<td>Demand</td>
-<td>2024-02-15 04:17:25.874410</td>
-<td>2024-02-15 03:00:00</td>
-<td>2024-02-15 02:00:00</td>
+<td>2024-02-14 16:00:00</td>
 <td>NaT</td>
 <td>NaT</td>
 <td>None</td>
 <td>None</td>
-<td>NaN</td>
-<td>NaN</td>
+<td>None</td>
+<td>None</td>
 <td>refresh</td>
 <td>False</td>
 <td>False</td>
@@ -1151,18 +513,18 @@ The behavior of DataFrame concatenation with empty or all-NA entries is deprecat
 <p>Forecast scope: - Used a train forecasting model and refit it with new data - Forecast refresh daily at the end of the day (past 23:00 UTC) - Forecast horizon 24 hours</p>
 <p>Steps: - Load the forecast log file - Check the time stamp of the most recent forecast - Check if new data meet the refresh criteria - If meet the criteria, update the forecast - Update the log file</p>
 <p>Forecast parameters</p>
-<div id="c79ce0aa" class="cell" data-execution_count="14">
+<div id="00b5497a" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span> <span class="dv">24</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>freq <span class="op">=</span> <span class="dv">24</span></span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>num_sample <span class="op">=</span> <span class="dv">500</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Forecast model:</p>
-<div id="160414d4" class="cell" data-execution_count="15">
+<div id="236fa170" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>lr_model <span class="op">=</span> LinearRegressionModel(lags<span class="op">=</span> [ <span class="op">-</span>freq, <span class="op">-</span><span class="dv">7</span> <span class="op">*</span> freq,  <span class="op">-</span> <span class="dv">365</span> <span class="op">*</span> freq],</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>                                 likelihood<span class="op">=</span> <span class="st">"quantile"</span>, </span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>                                 quantiles <span class="op">=</span> [<span class="fl">0.05</span>, <span class="fl">0.1</span>, <span class="fl">0.25</span>, <span class="fl">0.5</span>, <span class="fl">0.75</span>, <span class="fl">0.9</span>, <span class="fl">0.95</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="956d2dab" class="cell" data-execution_count="16">
+<div id="8be9f358" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>fc_meta <span class="op">=</span> pd.read_csv(<span class="st">"data/fc48_metadata.csv"</span>)</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>fc_meta[<span class="st">"start_act"</span>] <span class="op">=</span> pd.to_datetime(fc_meta[<span class="st">"start_act"</span>])</span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>fc_meta[<span class="st">"end_act"</span>] <span class="op">=</span> pd.to_datetime(fc_meta[<span class="st">"end_act"</span>])</span>
@@ -1197,7 +559,7 @@ The behavior of DataFrame concatenation with empty or all-NA entries is deprecat
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">1</td>
-<td>2024-02-14 13:11:01</td>
+<td>2024-02-15 04:51:15</td>
 <td>2024-02-14</td>
 <td>2024-02-14 00:00:00</td>
 <td>2024-02-14</td>
@@ -1221,12 +583,12 @@ The behavior of DataFrame concatenation with empty or all-NA entries is deprecat
 </div>
 </div>
 <p>Score past models:</p>
-<div id="fb41f028" class="cell" data-execution_count="17">
+<div id="77ef4eb2" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>act_max <span class="op">=</span> data[<span class="st">"period"</span>].<span class="bu">max</span>()</span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>fc_archive <span class="op">=</span> pd.read_csv(<span class="st">"data/fc48.csv"</span>)</span>
 <span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>fc_archive[<span class="st">"period"</span>] <span class="op">=</span> pd.to_datetime(fc_archive[<span class="st">"period"</span>])</span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>update_fc_meta <span class="op">=</span> <span class="va">False</span></span>
 <span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, row <span class="kw">in</span> fc_meta.iterrows():</span>
 <span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> row[<span class="st">"start_act"</span>] <span class="op">&lt;</span> act_max:</span>
@@ -1238,9 +600,10 @@ The behavior of DataFrame concatenation with empty or all-NA entries is deprecat
 <span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a>        fc_meta.at[index, <span class="st">"coverage"</span>] <span class="op">=</span><span class="bu">sum</span>((f[<span class="st">"value"</span>] <span class="op">&lt;=</span> f[<span class="st">"upper"</span>]) <span class="op">&amp;</span> (f[<span class="st">"value"</span>] <span class="op">&gt;=</span> f[<span class="st">"lower"</span>])) <span class="op">/</span> <span class="bu">len</span>(f)</span>
 <span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">len</span>(f) <span class="op">==</span> n_obs: </span>
-<span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a>            fc_meta.at[index, <span class="st">"score"</span>] <span class="op">=</span> <span class="va">True</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a>            fc_meta.at[index, <span class="st">"score"</span>] <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb28-18"><a href="#cb28-18" aria-hidden="true" tabindex="-1"></a>        update_fc_meta <span class="op">=</span> <span class="va">True</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="2db650a2" class="cell" data-execution_count="18">
+<div id="e5556654" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>fc_last <span class="op">=</span> fc_meta[<span class="st">"end_act"</span>].<span class="bu">max</span>()</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> fc_last <span class="op">&lt;</span> act_max:</span>
@@ -1288,31 +651,15 @@ The behavior of DataFrame concatenation with empty or all-NA entries is deprecat
 <span id="cb29-45"><a href="#cb29-45" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Save the forecast metadata into CSV file"</span>)</span>
 <span id="cb29-46"><a href="#cb29-46" aria-hidden="true" tabindex="-1"></a>    fc_log_df <span class="op">=</span> pd.DataFrame([fc_log])</span>
 <span id="cb29-47"><a href="#cb29-47" aria-hidden="true" tabindex="-1"></a>    fc_log_new <span class="op">=</span> fc_meta._append(fc_log_df)</span>
-<span id="cb29-48"><a href="#cb29-48" aria-hidden="true" tabindex="-1"></a>    <span class="co"># fc_log_new.to_csv("data/fc48_metadata.csv", index = False)</span></span>
+<span id="cb29-48"><a href="#cb29-48" aria-hidden="true" tabindex="-1"></a>    fc_log_new.to_csv(<span class="st">"data/fc48_metadata.csv"</span>, index <span class="op">=</span> <span class="va">False</span>)</span>
 <span id="cb29-49"><a href="#cb29-49" aria-hidden="true" tabindex="-1"></a>   </span>
 <span id="cb29-50"><a href="#cb29-50" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Save the forecast into CSV file"</span>)</span>
 <span id="cb29-51"><a href="#cb29-51" aria-hidden="true" tabindex="-1"></a>    fc_archive <span class="op">=</span> pd.read_csv(<span class="st">"data/fc48.csv"</span>)</span>
 <span id="cb29-52"><a href="#cb29-52" aria-hidden="true" tabindex="-1"></a>    fc_archive[<span class="st">"period"</span>] <span class="op">=</span> pd.to_datetime(fc_archive[<span class="st">"period"</span>])</span>
 <span id="cb29-53"><a href="#cb29-53" aria-hidden="true" tabindex="-1"></a>    new_fc_file <span class="op">=</span> fc_archive._append(fc)</span>
-<span id="cb29-54"><a href="#cb29-54" aria-hidden="true" tabindex="-1"></a>    <span class="co"># new_fc_file.to_csv("data/fc48.csv", index = False)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>You are transforming a stochastic TimeSeries (i.e., contains several samples). The resulting DataFrame is a 2D object with all samples on the columns. If this is not the expected behavior consider calling a function adapted to stochastic TimeSeries like quantile_df().
-/tmp/ipykernel_142/2315057940.py:47: FutureWarning:
-
-The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
-</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Save the forecast metadata into CSV file
-Save the forecast into CSV file</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="eia_data_refresh_files/figure-html/cell-19-output-3.png" width="608" height="426" class="figure-img"></p>
-</figure>
-</div>
-</div>
+<span id="cb29-54"><a href="#cb29-54" aria-hidden="true" tabindex="-1"></a>    new_fc_file.to_csv(<span class="st">"data/fc48.csv"</span>, index <span class="op">=</span> <span class="va">False</span>)</span>
+<span id="cb29-55"><a href="#cb29-55" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> update_fc_meta:</span>
+<span id="cb29-56"><a href="#cb29-56" aria-hidden="true" tabindex="-1"></a>    fc_meta.to_csv(<span class="st">"data/fc48_metadata.csv"</span>, index <span class="op">=</span> <span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 
