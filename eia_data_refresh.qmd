@@ -116,12 +116,12 @@ end_api = datetime.datetime.strptime(metadata.meta["endPeriod"], "%Y-%m-%dT%H")
 type(end_api)
 ```
 
-The `start` variable represents the data request starting timestamp (calculated as most recent timestamp on the current dataset plus one hour). The `end_api` variable represents the timestamp of the most recent data point available on the API. There is some issue on the API timestampe, a gap of 6 hours between the value of the last data point and the actual, therefore, creating a fix with the `end_fix` variable:
+The `start` variable represents the data request starting timestamp (calculated as most recent timestamp on the current dataset plus one hour). The `end_api` variable represents the timestamp of the most recent data point available on the API. There is some issue on the API timestampe, a gap of 16 hours between the value of the last data point and the actual, therefore, creating a fix with the `end_fix` variable:
 
 
 Comparing between the start and 
 ```{python}
-end_fix = end_api -  datetime.timedelta(hours = 6)
+end_fix = end_api -  datetime.timedelta(hours = 16)
 
 print(start)
 print(end_fix)
@@ -222,13 +222,13 @@ if (success_flag):
 else:
     if not update_flag:
        print("Updates are not available")
-       data = pd.read_csv("data/us48.csv")
-       data["period"] = pd.to_datetime(data["period"])
-       data["value"] = pd.to_numeric(data["value"])
     elif update_flag and not success_flag:
         print("Fail to refresh the data, check the log...")
     new_log = log_file._append(log_file_new)
     new_log.to_csv("data/us48_metadata.csv", index = False)
+    data = pd.read_csv("data/us48.csv")
+    data["period"] = pd.to_datetime(data["period"])
+    data["value"] = pd.to_numeric(data["value"])
 
 ```
 
@@ -286,7 +286,7 @@ act_max = data["period"].max()
 
 fc_archive = pd.read_csv("data/fc48.csv")
 fc_archive["period"] = pd.to_datetime(fc_archive["period"])
-
+update_fc_meta = False
 
 for index, row in fc_meta.iterrows():
     if row["start_act"] < act_max:
@@ -299,6 +299,8 @@ for index, row in fc_meta.iterrows():
 
         if len(f) == n_obs: 
             fc_meta.at[index, "score"] = True
+        update_fc_meta = True
+        
 
 ```
 
@@ -353,12 +355,16 @@ if fc_last < act_max:
     print("Save the forecast metadata into CSV file")
     fc_log_df = pd.DataFrame([fc_log])
     fc_log_new = fc_meta._append(fc_log_df)
-    # fc_log_new.to_csv("data/fc48_metadata.csv", index = False)
+    fc_log_new.to_csv("data/fc48_metadata.csv", index = False)
    
     print("Save the forecast into CSV file")
     fc_archive = pd.read_csv("data/fc48.csv")
     fc_archive["period"] = pd.to_datetime(fc_archive["period"])
     new_fc_file = fc_archive._append(fc)
-    # new_fc_file.to_csv("data/fc48.csv", index = False)
+    new_fc_file.to_csv("data/fc48.csv", index = False)
+elif update_fc_meta:
+    fc_meta.to_csv("data/fc48_metadata.csv", index = False)
+    
+
      
 ```
