@@ -1,2 +1,2 @@
 time,label,start,start_act,end_act,h,n_obs,start_flag,n_obs_flag,model,pi,score,mape,rmse,coverage,success
-2024-02-16 17:09:48,2024-02-16,2024-02-16 00:00:00,2024-02-16,2024-02-16 23:00:00,24,24,True,True,LinearRegressionModel,0.95,False,0.018706983317507832,9215.850993173284,1.0,True
+2024-02-16 17:09:48,2024-02-16,2024-02-16 00:00:00,2024-02-16,2024-02-16 23:00:00,24,24,True,True,LinearRegressionModel,0.95,False,0.019622465537947942,9774.107088250594,1.0,True
