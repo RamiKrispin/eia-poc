@@ -42,6 +42,7 @@ In addition, we will use the following libraries:
 ```{python}
 #| label: load libraries
 import eia_api
+import eia_etl as etl
 import os
 import datetime
 import numpy as np
@@ -61,32 +62,23 @@ from darts.models.forecasting.linear_regression_model import LinearRegressionMod
 We will load the log file from the `data` folder:
 
 ```{python}
-log_file = pd.read_csv("data/us48_metadata.csv")
-
-cols_time = log_file.columns[3:8]
-log_file[cols_time] = log_file[cols_time].apply(pd.to_datetime)
-print(log_file.dtypes)
-
-log_file.head
-
+log_file = etl.load_log(path = "data/us48_metadata.csv")
 ```
 
-Next, we will extract from the log file the infromation of the most recent data refresh:
-```{python}
-meta_file = log_file[log_file["success"] == True] 
-meta_file = meta_file[meta_file["index"] == meta_file["index"].max()]
 
-end_act = meta_file["end_act"]
-print(end_act)
-```
+The `load_log` function returns the following objects:
 
-The `end_act` reprecent the series ending timestamp, we will use it to check if new data is available on the API and set the `start` argument:
-
+- `log` - the full data log
+- `last_success` - the log of the last success data pull
+- `end` - the timestamp of the last data point derived from the `last_success` row 
+- `start` - the start timestamp of the future data pull (calculated as `end` + 1 hour)
 
 ```{python}
-start = end_act + datetime.timedelta(hours = 1)
-start = datetime.datetime.strptime(str(start.iloc[0]), "%Y-%m-%d %H:%M:%S")
-start
+print(log_file.last_success)
+print(log_file.end)
+print(log_file.start)
+
+start = log_file.start
 ```
 
 
@@ -104,137 +96,43 @@ offset = 2250
 eia_api_key = os.getenv('EIA_API_KEY')
 ```
 
-Pulling the series metadata from the API. We will use it to check if new data is available on the API using the `endPeriod` variable:
+Pulling the series metadata from the API. We will use it to check if new data is available on the API using the `get_api_end` function:
 
 ```{python}
-metadata = eia_api.eia_metadata(api_key = eia_api_key, api_path = "electricity/rto/region-data/")
+metadata = etl.get_api_end(api_key = eia_api_key, 
+api_path = "electricity/rto/region-data/", offset = 16)
 ```
 
+The `end` variable represents the timestamp of the most recent data point available on the API. There is some issue on the API timestampe, a gap of 16 hours between the value of the last data point and the actual, therefore, we will offset the `end` value by 16 hours using the `offset` argument and save it as `end_fix`:
+
 ```{python}
-print(metadata.meta["endPeriod"])
-end_api = datetime.datetime.strptime(metadata.meta["endPeriod"], "%Y-%m-%dT%H")
-type(end_api)
+print(metadata.end)
+print(metadata.end_fix)
+
+end_fix = metadata.end_fix
 ```
 
-The `start` variable represents the data request starting timestamp (calculated as most recent timestamp on the current dataset plus one hour). The `end_api` variable represents the timestamp of the most recent data point available on the API. There is some issue on the API timestampe, a gap of 16 hours between the value of the last data point and the actual, therefore, creating a fix with the `end_fix` variable:
 
-
-Comparing between the start and 
-```{python}
-end_fix = end_api -  datetime.timedelta(hours = 16)
-
-print(start)
-print(end_fix)
-```
-
-We will initiat a GET request of the `end_fix` time is greater than the `start` time: 
-
-```{python}
-if start <= end_fix:
-    print("Updates available")
-    df = eia_api.eia_get(api_key = eia_api_key, 
-        api_path = api_path, 
-        facets = facets, 
-        start = start,
-        end = end_fix) 
-    update_flag = True
-    if(len(df.data) > 0):
-        start_match_flag = df.data["period"].min() == start
-        end_match_flag = df.data["period"].max() == end_fix
-        start_act = df.data["period"].min()
-        end_act = df.data["period"].max()
-        n_obs = len(df.data)
-        na = df.data["value"].isna().sum()
-        if start_match_flag and end_match_flag and na == 0 and n_obs > 0:
-            print("Refresh successed")
-            success_flag = True
-        else:
-            success_flag = False
-            print("Refresh failed")
-    else:
-        print("Refresh failed")
-        success_flag = False
-        start_match_flag = None
-        end_match_flag = None
-        start_act = None
-        end_act = None
-        n_obs = None
-        na = None
-        
-else:
-    print("No updates are available...")
-    update_flag = False
-    success_flag = False
-    start_match_flag = None
-    end_match_flag = None
-    start_act = None
-    end_act = None
-    n_obs = None
-    na = None
+``` {python}
+new_data = etl.eia_data_refresh(start = start, end = end_fix, api_key = eia_api_key, api_path = api_path, facets = facets) 
 
 ```
 
 ## Updating the Dataset and Log File
 
-If the pull was successful, we will append the new data to the current one. In any case, we will update log file with the results of the GET request:
 ```{python}
-if success_flag:
-    print(df.data)
+data = etl.append_new_data(data_path = "data/us48.csv",
+                           log_path = "data/us48_metadata.csv",
+                           new_data = new_data,
+                           save = True)
 ```
 
-```{python}
-log = {
-    "index": log_file["index"].max() + 1,
-    "respondent": "US48",
-    "respondent_type": "Demand",
-    "time": datetime.datetime.now(),
-    "start": start,
-    "end": end_fix,
-    "start_act": start_act,
-    "end_act": end_act,
-    "start_match": start_match_flag, 
-    "end_match": end_match_flag, 
-    "n_obs": n_obs,
-    "na": na,
-    "type": "refresh",
-    "update": update_flag,
-    "success": success_flag
-
-}
-
-log_file_new = pd.DataFrame([log])
-
-log_file_new
-```
 
 ```{python}
-if (success_flag):
-    print("Save the data into CSV file")
-    pre_data = pd.read_csv("data/us48.csv")
-    pre_data["period"] = pd.to_datetime(pre_data["period"])
-    pre_data["value"] = pd.to_numeric(pre_data["value"])
-    data = pre_data._append(df.data)
-    data = data.sort_values("period")
-    data.to_csv("data/us48.csv", index = False)
-    print("Save the metadata into CSV file")
-    new_log = log_file._append(log_file_new)
-    new_log.to_csv("data/us48_metadata.csv", index = False)
-else:
-    if not update_flag:
-       print("Updates are not available")
-    elif update_flag and not success_flag:
-        print("Fail to refresh the data, check the log...")
-    new_log = log_file._append(log_file_new)
-    new_log.to_csv("data/us48_metadata.csv", index = False)
-    data = pd.read_csv("data/us48.csv")
-    data["period"] = pd.to_datetime(data["period"])
-    data["value"] = pd.to_numeric(data["value"])
-
+print(data.log)
+print(data.data_update)
 ```
 
-```{python}
-new_log
-```
 
 ## Forecast Refresh
 
