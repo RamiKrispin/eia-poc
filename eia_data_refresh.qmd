@@ -121,16 +121,18 @@ new_data = etl.eia_data_refresh(start = start, end = end_fix, api_key = eia_api_
 ## Updating the Dataset and Log File
 
 ```{python}
-data = etl.append_new_data(data_path = "data/us48.csv",
+append_data = etl.append_new_data(data_path = "data/us48.csv",
                            log_path = "data/us48_metadata.csv",
                            new_data = new_data,
                            save = True)
+
+data = append_data.data
 ```
 
 
 ```{python}
-print(data.log)
-print(data.data_update)
+print(append_data.log)
+print(append_data.data_update)
 ```
 
 
