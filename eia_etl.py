@@ -128,6 +128,9 @@ def eia_data_refresh(start, end, api_key, api_path, facets):
     return output
 
 
+
+
+
 def append_new_data(data_path,log_path, new_data, save = False):
     
     class appended_data:
@@ -156,7 +159,7 @@ def append_new_data(data_path,log_path, new_data, save = False):
 
         if save:
             print("Save the data into CSV file")
-            data.to_csv(data, index = False)
+            data.to_csv(data_path, index = False)
             print("Save the metadata into CSV file")
             new_log.to_csv(log_path, index = False)
     else:
