@@ -1,3 +1,4 @@
 index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,end_match,n_obs,na,type,update,success
 1,US48,Demand,2024-02-20 14:11:55.449562,2015-07-01 05:00:00,2024-02-18 01:00:00,2015-07-01 05:00:00,2024-02-18 01:00:00,True,True,75693,0,backfill,True,True
 2,US48,Demand,2024-02-20 14:17:41.904256,2024-02-18 02:00:00,2024-02-19 20:00:00,2024-02-18 02:00:00,2024-02-19 20:00:00,True,True,43,0,refresh,True,True
+3,US48,Demand,2024-02-20 14:24:41.537818,2024-02-19 21:00:00,2024-02-19 20:00:00,,,,,,,refresh,False,False
