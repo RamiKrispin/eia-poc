@@ -43,6 +43,7 @@ In addition, we will use the following libraries:
 #| label: load libraries
 import eia_api
 import eia_etl as etl
+import eia_forecast as fc
 import os
 import datetime
 import numpy as np
@@ -161,6 +162,67 @@ num_sample = 500
 ```
 
 
+```{python}
+log_path = "data/fc48_metadata.csv"
+fc_path = "data/fc48.csv"
+
+forecast_start = data["period"].max().floor(freq = "d")
+last_start = fc.get_last_fc_start(log_path = log_path)
+
+if last_start < forecast_start:
+    end = forecast_start - datetime.timedelta(hours = 1)
+    start = end - datetime.timedelta(hours = freq * 365 * 2)
+    print(start, end)
+    input = fc.set_input(input = data, start = start, end = end)
+    
+    forecast = fc.train_lm(input = input, 
+            lags = [ -freq, -7 * freq,  - 365 * freq],
+            likelihood = "quantile",
+            quantiles = [0.025, 0.1, 0.25, 0.5, 0.75, 0.9, 0.975],
+            h = h,
+            pi = 0.95,
+            num_samples = 500)
+    print(forecast.log)
+    log = fc.append_log(log_path= log_path, new_log = forecast.log, save = True, init = False)
+    new_fc = fc.append_forecast(fc_path =  "data/fc48.csv", fc_new = forecast, save = True, init = False)
+```
+
+
+
+Score past forecasts
+
+```{python}
+fc = fc.load_forecast(fc_path)
+new_log = fc.score_forecast(log_path = "data/fc48_metadata.csv", actual = data, forecast = new_fc, save = True)
+```
+
+```{python}
+log_path = "data/fc48_metadata.csv"
+
+# def get_last_fc_start(log_path):
+    
+fc_log = pd.read_csv(log_path)
+fc_log = fc_log[fc_log["success"] == True]
+fc_log = fc_log[fc_log["index"] == fc_log["index"].max()]
+fc_log["start_act"] = pd.to_datetime(fc_log["start_act"])
+fc_log["end_act"] = pd.to_datetime(fc_log["end_act"])
+
+    # return fc_log
+    
+last_start = get_last_fc_start(log_path = log_path)
+# print(last_start)
+
+# forecast_start = data["period"].max().floor(freq = "d")
+
+# if last_start < pd.to_datetime(forecast_start):
+#     print("test")
+```
+
+
+
+
+
+
 Forecast model:
 ```{python}
 lr_model = LinearRegressionModel(lags= [ -freq, -7 * freq,  - 365 * freq],
@@ -205,6 +267,10 @@ for index, row in fc_meta.iterrows():
 ```
 
 
+
+```{python}
+forecast_start = data["period"].max().floor(freq = "d")
+```
 
 
 ```{python}

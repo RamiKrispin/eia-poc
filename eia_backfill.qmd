@@ -26,6 +26,8 @@ We will pull the data from the EIA API using a set of functions on the `eia_api.
 ```{python}
 import eia_api
 import plot_fc
+import eia_etl as etl
+import eia_forecast as fc
 ```
 
 The `eia_api.py` file imports the following libraries:
@@ -68,7 +70,7 @@ facets = {
 }
 
 start = datetime.datetime(2015, 7, 1, 5)
-end = datetime.datetime(2024, 2, 8, 1)
+end = datetime.datetime(2024, 2, 18, 1)
 
 offset = 2250
 
@@ -214,148 +216,59 @@ profile
 
 ## Create forecast
 
+
+```{python}
+data = df.data
+data["period"].max()
+```
+
 ```{python}
 h = 24
 freq = 24
 num_samples = 500
+
+
+pd.read_csv("data/fc48_metadata.csv")
 ```
 
 ```{python}
+start = 30
 
+for i in range(start, 0 , -1):
+    input = None
+    forecast = None
+    lon = None
+    print(i)
+    if i == start:
+        init = True
+    else:
+        init = False
 
-forecast_start = df.data["period"].max().floor(freq = "d")
+    end = data["period"].max().floor(freq = "d") - datetime.timedelta(days = i) - datetime.timedelta(hours = 1)
+    start = end - datetime.timedelta(hours = freq * 365 * 2)
+    print(start, end)
+    input = fc.set_input(input = data, start = start, end = end)
+    print(input.forecast_start)
+    forecast = fc.train_lm(input = input, 
+            lags = [ -freq, -7 * freq,  - 365 * freq],
+            likelihood = "quantile",
+            quantiles = [0.025, 0.1, 0.25, 0.5, 0.75, 0.9, 0.975],
+            h = h,
+            pi = 0.95,
+            num_samples = 500)
+    print(forecast.log)
+    log = fc.append_log(log_path= "data/fc48_metadata.csv", new_log = forecast.log, save = True, init = init)
+    new_fc = fc.append_forecast(fc_path =  "data/fc48.csv", fc_new = forecast, save = True, init = init)
 
-forecast_start
-
-ts_start = forecast_start - datetime.timedelta(hours = freq * 365 * 2)
-```
-
-```{python}
-
-d1 = d[(d["period"] > ts_start) & (d["period"] < forecast_start)]
-
-input = TimeSeries.from_dataframe(d1,time_col= "period", value_cols= "value")
-
-```
-
-```{python}
-lr_model = LinearRegressionModel(lags= [ -freq, -7 * freq,  - 365 * freq],
-                                 likelihood= "quantile", 
-                                 quantiles = [0.05, 0.1, 0.25, 0.5, 0.75, 0.9, 0.95])
-
-lr_model.fit(input)
-```
-
-
-```{python}
-
-lr_preds = lr_model.predict(series=input, 
-                            n= h, 
-                            num_samples = num_samples)
-
-lr_preds.plot(label = "Forecast",low_quantile=0.05, high_quantile=0.95)
-```
-
-```{python}
-pred = lr_preds.pd_dataframe()
-fc = pred.quantile(axis = 1, q = [0.05, 0.5, 0.95]).transpose().reset_index()
-
-fc = fc.rename(columns = {0.05: "lower", 0.5: "mean", 0.95: "upper"})
-fc.head()
-
-```
-
-```{python}
-label = str(forecast_start.date())
-
-fc["label"] = label
-
-
-fc_log = {
-    "time": datetime.datetime.now(tz=ZoneInfo("UTC")).strftime('%Y-%m-%d %H:%M:%S'),
-    "label": label,
-    "start": forecast_start,
-    "start_act": fc["period"].min(),
-    "end_act": fc["period"].max(),
-    "h": h,
-    "n_obs": len(fc),
-    "start_flag": forecast_start == fc["period"].min(),
-    "n_obs_flag": h == len(fc),
-    "model": "LinearRegressionModel",
-    "pi":  0.95,
-    "score": False,
-    "mape": None,
-    "rmse": None,
-    "coverage": None
-}
-
-fc_log["success"] = fc_log["start_flag"] and fc_log["n_obs_flag"]
-fc_log
-fc_log_file = pd.DataFrame([fc_log])
-```
-
-```{python}
-print("Save the forecast into CSV file")
-fc.to_csv("data/fc48.csv", index = False)
-
-print("Save the forecast metadata into CSV file")
-fc_log_file.to_csv("data/fc48_metadata.csv", index = False)
-
+pd.read_csv("data/fc48_metadata.csv")
+pd.read_csv("data/fc48.csv")
 ```
 
 
 ```{python}
-def plot_fc(actual,forecast, actual_length = None):
-    
-    if actual_length is not None:
-        actual = actual.tail(n = actual_length)
+print(pd.read_csv("data/fc48_metadata.csv"))
+pd.read_csv("data/fc48.csv")
 
-    p = go.Figure([
-        go.Scatter(
-            name="Actual",
-            x= actual["period"], 
-            y= actual["value"],
-            mode='lines',
-            line= dict(color='royalblue'),
-        ), 
-        go.Scatter(
-            name="Forecast",
-            x= forecast["period"], 
-            y= forecast["mean"],
-            mode='lines',
-            line= dict(color='black', dash = "dash"),
-        ),
-        go.Scatter(
-            name= "Prediction Intervals",
-            x= forecast["period"], 
-            y= forecast["upper"],
-            mode='lines',
-            marker=dict(color="#444"),
-            line=dict(width=0),
-            showlegend=True
-        ),
-        go.Scatter(
-            name="Prediction Intervals",
-            x= forecast["period"], 
-            y= forecast["lower"],
-            marker=dict(color="#444"),
-            line=dict(width=0),
-            mode='lines',
-            fillcolor='rgba(68, 68, 68, 0.3)',
-            fill='tonexty',
-            showlegend=False
-        )
-    ])
-
-    return p 
+new_log = fc.score_forecast(log_path = "data/fc48_metadata.csv", actual = data, forecast = new_fc, save = True)
+new_log
 ```
-
-```{python}
-d = df.data.sort_values(by = ["period"])
-# d = d[d["respondent"] == "US48"].tail(n = freq * 14)
-
-p = plot_fc(actual = d, forecast = fc, actual_length = freq * 14)
-
-p
-```
-
