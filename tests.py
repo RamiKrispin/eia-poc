@@ -1,6 +1,10 @@
 import eia_etl 
 import eia_api
-import os
+import eia_forecast as fc
+from darts import TimeSeries
+import datetime
+import pandas as pd
+import numpy as np
 log_file = eia_etl.load_log(path = "data/us48_metadata.csv")
 
 print(log_file.last_success)
@@ -36,32 +40,39 @@ new_data = eia_etl.eia_data_refresh(start = start,
                                     api_key = eia_api_key, 
                                     api_path = api_path, 
                                     facets = facets) 
+append_data = eia_etl.append_new_data(data_path = "data/us48.csv",
+                           log_path = "data/us48_metadata.csv",
+                           new_data = new_data,
+                           save = True)
 
-# df = eia_api.eia_get(api_key = eia_api_key, 
-#                              api_path = api_path, 
-#                              facets = facets, 
-#                              start = start,
-#                              end = end) 
+data = append_data.data
 
-# if df is not None and len(df.data) > 0:
-#     start_match_flag = df.data["period"].min() == start
-#     end_match_flag = df.data["period"].max() == end
-#     start_act = df.data["period"].min()
-#     end_act = df.data["period"].max()
-#     n_obs = len(df.data)
-#     na = df.data["value"].isna().sum()
-#     if start_match_flag and end_match_flag and na == 0 and n_obs > 0:
-#         print("Refresh successed")
-#         success_flag = True
-#     else:
-#         success_flag = False
-#         print("Refresh failed")
-# else:
-#     print("Refresh failed")
-#     success_flag = False
-#     start_match_flag = None
-#     end_match_flag = None
-#     start_act = None
-#     end_act = None
-#     n_obs = None
-#     na = None
+h = 24
+freq = 24
+num_sample = 500 
+
+forecast_start = data["period"].max().floor(freq = "d")
+ts_start = forecast_start - datetime.timedelta(hours = freq * 365 * 2)
+d1 = data[(data["period"] > ts_start) & (data["period"] < forecast_start)]
+ts_obj = pd.DataFrame(np.arange(start = d1["period"].min(), stop = d1["period"].max() + datetime.timedelta(hours = 1), step = datetime.timedelta(hours = 1)).astype(datetime.datetime), columns=["index"])
+ts_obj  = ts_obj.merge(d1, left_on = "index", right_on = "period", how="left")
+input1 = TimeSeries.from_dataframe(d1,time_col= "period", value_cols= "value")
+
+end =  data["period"].max()
+input = fc.set_input(input = data, start = ts_start, end = end)
+fc1 = fc.train_lm(input = input, 
+            lags = [ -freq, -7 * freq,  - 365 * freq],
+            likelihood = "quantile",
+            quantiles = [0.025, 0.1, 0.25, 0.5, 0.75, 0.9, 0.975],
+            h = h,
+            pi = 0.95,
+            num_samples = 500)
+
+
+print(fc1.log)
+
+log = fc.append_log(log_path= "data/fc48_metadata.csv", new_log = fc1.log, save = False)
+
+new_fc = fc.append_forecast(fc_path =  "data/fc48.csv", fc_new = fc1, save = False)
+
+new_log = fc.score_forecast(log_path = "data/fc48_metadata.csv", actual = data, forecast = new_fc)
