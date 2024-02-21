@@ -23,3 +23,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 22,US48,Demand,2024-02-21 09:12:35.810235,2024-02-20 17:00:00,2024-02-20 16:00:00,,,,,,,refresh,False,False
 23,US48,Demand,2024-02-21 10:11:31.026304,2024-02-20 17:00:00,2024-02-20 16:00:00,,,,,,,refresh,False,False
 24,US48,Demand,2024-02-21 11:09:21.857937,2024-02-20 17:00:00,2024-02-20 18:00:00,2024-02-20 17:00:00,2024-02-20 18:00:00,True,True,2.0,0.0,refresh,True,True
+25,US48,Demand,2024-02-21 12:17:33.780933,2024-02-20 19:00:00,2024-02-20 19:00:00,,,,,,,refresh,False,False
