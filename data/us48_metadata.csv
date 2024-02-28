@@ -190,3 +190,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 189,US48,Demand,2024-02-28 09:10:09.394045,2024-02-27 17:00:00,2024-02-27 16:00:00,,,,,,,refresh,False,False
 190,US48,Demand,2024-02-28 10:11:33.155539,2024-02-27 17:00:00,2024-02-27 17:00:00,,,,,,,refresh,False,False
 191,US48,Demand,2024-02-28 11:10:31.750563,2024-02-27 17:00:00,2024-02-27 18:00:00,2024-02-27 17:00:00,2024-02-27 18:00:00,True,True,2.0,0.0,refresh,True,True
+192,US48,Demand,2024-02-28 12:17:01.768799,2024-02-27 19:00:00,2024-02-27 19:00:00,,,,,,,refresh,False,False
