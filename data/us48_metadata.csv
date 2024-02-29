@@ -213,3 +213,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 212,US48,Demand,2024-02-29 08:12:43.806295,2024-02-28 17:00:00,2024-02-28 16:00:00,,,,,,,refresh,False,False
 213,US48,Demand,2024-02-29 09:11:08.558567,2024-02-28 17:00:00,2024-02-28 16:00:00,,,,,,,refresh,False,False
 214,US48,Demand,2024-02-29 10:12:06.112908,2024-02-28 17:00:00,2024-02-28 17:00:00,,,,,,,refresh,False,False
+215,US48,Demand,2024-02-29 11:09:36.889429,2024-02-28 17:00:00,2024-02-28 18:00:00,2024-02-28 17:00:00,2024-02-28 18:00:00,True,True,2.0,0.0,refresh,True,True
