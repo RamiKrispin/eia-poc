@@ -306,3 +306,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 305,US48,Demand,2024-03-04 07:56:50.596022,2024-03-03 17:00:00,2024-03-03 16:00:00,,,,,,,refresh,False,False
 306,US48,Demand,2024-03-04 09:59:48.592862,2024-03-03 17:00:00,2024-03-03 17:00:00,,,,,,,refresh,False,False
 307,US48,Demand,2024-03-04 11:24:46.737832,2024-03-03 17:00:00,2024-03-03 18:00:00,2024-03-03 17:00:00,2024-03-03 18:00:00,True,True,2.0,0.0,refresh,True,True
+308,US48,Demand,2024-03-04 12:23:26.164273,2024-03-03 19:00:00,2024-03-03 19:00:00,,,,,,,refresh,False,False
