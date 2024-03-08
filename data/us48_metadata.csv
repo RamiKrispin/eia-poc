@@ -402,3 +402,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 401,US48,Demand,2024-03-08 09:10:25.969687,2024-03-07 17:00:00,2024-03-07 16:00:00,,,,,,,refresh,False,False
 402,US48,Demand,2024-03-08 10:13:01.070366,2024-03-07 17:00:00,2024-03-07 16:00:00,,,,,,,refresh,False,False
 403,US48,Demand,2024-03-08 11:08:44.431627,2024-03-07 17:00:00,2024-03-07 16:00:00,,,,,,,refresh,False,False
+404,US48,Demand,2024-03-08 12:17:50.558662,2024-03-07 17:00:00,2024-03-07 19:00:00,2024-03-07 17:00:00,2024-03-07 19:00:00,True,True,3.0,0.0,refresh,True,True
