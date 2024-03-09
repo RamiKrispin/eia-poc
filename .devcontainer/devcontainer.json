@@ -9,12 +9,12 @@
     //         "QUARTO_VER": "1.3.450"
     //     }
     // },
-    "settings": {
-        "python.defaultInterpreterPath": "/opt/forecasting-poc/bin/python3",
-        "python.selectInterpreter": "/opt/forecasting-poc/bin/python3"
-    },
     "customizations": {
         "vscode": {
+            "settings": {
+                "python.defaultInterpreterPath": "/opt/forecasting-poc/bin/python3",
+                "python.selectInterpreter": "/opt/forecasting-poc/bin/python3"
+            },
             "extensions": [
                 "quarto.quarto",
                 "ms-azuretools.vscode-docker",
