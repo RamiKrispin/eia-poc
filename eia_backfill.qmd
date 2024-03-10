@@ -70,7 +70,7 @@ facets = {
 }
 
 start = datetime.datetime(2015, 7, 1, 5)
-end = datetime.datetime(2024, 3, 1, 1)
+end = datetime.datetime(2024, 3, 8, 1)
 
 offset = 2250
 
@@ -228,8 +228,6 @@ h = 24
 freq = 24
 num_samples = 500
 
-
-pd.read_csv("data/fc48_metadata.csv")
 ```
 
 ```{python}
