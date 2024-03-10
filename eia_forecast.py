@@ -153,7 +153,7 @@ def score_forecast(log_path, actual, forecast, save = False):
             if len(f) == n_obs: 
                 log.at[index, "score"] = True
     if save:
-        log.to_csv(log_path)
+        log.to_csv(log_path, index = False)
 
     return log
 

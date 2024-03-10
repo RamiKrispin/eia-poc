@@ -101,10 +101,10 @@ Pulling the series metadata from the API. We will use it to check if new data is
 
 ```{python}
 metadata = etl.get_api_end(api_key = eia_api_key, 
-api_path = "electricity/rto/region-data/", offset = 16)
+api_path = "electricity/rto/region-data/", offset = 8)
 ```
 
-The `end` variable represents the timestamp of the most recent data point available on the API. There is some issue on the API timestampe, a gap of 16 hours between the value of the last data point and the actual, therefore, we will offset the `end` value by 16 hours using the `offset` argument and save it as `end_fix`:
+The `end` variable represents the timestamp of the most recent data point available on the API. There is some issue on the API timestampe, a gap of 8 hours between the value of the last data point and the actual, therefore, we will offset the `end` value by 16 hours using the `offset` argument and save it as `end_fix`:
 
 ```{python}
 print(metadata.end)

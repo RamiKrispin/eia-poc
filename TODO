@@ -1,0 +1,11 @@
+Data validation
+- Modify the failure for end time -> Set warning if end.actual does not match end.api and end > start [DONE]
+
+Metadata
+- Create a function that set logs
+    - Initial 
+    - Append
+
+
+Forecast 
+- Fix the forecast metadata issue [IN TEST]

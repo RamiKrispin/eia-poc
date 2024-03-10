@@ -58,6 +58,7 @@ def eia_data_refresh(start, end, api_key, api_path, facets):
             output.log = log
     
     df = None
+    comments = ""
 
 
     if(start < end):
@@ -73,14 +74,19 @@ def eia_data_refresh(start, end, api_key, api_path, facets):
             end_match_flag = df.data["period"].max() == end
             start_act = df.data["period"].min()
             end_act = df.data["period"].max()
+            end_flag = start_act < end_act
             n_obs = len(df.data)
             na = df.data["value"].isna().sum()
-            if start_match_flag and end_match_flag and na == 0 and n_obs > 0:
+            if start_match_flag and end_flag and na == 0 and n_obs > 0:
                 print("Refresh successed")
                 success_flag = True
+                if end_match_flag:
+                    comments = comments + "The end argument does not match the last data point timestamp; "
             else:
                 success_flag = False
                 print("Refresh failed")
+                comments = comments + "The refresh process failed, please check the log's flags; "
+
         else:
             print("Refresh failed")
             success_flag = False
@@ -90,6 +96,7 @@ def eia_data_refresh(start, end, api_key, api_path, facets):
             end_act = None
             n_obs = None
             na = None
+            comments = comments + "The refresh process failed, something went wrong with the data request; "
     else:
         print("No updates are available...")
         success_flag = False
@@ -99,6 +106,7 @@ def eia_data_refresh(start, end, api_key, api_path, facets):
         end_act = None
         n_obs = None
         na = None
+        comments = comments + "No new data is available; "
     
     log = {
         "index": None,
@@ -115,7 +123,8 @@ def eia_data_refresh(start, end, api_key, api_path, facets):
         "na": na,
         "type": "refresh",
         "update": None,
-        "success": success_flag
+        "success": success_flag,
+        "comments": comments
         }
     
     if success_flag:
