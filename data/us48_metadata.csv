@@ -15,3 +15,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 14,US48,Demand,2024-03-10 18:11:25.692671,2024-03-10 17:00:00,2024-03-10 23:00:00,2024-03-10 17:00:00,2024-03-10 17:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
 15,US48,Demand,2024-03-10 19:08:00.508049,2024-03-10 17:00:00,2024-03-10 23:00:00,2024-03-10 17:00:00,2024-03-10 18:00:00,True,False,2.0,0.0,refresh,True,True,
 16,US48,Demand,2024-03-10 20:11:10.683338,2024-03-10 19:00:00,2024-03-10 23:00:00,2024-03-10 19:00:00,2024-03-10 19:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+17,US48,Demand,2024-03-10 21:08:39.522629,2024-03-10 19:00:00,2024-03-10 23:00:00,2024-03-10 19:00:00,2024-03-10 20:00:00,True,False,2.0,0.0,refresh,True,True,
