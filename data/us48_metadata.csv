@@ -53,3 +53,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 52,US48,Demand,2024-03-12 08:12:49.849385,2024-03-12 00:00:00,2024-03-11 23:00:00,,,,,,,refresh,False,False,No new data is available; 
 53,US48,Demand,2024-03-12 09:13:12.100286,2024-03-12 00:00:00,2024-03-12 00:00:00,,,,,,,refresh,False,False,No new data is available; 
 54,US48,Demand,2024-03-12 10:11:02.661037,2024-03-12 00:00:00,2024-03-12 01:00:00,2024-03-12 00:00:00,2024-03-12 01:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+55,US48,Demand,2024-03-12 11:08:51.594008,2024-03-12 02:00:00,2024-03-12 02:00:00,,,,,,,refresh,False,False,No new data is available; 
