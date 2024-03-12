@@ -57,3 +57,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 56,US48,Demand,2024-03-12 12:17:26.874526,2024-03-12 02:00:00,2024-03-12 03:00:00,2024-03-12 02:00:00,2024-03-12 03:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
 57,US48,Demand,2024-03-12 13:11:04.879460,2024-03-12 04:00:00,2024-03-12 23:00:00,2024-03-12 04:00:00,2024-03-12 12:00:00,True,False,9.0,0.0,refresh,True,True,
 58,US48,Demand,2024-03-12 14:09:48.324237,2024-03-12 13:00:00,2024-03-12 23:00:00,2024-03-12 13:00:00,2024-03-12 13:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+59,US48,Demand,2024-03-12 15:24:31.923272,2024-03-12 13:00:00,2024-03-12 23:00:00,2024-03-12 13:00:00,2024-03-12 14:00:00,True,False,2.0,0.0,refresh,True,True,
