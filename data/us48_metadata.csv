@@ -81,3 +81,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 80,US48,Demand,2024-03-13 12:18:14.987639,2024-03-13 03:00:00,2024-03-13 03:00:00,,,,,,,refresh,False,False,No new data is available; 
 81,US48,Demand,2024-03-13 13:10:26.865364,2024-03-13 03:00:00,2024-03-13 03:00:00,,,,,,,refresh,False,False,No new data is available; 
 82,US48,Demand,2024-03-13 14:10:04.982486,2024-03-13 03:00:00,2024-03-13 23:00:00,2024-03-13 03:00:00,2024-03-13 11:00:00,True,False,9.0,0.0,refresh,True,True,
+83,US48,Demand,2024-03-13 15:11:11.444216,2024-03-13 12:00:00,2024-03-13 23:00:00,2024-03-13 12:00:00,2024-03-13 14:00:00,True,False,3.0,0.0,refresh,True,True,
