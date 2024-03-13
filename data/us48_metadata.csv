@@ -79,3 +79,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 78,US48,Demand,2024-03-13 10:11:14.924331,2024-03-13 01:00:00,2024-03-13 01:00:00,,,,,,,refresh,False,False,No new data is available; 
 79,US48,Demand,2024-03-13 11:10:35.116354,2024-03-13 01:00:00,2024-03-13 02:00:00,2024-03-13 01:00:00,2024-03-13 02:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
 80,US48,Demand,2024-03-13 12:18:14.987639,2024-03-13 03:00:00,2024-03-13 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+81,US48,Demand,2024-03-13 13:10:26.865364,2024-03-13 03:00:00,2024-03-13 03:00:00,,,,,,,refresh,False,False,No new data is available; 
