@@ -90,3 +90,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 89,US48,Demand,2024-03-13 21:11:18.085801,2024-03-13 17:00:00,2024-03-13 23:00:00,2024-03-13 17:00:00,2024-03-13 17:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
 90,US48,Demand,2024-03-13 22:09:54.163763,2024-03-13 17:00:00,2024-03-13 23:00:00,2024-03-13 17:00:00,2024-03-13 17:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
 91,US48,Demand,2024-03-13 23:10:30.136929,2024-03-13 17:00:00,2024-03-13 23:00:00,2024-03-13 17:00:00,2024-03-13 17:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+92,US48,Demand,2024-03-14 00:42:56.345856,2024-03-13 17:00:00,2024-03-13 23:00:00,2024-03-13 17:00:00,2024-03-13 23:00:00,True,True,7.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
