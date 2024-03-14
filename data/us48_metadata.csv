@@ -109,3 +109,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 108,US48,Demand,2024-03-14 16:13:49.406401,2024-03-14 15:00:00,2024-03-14 23:00:00,2024-03-14 15:00:00,2024-03-14 15:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
 109,US48,Demand,2024-03-14 17:09:42.829784,2024-03-14 15:00:00,2024-03-14 23:00:00,2024-03-14 15:00:00,2024-03-14 16:00:00,True,False,2.0,0.0,refresh,True,True,
 110,US48,Demand,2024-03-14 18:12:51.618402,2024-03-14 17:00:00,2024-03-14 23:00:00,2024-03-14 17:00:00,2024-03-14 17:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+111,US48,Demand,2024-03-14 19:08:25.801786,2024-03-14 17:00:00,2024-03-14 23:00:00,2024-03-14 17:00:00,2024-03-14 18:00:00,True,False,2.0,0.0,refresh,True,True,
