@@ -158,7 +158,7 @@ Using `tqdm.autonotebook.tqdm` in notebook mode. Use `tqdm.tqdm` instead to forc
 <section id="load-the-log-file-and-api-metadata" class="level2">
 <h2 class="anchored" data-anchor-id="load-the-log-file-and-api-metadata">Load the Log File and API Metadata</h2>
 <p>We will load the log file from the <code>data</code> folder:</p>
-<div id="9aeaac26" class="cell" data-execution_count="2">
+<div id="5c731096" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>log_file <span class="op">=</span> etl.load_log(path <span class="op">=</span> <span class="st">"data/us48_metadata.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The <code>load_log</code> function returns the following objects:</p>
@@ -168,7 +168,7 @@ Using `tqdm.autonotebook.tqdm` in notebook mode. Use `tqdm.tqdm` instead to forc
 <li><code>end</code> - the timestamp of the last data point derived from the <code>last_success</code> row</li>
 <li><code>start</code> - the start timestamp of the future data pull (calculated as <code>end</code> + 1 hour)</li>
 </ul>
-<div id="a124a48d" class="cell" data-execution_count="3">
+<div id="8ab70d7e" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(log_file.last_success)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(log_file.end)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(log_file.start)</span>
@@ -176,23 +176,23 @@ Using `tqdm.autonotebook.tqdm` in notebook mode. Use `tqdm.tqdm` instead to forc
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>start <span class="op">=</span> log_file.start</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     index respondent respondent_type                       time  \
-129    130       US48          Demand 2024-03-15 14:10:31.216774   
+130    131       US48          Demand 2024-03-15 15:10:33.840958   
 
                   start                 end           start_act  \
-129 2024-03-15 03:00:00 2024-03-15 23:00:00 2024-03-15 03:00:00   
+130 2024-03-15 12:00:00 2024-03-15 23:00:00 2024-03-15 12:00:00   
 
                 end_act start_match end_match  n_obs   na     type  update  \
-129 2024-03-15 11:00:00        True     False    9.0  0.0  refresh    True   
+130 2024-03-15 14:00:00        True     False    3.0  0.0  refresh    True   
 
      success comments  
-129     True      NaN  
-129   2024-03-15 11:00:00
+130     True      NaN  
+130   2024-03-15 14:00:00
 Name: end_act, dtype: datetime64[ns]
-2024-03-15 12:00:00</code></pre>
+2024-03-15 15:00:00</code></pre>
 </div>
 </div>
 <p>Setting the GET request parameters:</p>
-<div id="400d28f8" class="cell" data-execution_count="4">
+<div id="14ffc2c7" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>api_path <span class="op">=</span> <span class="st">"electricity/rto/region-data/data"</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>facets <span class="op">=</span> {</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"respondent"</span>: <span class="st">"US48"</span>,</span>
@@ -204,12 +204,12 @@ Name: end_act, dtype: datetime64[ns]
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>eia_api_key <span class="op">=</span> os.getenv(<span class="st">'EIA_API_KEY'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Pulling the series metadata from the API. We will use it to check if new data is available on the API using the <code>get_api_end</code> function:</p>
-<div id="7db73cf8" class="cell" data-execution_count="5">
+<div id="474085b4" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>metadata <span class="op">=</span> etl.get_api_end(api_key <span class="op">=</span> eia_api_key, </span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>api_path <span class="op">=</span> <span class="st">"electricity/rto/region-data/"</span>, offset <span class="op">=</span> <span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The <code>end</code> variable represents the timestamp of the most recent data point available on the API. There is some issue on the API timestampe, a gap of 8 hours between the value of the last data point and the actual, therefore, we will offset the <code>end</code> value by 16 hours using the <code>offset</code> argument and save it as <code>end_fix</code>:</p>
-<div id="29504ed1" class="cell" data-execution_count="6">
+<div id="fcb41f08" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(metadata.end)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(metadata.end_fix)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -219,17 +219,17 @@ Name: end_act, dtype: datetime64[ns]
 2024-03-15 23:00:00</code></pre>
 </div>
 </div>
-<div id="d60a9687" class="cell" data-execution_count="7">
+<div id="7f949155" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>new_data <span class="op">=</span> etl.eia_data_refresh(start <span class="op">=</span> start, end <span class="op">=</span> end_fix, api_key <span class="op">=</span> eia_api_key, api_path <span class="op">=</span> api_path, facets <span class="op">=</span> facets) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Updates are available
-Refresh successed</code></pre>
+Refresh failed</code></pre>
 </div>
 </div>
 </section>
 <section id="updating-the-dataset-and-log-file" class="level2">
 <h2 class="anchored" data-anchor-id="updating-the-dataset-and-log-file">Updating the Dataset and Log File</h2>
-<div id="c087fd36" class="cell" data-execution_count="8">
+<div id="f4f38a0f" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>append_data <span class="op">=</span> etl.append_new_data(data_path <span class="op">=</span> <span class="st">"data/us48.csv"</span>,</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>                           log_path <span class="op">=</span> <span class="st">"data/us48_metadata.csv"</span>,</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>                           new_data <span class="op">=</span> new_data,</span>
@@ -237,13 +237,11 @@ Refresh successed</code></pre>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> append_data.data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Appending the new data to the series
-Adding 3 new rows
-Save the data into CSV file
+<pre><code>No new data is available or the data refresh failed, please check the log file
 Save the metadata into CSV file</code></pre>
 </div>
 </div>
-<div id="b131200c" class="cell" data-execution_count="9">
+<div id="537bb047" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(append_data.log)</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(append_data.data_update)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -254,11 +252,11 @@ Save the metadata into CSV file</code></pre>
 3        4       US48          Demand 2024-03-10 08:12:22.395255   
 4        5       US48          Demand 2024-03-10 09:09:17.965103   
 ..     ...        ...             ...                        ...   
-126    127       US48          Demand 2024-03-15 11:08:50.674187   
 127    128       US48          Demand 2024-03-15 12:17:26.386749   
 128    129       US48          Demand 2024-03-15 13:11:34.430112   
 129    130       US48          Demand 2024-03-15 14:10:31.216774   
-0      131       US48          Demand 2024-03-15 15:10:33.840958   
+130    131       US48          Demand 2024-03-15 15:10:33.840958   
+0      132       US48          Demand 2024-03-15 16:13:20.750382   
 
                   start                 end           start_act  \
 0   2015-07-01 05:00:00 2024-03-08 01:00:00 2015-07-01 05:00:00   
@@ -267,11 +265,11 @@ Save the metadata into CSV file</code></pre>
 3   2024-03-10 01:00:00 2024-03-10 00:00:00                 NaT   
 4   2024-03-10 01:00:00 2024-03-10 00:00:00                 NaT   
 ..                  ...                 ...                 ...   
-126 2024-03-14 21:00:00 2024-03-15 02:00:00 2024-03-14 21:00:00   
 127 2024-03-15 03:00:00 2024-03-15 03:00:00                 NaT   
 128 2024-03-15 03:00:00 2024-03-15 03:00:00                 NaT   
 129 2024-03-15 03:00:00 2024-03-15 23:00:00 2024-03-15 03:00:00   
-0   2024-03-15 12:00:00 2024-03-15 23:00:00 2024-03-15 12:00:00   
+130 2024-03-15 12:00:00 2024-03-15 23:00:00 2024-03-15 12:00:00   
+0   2024-03-15 15:00:00 2024-03-15 23:00:00 2024-03-15 15:00:00   
 
                 end_act start_match end_match    n_obs   na      type  update  \
 0   2024-03-08 01:00:00        True      True  76149.0  0.0  backfill    True   
@@ -280,11 +278,11 @@ Save the metadata into CSV file</code></pre>
 3                   NaT         NaN       NaN      NaN  NaN   refresh   False   
 4                   NaT         NaN       NaN      NaN  NaN   refresh   False   
 ..                  ...         ...       ...      ...  ...       ...     ...   
-126 2024-03-15 02:00:00        True      True      6.0  0.0   refresh    True   
 127                 NaT         NaN       NaN      NaN  NaN   refresh   False   
 128                 NaT         NaN       NaN      NaN  NaN   refresh   False   
 129 2024-03-15 11:00:00        True     False      9.0  0.0   refresh    True   
-0   2024-03-15 14:00:00        True     False      3.0  0.0   refresh    True   
+130 2024-03-15 14:00:00        True     False      3.0  0.0   refresh    True   
+0   2024-03-15 15:00:00        True     False      1.0  0.0   refresh   False   
 
      success                                           comments  
 0       True                              Initial data backfill  
@@ -293,14 +291,14 @@ Save the metadata into CSV file</code></pre>
 3      False                         No new data is available;   
 4      False                         No new data is available;   
 ..       ...                                                ...  
-126     True  The end argument does not match the last data ...  
 127    False                         No new data is available;   
 128    False                         No new data is available;   
 129     True                                                NaN  
-0       True                                                     
+130     True                                                NaN  
+0      False  The refresh process failed, please check the l...  
 
-[131 rows x 16 columns]
-True</code></pre>
+[132 rows x 16 columns]
+False</code></pre>
 </div>
 </div>
 </section>
@@ -309,12 +307,12 @@ True</code></pre>
 <p>Forecast scope: - Used a train forecasting model and refit it with new data - Forecast refresh daily at the end of the day (past 23:00 UTC) - Forecast horizon 24 hours</p>
 <p>Steps: - Load the forecast log file - Check the time stamp of the most recent forecast - Check if new data meet the refresh criteria - If meet the criteria, update the forecast - Update the log file</p>
 <p>Forecast parameters</p>
-<div id="74230139" class="cell" data-execution_count="10">
+<div id="84ab7bae" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span> <span class="dv">24</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>freq <span class="op">=</span> <span class="dv">24</span></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>num_sample <span class="op">=</span> <span class="dv">500</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="9f0a559e" class="cell" data-execution_count="11">
+<div id="8deb77fe" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>log_path <span class="op">=</span> <span class="st">"data/fc48_metadata.csv"</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>fc_path <span class="op">=</span> <span class="st">"data/fc48.csv"</span></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -339,7 +337,7 @@ True</code></pre>
 <span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>    new_fc <span class="op">=</span> fc.append_forecast(fc_path <span class="op">=</span>  <span class="st">"data/fc48.csv"</span>, fc_new <span class="op">=</span> forecast, save <span class="op">=</span> <span class="va">True</span>, init <span class="op">=</span> <span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Score past forecasts</p>
-<div id="61846c31" class="cell" data-execution_count="12">
+<div id="c38d0c86" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>forecast_archive <span class="op">=</span> fc.load_forecast(fc_path)</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>new_log <span class="op">=</span> fc.score_forecast(log_path <span class="op">=</span> <span class="st">"data/fc48_metadata.csv"</span>, actual <span class="op">=</span> data, forecast <span class="op">=</span> forecast_archive, save <span class="op">=</span> <span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
