@@ -205,3 +205,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 204,US48,Demand,2024-03-18 17:11:18.037149,2024-03-18 16:00:00,2024-03-18 23:00:00,2024-03-18 16:00:00,2024-03-18 16:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
 205,US48,Demand,2024-03-18 18:12:37.071564,2024-03-18 16:00:00,2024-03-18 23:00:00,2024-03-18 16:00:00,2024-03-18 17:00:00,True,False,2.0,0.0,refresh,True,True,
 206,US48,Demand,2024-03-18 19:09:59.708788,2024-03-18 18:00:00,2024-03-18 23:00:00,2024-03-18 18:00:00,2024-03-18 18:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+207,US48,Demand,2024-03-18 20:11:05.100803,2024-03-18 18:00:00,2024-03-18 23:00:00,2024-03-18 18:00:00,2024-03-18 19:00:00,True,False,2.0,0.0,refresh,True,True,
