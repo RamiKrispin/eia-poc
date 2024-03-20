@@ -255,3 +255,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 254,US48,Demand,2024-03-20 19:08:30.504194,2024-03-20 17:00:00,2024-03-20 23:00:00,2024-03-20 17:00:00,2024-03-20 18:00:00,True,False,2.0,0.0,refresh,True,True,
 255,US48,Demand,2024-03-20 20:11:24.314054,2024-03-20 19:00:00,2024-03-20 23:00:00,2024-03-20 19:00:00,2024-03-20 19:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
 256,US48,Demand,2024-03-20 21:10:37.669915,2024-03-20 19:00:00,2024-03-20 23:00:00,2024-03-20 19:00:00,2024-03-20 20:00:00,True,False,2.0,0.0,refresh,True,True,
+257,US48,Demand,2024-03-20 22:09:07.158145,2024-03-20 21:00:00,2024-03-20 23:00:00,2024-03-20 21:00:00,2024-03-20 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
