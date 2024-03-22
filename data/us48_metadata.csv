@@ -302,3 +302,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 301,US48,Demand,2024-03-22 18:12:57.198794,2024-03-22 03:00:00,2024-03-22 03:00:00,,,,,,,refresh,False,False,No new data is available; 
 302,US48,Demand,2024-03-22 19:09:39.943617,2024-03-22 03:00:00,2024-03-22 03:00:00,,,,,,,refresh,False,False,No new data is available; 
 303,US48,Demand,2024-03-22 20:10:37.255474,2024-03-22 03:00:00,2024-03-22 11:00:00,2024-03-22 03:00:00,2024-03-22 11:00:00,True,True,9.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+304,US48,Demand,2024-03-22 21:09:59.512321,2024-03-22 12:00:00,2024-03-22 11:00:00,,,,,,,refresh,False,False,No new data is available; 
