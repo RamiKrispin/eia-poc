@@ -282,3 +282,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 281,US48,Demand,2024-03-21 22:10:19.682970,2024-03-21 21:00:00,2024-03-21 23:00:00,2024-03-21 21:00:00,2024-03-21 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
 282,US48,Demand,2024-03-21 23:11:26.634850,2024-03-21 21:00:00,2024-03-21 23:00:00,2024-03-21 21:00:00,2024-03-21 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
 283,US48,Demand,2024-03-22 00:43:34.256021,2024-03-21 21:00:00,2024-03-21 23:00:00,2024-03-21 21:00:00,2024-03-21 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+284,US48,Demand,2024-03-22 01:42:03.945188,2024-03-21 21:00:00,2024-03-21 23:00:00,2024-03-21 21:00:00,2024-03-21 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
