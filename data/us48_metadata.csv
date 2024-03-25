@@ -367,3 +367,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 366,US48,Demand,2024-03-25 13:11:28.196066,2024-03-25 03:00:00,2024-03-25 03:00:00,,,,,,,refresh,False,False,No new data is available; 
 367,US48,Demand,2024-03-25 14:10:00.106021,2024-03-25 03:00:00,2024-03-25 03:00:00,,,,,,,refresh,False,False,No new data is available; 
 368,US48,Demand,2024-03-25 15:11:42.103467,2024-03-25 03:00:00,2024-03-25 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+369,US48,Demand,2024-03-25 16:13:05.934004,2024-03-25 03:00:00,2024-03-25 23:00:00,2024-03-25 03:00:00,2024-03-25 11:00:00,True,False,9.0,0.0,refresh,True,True,
