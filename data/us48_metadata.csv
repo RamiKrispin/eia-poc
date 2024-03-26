@@ -390,3 +390,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 389,US48,Demand,2024-03-26 12:18:27.640606,2024-03-26 03:00:00,2024-03-26 03:00:00,,,,,,,refresh,False,False,No new data is available; 
 390,US48,Demand,2024-03-26 13:10:47.386116,2024-03-26 03:00:00,2024-03-26 03:00:00,,,,,,,refresh,False,False,No new data is available; 
 391,US48,Demand,2024-03-26 14:10:33.222025,2024-03-26 03:00:00,2024-03-26 23:00:00,2024-03-26 03:00:00,2024-03-26 11:00:00,True,False,9.0,0.0,refresh,True,True,
+392,US48,Demand,2024-03-26 15:10:27.754594,2024-03-26 12:00:00,2024-03-26 23:00:00,2024-03-26 12:00:00,2024-03-26 14:00:00,True,False,3.0,0.0,refresh,True,True,
