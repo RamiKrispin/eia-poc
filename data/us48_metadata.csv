@@ -446,3 +446,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 445,US48,Demand,2024-03-28 20:12:02.183952,2024-03-28 19:00:00,2024-03-28 23:00:00,2024-03-28 19:00:00,2024-03-28 19:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
 446,US48,Demand,2024-03-28 21:10:09.114742,2024-03-28 19:00:00,2024-03-28 23:00:00,2024-03-28 19:00:00,2024-03-28 20:00:00,True,False,2.0,0.0,refresh,True,True,
 447,US48,Demand,2024-03-28 22:10:17.749379,2024-03-28 21:00:00,2024-03-28 23:00:00,2024-03-28 21:00:00,2024-03-28 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+448,US48,Demand,2024-03-28 23:10:51.118578,2024-03-28 21:00:00,2024-03-28 23:00:00,2024-03-28 21:00:00,2024-03-28 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
