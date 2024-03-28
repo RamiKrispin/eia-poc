@@ -438,3 +438,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 437,US48,Demand,2024-03-28 12:18:53.070765,2024-03-28 03:00:00,2024-03-28 03:00:00,,,,,,,refresh,False,False,No new data is available; 
 438,US48,Demand,2024-03-28 13:10:47.670077,2024-03-28 03:00:00,2024-03-28 03:00:00,,,,,,,refresh,False,False,No new data is available; 
 439,US48,Demand,2024-03-28 14:11:19.664916,2024-03-28 03:00:00,2024-03-28 23:00:00,2024-03-28 03:00:00,2024-03-28 11:00:00,True,False,9.0,0.0,refresh,True,True,
+440,US48,Demand,2024-03-28 15:11:14.368949,2024-03-28 12:00:00,2024-03-28 23:00:00,2024-03-28 12:00:00,2024-03-28 14:00:00,True,False,3.0,0.0,refresh,True,True,
