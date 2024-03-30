@@ -485,3 +485,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 484,US48,Demand,2024-03-30 11:09:16.757705,2024-03-30 01:00:00,2024-03-30 02:00:00,2024-03-30 01:00:00,2024-03-30 02:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
 485,US48,Demand,2024-03-30 12:16:03.892479,2024-03-30 03:00:00,2024-03-30 03:00:00,,,,,,,refresh,False,False,No new data is available; 
 486,US48,Demand,2024-03-30 13:11:55.084529,2024-03-30 03:00:00,2024-03-30 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+487,US48,Demand,2024-03-30 14:08:31.719182,2024-03-30 03:00:00,2024-03-30 23:00:00,2024-03-30 03:00:00,2024-03-30 11:00:00,True,False,9.0,0.0,refresh,True,True,
