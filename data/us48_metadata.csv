@@ -510,3 +510,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 509,US48,Demand,2024-03-31 12:16:53.425146,2024-03-31 03:00:00,2024-03-31 03:00:00,,,,,,,refresh,False,False,No new data is available; 
 510,US48,Demand,2024-03-31 13:11:44.840338,2024-03-31 03:00:00,2024-03-31 03:00:00,,,,,,,refresh,False,False,No new data is available; 
 511,US48,Demand,2024-03-31 14:08:50.870158,2024-03-31 03:00:00,2024-03-31 23:00:00,2024-03-31 03:00:00,2024-03-31 11:00:00,True,False,9.0,0.0,refresh,True,True,
+512,US48,Demand,2024-03-31 15:09:30.780268,2024-03-31 12:00:00,2024-03-31 23:00:00,2024-03-31 12:00:00,2024-03-31 14:00:00,True,False,3.0,0.0,refresh,True,True,
