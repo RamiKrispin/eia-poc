@@ -518,3 +518,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 517,US48,Demand,2024-03-31 20:11:03.758061,2024-03-31 19:00:00,2024-03-31 23:00:00,2024-03-31 19:00:00,2024-03-31 19:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
 518,US48,Demand,2024-03-31 21:08:38.542969,2024-03-31 19:00:00,2024-03-31 23:00:00,2024-03-31 19:00:00,2024-03-31 20:00:00,True,False,2.0,0.0,refresh,True,True,
 519,US48,Demand,2024-03-31 22:10:01.052162,2024-03-31 21:00:00,2024-03-31 23:00:00,2024-03-31 21:00:00,2024-03-31 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+520,US48,Demand,2024-03-31 23:09:58.726503,2024-03-31 21:00:00,2024-03-31 23:00:00,2024-03-31 21:00:00,2024-03-31 22:00:00,True,False,2.0,0.0,refresh,True,True,
