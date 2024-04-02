@@ -560,3 +560,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 559,US48,Demand,2024-04-02 14:09:52.430301,2024-04-02 04:00:00,2024-04-02 23:00:00,2024-04-02 04:00:00,2024-04-02 11:00:00,True,False,8.0,0.0,refresh,True,True,
 560,US48,Demand,2024-04-02 15:10:16.475387,2024-04-02 12:00:00,2024-04-02 23:00:00,2024-04-02 12:00:00,2024-04-02 14:00:00,True,False,3.0,0.0,refresh,True,True,
 561,US48,Demand,2024-04-02 16:13:30.026793,2024-04-02 15:00:00,2024-04-02 23:00:00,2024-04-02 15:00:00,2024-04-02 15:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+562,US48,Demand,2024-04-02 17:10:40.825309,2024-04-02 15:00:00,2024-04-02 23:00:00,2024-04-02 15:00:00,2024-04-02 16:00:00,True,False,2.0,0.0,refresh,True,True,
