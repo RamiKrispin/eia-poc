@@ -576,3 +576,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 575,US48,Demand,2024-04-03 06:13:13.876882,2024-04-02 23:00:00,2024-04-02 23:00:00,,,,,,,refresh,False,False,No new data is available; 
 576,US48,Demand,2024-04-03 07:10:12.816514,2024-04-02 23:00:00,2024-04-02 23:00:00,,,,,,,refresh,False,False,No new data is available; 
 577,US48,Demand,2024-04-03 08:13:32.363895,2024-04-02 23:00:00,2024-04-02 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+578,US48,Demand,2024-04-03 09:11:40.667453,2024-04-02 23:00:00,2024-04-03 00:00:00,2024-04-02 23:00:00,2024-04-03 00:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
