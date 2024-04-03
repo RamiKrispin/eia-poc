@@ -583,3 +583,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 582,US48,Demand,2024-04-03 13:12:59.918520,2024-04-03 03:00:00,2024-04-03 03:00:00,,,,,,,refresh,False,False,No new data is available; 
 583,US48,Demand,2024-04-03 14:10:03.965428,2024-04-03 03:00:00,2024-04-03 23:00:00,2024-04-03 03:00:00,2024-04-03 11:00:00,True,False,9.0,0.0,refresh,True,True,
 584,US48,Demand,2024-04-03 15:10:24.848094,2024-04-03 12:00:00,2024-04-03 23:00:00,2024-04-03 12:00:00,2024-04-03 14:00:00,True,False,3.0,0.0,refresh,True,True,
+585,US48,Demand,2024-04-03 16:12:27.100895,2024-04-03 15:00:00,2024-04-03 23:00:00,2024-04-03 15:00:00,2024-04-03 15:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
