@@ -612,3 +612,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 611,US48,Demand,2024-04-04 18:13:40.701276,2024-04-04 16:00:00,2024-04-04 23:00:00,2024-04-04 16:00:00,2024-04-04 17:00:00,True,False,2.0,0.0,refresh,True,True,
 612,US48,Demand,2024-04-04 19:09:58.116599,2024-04-04 18:00:00,2024-04-04 23:00:00,2024-04-04 18:00:00,2024-04-04 18:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
 613,US48,Demand,2024-04-04 20:11:03.441161,2024-04-04 18:00:00,2024-04-04 23:00:00,2024-04-04 18:00:00,2024-04-04 19:00:00,True,False,2.0,0.0,refresh,True,True,
+614,US48,Demand,2024-04-04 21:09:34.800630,2024-04-04 20:00:00,2024-04-04 23:00:00,2024-04-04 20:00:00,2024-04-04 20:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
