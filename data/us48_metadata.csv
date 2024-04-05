@@ -618,3 +618,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 617,US48,Demand,2024-04-05 12:17:24.764069,2024-04-05 03:00:00,2024-04-05 03:00:00,,,,,,,refresh,False,False,No new data is available; 
 618,US48,Demand,2024-04-05 13:11:53.965097,2024-04-05 03:00:00,2024-04-05 03:00:00,,,,,,,refresh,False,False,No new data is available; 
 619,US48,Demand,2024-04-05 14:12:03.233093,2024-04-05 03:00:00,2024-04-05 23:00:00,2024-04-05 03:00:00,2024-04-05 11:00:00,True,False,9.0,0.0,refresh,True,True,
+620,US48,Demand,2024-04-05 15:10:29.569894,2024-04-05 12:00:00,2024-04-05 23:00:00,2024-04-05 12:00:00,2024-04-05 14:00:00,True,False,3.0,0.0,refresh,True,True,
