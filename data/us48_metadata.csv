@@ -642,3 +642,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 641,US48,Demand,2024-04-06 12:17:03.724061,2024-04-06 03:00:00,2024-04-06 03:00:00,,,,,,,refresh,False,False,No new data is available; 
 642,US48,Demand,2024-04-06 13:11:15.723304,2024-04-06 03:00:00,2024-04-06 03:00:00,,,,,,,refresh,False,False,No new data is available; 
 643,US48,Demand,2024-04-06 14:08:42.586155,2024-04-06 03:00:00,2024-04-06 23:00:00,2024-04-06 03:00:00,2024-04-06 11:00:00,True,False,9.0,0.0,refresh,True,True,
+644,US48,Demand,2024-04-06 15:09:14.511497,2024-04-06 12:00:00,2024-04-06 23:00:00,2024-04-06 12:00:00,2024-04-06 14:00:00,True,False,3.0,0.0,refresh,True,True,
