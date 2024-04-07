@@ -660,3 +660,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 659,US48,Demand,2024-04-07 06:12:37.633144,2024-04-06 23:00:00,2024-04-06 23:00:00,,,,,,,refresh,False,False,No new data is available; 
 660,US48,Demand,2024-04-07 07:09:06.220074,2024-04-06 23:00:00,2024-04-06 23:00:00,,,,,,,refresh,False,False,No new data is available; 
 661,US48,Demand,2024-04-07 08:14:30.991342,2024-04-06 23:00:00,2024-04-06 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+662,US48,Demand,2024-04-07 09:10:31.470544,2024-04-06 23:00:00,2024-04-07 00:00:00,2024-04-06 23:00:00,2024-04-07 00:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
