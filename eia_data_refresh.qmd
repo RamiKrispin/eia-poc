@@ -43,7 +43,8 @@ In addition, we will use the following libraries:
 #| label: load libraries
 import eia_api
 import eia_etl as etl
-import eia_forecast as fc
+# import eia_forecast as fc
+import dev_fc as fc
 import os
 import datetime
 import numpy as np
@@ -156,10 +157,27 @@ Steps:
 Forecast parameters
 
 ```{python}
-h = 24
-freq = 24
-num_sample = 500 
-```
+md_params = fc.model_params(model = "LinearRegressionModel",
+                    model_label = "model 1",
+                    comments = "LM Model",
+                    h = 24,
+                    lags = [-24, -7 * 24, - 365 * 24],
+                    freq = 24,
+                    pi = 0.95,
+                    train_length =  24 * 365 * 2,
+                    num_samples= 500,
+                    likelihood = "quantile",
+                    quantiles = [0.025, 0.1, 0.25, 0.5, 0.75, 0.9, 0.975],
+                    seed = 12345)  
+
+mlflow_settings = fc.mlflow_params(path = "./metadata/",
+                                experiment_name = "Forecast Dev",
+                                type = "forecast",
+                                score = False,
+                                append = False,
+                                version = "0.0.1")
+```                                
+
 
 
 ```{python}
@@ -171,20 +189,18 @@ last_start = fc.get_last_fc_start(log_path = log_path)
 
 if last_start < forecast_start:
     end = forecast_start - datetime.timedelta(hours = 1)
-    start = end - datetime.timedelta(hours = freq * 365 * 2)
+    start = end - datetime.timedelta(hours = md_params.train_length)
     print(start, end)
     input = fc.set_input(input = data, start = start, end = end)
-    
-    forecast = fc.train_lm(input = input, 
-            lags = [ -freq, -7 * freq,  - 365 * freq],
-            likelihood = "quantile",
-            quantiles = [0.025, 0.1, 0.25, 0.5, 0.75, 0.9, 0.975],
-            h = h,
-            pi = 0.95,
-            num_samples = 500)
-    print(forecast.log)
-    log = fc.append_log(log_path= log_path, new_log = forecast.log, save = True, init = False)
-    new_fc = fc.append_forecast(fc_path =  "data/fc48.csv", fc_new = forecast, save = True, init = False)
+    f = fc.forecast_object()
+    f.add_input(input = input) 
+    f.add_model_params(model_params =  md_params)    
+    f.add_mlflow_settings(mlflow_settings = mlflow_settings)
+    f.create_forecast()
+
+    print(f.model_meta)
+    log = fc.append_log(log_path= log_path, new_log = f.model_meta, save = True, init = True)
+    new_fc = fc.append_forecast(fc_path =  "data/fc48.csv", fc_new = f.forecast, save = True, init = True)
 ```
 
 
@@ -192,6 +208,6 @@ if last_start < forecast_start:
 Score past forecasts
 
 ```{python}
-forecast_archive = fc.load_forecast(fc_path)
-new_log = fc.score_forecast(log_path = "data/fc48_metadata.csv", actual = data, forecast = forecast_archive, save = True)
+# forecast_archive = fc.load_forecast(fc_path)
+# new_log = fc.score_forecast(log_path = "data/fc48_metadata.csv", actual = data, forecast = forecast_archive, save = True)
 ```
