@@ -9,3 +9,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 8,US48,Demand,2024-04-09 10:12:48.127720,2024-04-08 20:00:00,2024-04-08 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
 9,US48,Demand,2024-04-09 11:08:47.997131,2024-04-08 20:00:00,2024-04-08 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
 10,US48,Demand,2024-04-09 12:18:43.848630,2024-04-08 20:00:00,2024-04-09 03:00:00,2024-04-08 20:00:00,2024-04-09 03:00:00,True,True,8.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+11,US48,Demand,2024-04-09 13:10:57.254033,2024-04-09 04:00:00,2024-04-09 03:00:00,,,,,,,refresh,False,False,No new data is available; 
