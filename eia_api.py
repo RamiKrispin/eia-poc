@@ -52,12 +52,12 @@ def eia_get(api_key,
         fc = ""
     else:
         fc = ""
-    for i in facets.keys():
-        if type(facets[i]) is list:
-            for n in facets[i]:
-                fc = fc + "&facets[" + i + "][]=" + n
-        elif type(facets[i]) is str:
-            fc = fc + "&facets[" + i + "][]=" + facets[i]
+        for i in facets.keys():
+            if type(facets[i]) is list:
+                for n in facets[i]:
+                    fc = fc + "&facets[" + i + "][]=" + n
+            elif type(facets[i]) is str:
+                fc = fc + "&facets[" + i + "][]=" + facets[i]
     
     if start is None:
         s = ""
@@ -103,10 +103,15 @@ def eia_get(api_key,
     d = requests.get(url + "&api_key=" + api_key).json()
 
     df = pd.DataFrame(d['response']['data'])
+    if len(df) > 0:
     # Reformating the output
-    df["period"] = pd.to_datetime(df["period"])
-    df["value"] = pd.to_numeric(df["value"])
-    df = df.sort_values(by = ["period"])
+        df["period"] = pd.to_datetime(df["period"])
+        df["value"] = pd.to_numeric(df["value"])
+        df = df.sort_values(by = ["period"])
+        status = True
+    else:
+        status = False
+        print("The return object does not contain observations, check the end parameter settings")
 
     parameters = {
         "api_path": api_path,
@@ -116,7 +121,8 @@ def eia_get(api_key,
         "end": end, 
         "length": length, 
         "offset": offset, 
-        "frequency": frequency
+        "frequency": frequency,
+        "status": status
     }
     output = response(data = df, url = url + "&api_key=", parameters = parameters)
     return output
