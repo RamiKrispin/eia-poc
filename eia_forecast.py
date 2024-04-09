@@ -12,6 +12,7 @@ def train_lm(input,
              quantiles, 
              h, 
              num_samples, 
+             seed = 12345,
              pi = 0.95):
     
     class forecast:
@@ -26,6 +27,7 @@ def train_lm(input,
     upper = 1 - lower
     lr_model = LinearRegressionModel(lags= lags,
                                  likelihood= likelihood, 
+                                 random_state = seed,
                                  quantiles = quantiles)
     lr_model.fit(ts)
     lr_preds = lr_model.predict(series = ts, 
@@ -144,6 +146,7 @@ def score_forecast(log_path, actual, forecast, save = False):
     act_max = actual["period"].max()
     for index, row in log.iterrows():
         if row["start_act"] < act_max and row["score"] == False:
+            
             label = row["label"]
             n_obs = row["n_obs"]
             f = forecast[(forecast["label"] == label) & (forecast["period"] <= act_max)].merge(actual[["period", "value"]], on = "period", how = "left")
