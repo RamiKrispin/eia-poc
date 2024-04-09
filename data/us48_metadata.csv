@@ -700,3 +700,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 699,US48,Demand,2024-04-09 00:44:23.134330,2024-04-08 19:00:00,2024-04-08 23:00:00,2024-04-08 19:00:00,2024-04-08 19:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
 700,US48,Demand,2024-04-09 01:44:19.762015,2024-04-08 19:00:00,2024-04-08 23:00:00,2024-04-08 19:00:00,2024-04-08 19:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
 701,US48,Demand,2024-04-09 02:18:25.716082,2024-04-08 19:00:00,2024-04-08 23:00:00,2024-04-08 19:00:00,2024-04-08 19:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+702,US48,Demand,2024-04-09 03:12:43.474047,2024-04-08 19:00:00,2024-04-08 23:00:00,2024-04-08 19:00:00,2024-04-08 19:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
