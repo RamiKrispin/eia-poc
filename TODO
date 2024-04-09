@@ -1,3 +1,6 @@
+Data Pipeline
+- Add window functionality
+
 Data validation
 - Modify the failure for end time -> Set warning if end.actual does not match end.api and end > start [DONE]
 
@@ -9,3 +12,6 @@ Metadata
 
 Forecast 
 - Fix the forecast metadata issue [IN TEST]
+
+MLflow
+- delete experiment if name exists [DONE]
