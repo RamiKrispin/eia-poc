@@ -1,4 +1,5 @@
 index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,end_match,n_obs,na,type,update,success,comments
-1,US48,Demand,2024-04-09 04:48:42.466770,2015-07-01 05:00:00,2024-04-07 01:00:00,2015-07-01 05:00:00,2024-04-07 01:00:00,True,True,76869,0,backfill,True,True,Initial data backfill
-2,US48,Demand,2024-04-09 04:49:11.006799,2024-04-07 02:00:00,2024-04-08 23:00:00,2024-04-07 02:00:00,2024-04-08 19:00:00,True,False,42,0,refresh,True,True,
+1,US48,Demand,2024-04-09 04:48:42.466770,2015-07-01 05:00:00,2024-04-07 01:00:00,2015-07-01 05:00:00,2024-04-07 01:00:00,True,True,76869.0,0.0,backfill,True,True,Initial data backfill
+2,US48,Demand,2024-04-09 04:49:11.006799,2024-04-07 02:00:00,2024-04-08 23:00:00,2024-04-07 02:00:00,2024-04-08 19:00:00,True,False,42.0,0.0,refresh,True,True,
 3,US48,Demand,2024-04-09 05:10:19.997935,2024-04-08 20:00:00,2024-04-08 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+4,US48,Demand,2024-04-09 06:14:23.579778,2024-04-08 20:00:00,2024-04-08 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
