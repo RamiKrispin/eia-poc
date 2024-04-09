@@ -1,0 +1,10 @@
+artifact_location: /workspaces/eia-poc/metadata
+creation_time: 1712561247514
+experiment_id: '424898273550184764'
+last_update_time: 1712561297042
+lifecycle_stage: deleted
+name: Forecast Dev
+tags:
+  score: 'False'
+  type: forecast
+  version: 0.0.1

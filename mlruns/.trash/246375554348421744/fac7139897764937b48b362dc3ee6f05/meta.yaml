@@ -1,0 +1,16 @@
+artifact_uri: file:///workspaces/eia-poc/mlruns/246375554348421744/fac7139897764937b48b362dc3ee6f05/artifacts
+deleted_time: 1710144927468
+end_time: 1710125794795
+entry_point_name: ''
+experiment_id: '246375554348421744'
+lifecycle_stage: deleted
+run_id: fac7139897764937b48b362dc3ee6f05
+run_name: illustrious-newt-879
+run_uuid: fac7139897764937b48b362dc3ee6f05
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1710111462296
+status: 3
+tags: []
+user_id: root

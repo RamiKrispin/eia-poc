@@ -1,0 +1,9 @@
+artifact_location: /workspaces/eia-poc/metadata
+creation_time: 1710245886374
+experiment_id: '975083585404554604'
+last_update_time: 1710247252955
+lifecycle_stage: deleted
+name: Forecast Testing
+tags:
+  env: dev
+  version: 0.0.0.9000

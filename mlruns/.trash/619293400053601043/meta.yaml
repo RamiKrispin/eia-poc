@@ -1,0 +1,9 @@
+artifact_location: /workspaces/eia-poc/metadata
+creation_time: 1710145070729
+experiment_id: '619293400053601043'
+last_update_time: 1710145430024
+lifecycle_stage: deleted
+name: test
+tags:
+  env: dev
+  version: 0.0.1.9000

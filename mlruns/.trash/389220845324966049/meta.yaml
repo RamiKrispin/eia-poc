@@ -1,0 +1,7 @@
+artifact_location: file:///workspaces/eia-poc/mlruns/389220845324966049
+creation_time: 1710249101146
+experiment_id: '389220845324966049'
+last_update_time: 1710249164267
+lifecycle_stage: deleted
+name: Electricity Forecast
+tags: {}

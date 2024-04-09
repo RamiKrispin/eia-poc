@@ -1,0 +1,16 @@
+artifact_uri: /workspaces/eia-poc/metadata/1f77851cd6d8404e9559e75d40af0d5d/artifacts
+deleted_time: 1712016169917
+end_time: 1711461690061
+entry_point_name: ''
+experiment_id: '974479692091141522'
+lifecycle_stage: deleted
+run_id: 1f77851cd6d8404e9559e75d40af0d5d
+run_name: '2024-03-20'
+run_uuid: 1f77851cd6d8404e9559e75d40af0d5d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1711461689980
+status: 3
+tags: []
+user_id: root

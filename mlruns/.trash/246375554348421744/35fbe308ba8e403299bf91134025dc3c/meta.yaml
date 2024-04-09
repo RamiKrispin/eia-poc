@@ -1,0 +1,16 @@
+artifact_uri: file:///workspaces/eia-poc/mlruns/246375554348421744/35fbe308ba8e403299bf91134025dc3c/artifacts
+deleted_time: 1710144927468
+end_time: null
+entry_point_name: ''
+experiment_id: '246375554348421744'
+lifecycle_stage: deleted
+run_id: 35fbe308ba8e403299bf91134025dc3c
+run_name: enchanting-ant-293
+run_uuid: 35fbe308ba8e403299bf91134025dc3c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1710125802197
+status: 1
+tags: []
+user_id: root
