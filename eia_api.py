@@ -121,8 +121,7 @@ def eia_get(api_key,
         "end": end, 
         "length": length, 
         "offset": offset, 
-        "frequency": frequency,
-        "status": status
+        "frequency": frequency
     }
     output = response(data = df, url = url + "&api_key=", parameters = parameters)
     return output

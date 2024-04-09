@@ -200,7 +200,7 @@ if last_start < forecast_start:
 
     print(f.model_meta)
     log = fc.append_log(log_path= log_path, new_log = f.model_meta, save = True, init = True)
-    new_fc = fc.append_forecast(fc_path =  "data/fc48.csv", fc_new = f.forecast, save = True, init = True)
+    new_fc = fc.append_forecast(fc_path =  "data/fc48.csv", fc_new = f, save = True, init = True)
 ```
 
 

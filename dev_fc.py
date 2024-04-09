@@ -276,7 +276,7 @@ def append_forecast(fc_path, fc_new, save = False, init = False):
     
     
     fc = fc_new.forecast
-    fc["label"] = fc_new.log["label"]
+    
 
     if not init:
         fc_archive = pd.read_csv(fc_path)
