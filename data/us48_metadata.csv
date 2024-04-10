@@ -20,3 +20,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 19,US48,Demand,2024-04-09 21:10:42.972623,2024-04-09 19:00:00,2024-04-09 23:00:00,2024-04-09 19:00:00,2024-04-09 20:00:00,True,False,2.0,0.0,refresh,True,True,
 20,US48,Demand,2024-04-09 22:09:29.685497,2024-04-09 21:00:00,2024-04-09 23:00:00,2024-04-09 21:00:00,2024-04-09 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
 21,US48,Demand,2024-04-09 23:11:05.243786,2024-04-09 21:00:00,2024-04-09 23:00:00,2024-04-09 21:00:00,2024-04-09 22:00:00,True,False,2.0,0.0,refresh,True,True,
+22,US48,Demand,2024-04-10 00:45:55.380688,2024-04-09 23:00:00,2024-04-09 23:00:00,,,,,,,refresh,False,False,No new data is available; 
