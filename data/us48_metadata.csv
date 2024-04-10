@@ -22,3 +22,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 21,US48,Demand,2024-04-09 23:11:05.243786,2024-04-09 21:00:00,2024-04-09 23:00:00,2024-04-09 21:00:00,2024-04-09 22:00:00,True,False,2.0,0.0,refresh,True,True,
 22,US48,Demand,2024-04-10 00:45:55.380688,2024-04-09 23:00:00,2024-04-09 23:00:00,,,,,,,refresh,False,False,No new data is available; 
 23,US48,Demand,2024-04-10 01:44:08.310757,2024-04-09 23:00:00,2024-04-09 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+24,US48,Demand,2024-04-10 02:18:52.216443,2024-04-09 23:00:00,2024-04-09 23:00:00,,,,,,,refresh,False,False,No new data is available; 
