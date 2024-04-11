@@ -59,3 +59,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 58,US48,Demand,2024-04-11 12:18:06.594403,2024-04-11 03:00:00,2024-04-11 03:00:00,,,,,,,refresh,False,False,No new data is available; 
 59,US48,Demand,2024-04-11 13:11:07.970791,2024-04-11 03:00:00,2024-04-11 03:00:00,,,,,,,refresh,False,False,No new data is available; 
 60,US48,Demand,2024-04-11 14:10:21.663618,2024-04-11 03:00:00,2024-04-11 23:00:00,2024-04-11 03:00:00,2024-04-11 11:00:00,True,False,9.0,0.0,refresh,True,True,
+61,US48,Demand,2024-04-11 15:11:25.670685,2024-04-11 12:00:00,2024-04-11 23:00:00,2024-04-11 12:00:00,2024-04-11 14:00:00,True,False,3.0,0.0,refresh,True,True,
