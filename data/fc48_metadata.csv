@@ -1,2 +1,2 @@
 index,time,label,start,start_act,end_act,h,n_obs,start_flag,n_obs_flag,model,pi,score,mape,rmse,coverage,success,experiment_id,run_id
-1,2024-04-11 09:11:51,2024-04-11,2024-04-11,2024-04-11,2024-04-11 23:00:00,24,24,True,True,LinearRegressionModel,0.95,False,,,,True,603028514430067450,56a3371e063e4ab7b5bda4dfcc526a3b
+1,2024-04-12 11:12:03,2024-04-12,2024-04-12,2024-04-12,2024-04-12 23:00:00,24,24,True,True,LinearRegressionModel,0.95,False,,,,True,270244985058989149,a317389dbe564efa870ab62c9229290a
