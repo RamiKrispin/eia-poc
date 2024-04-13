@@ -114,3 +114,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 113,US48,Demand,2024-04-13 19:07:45.438197,2024-04-13 17:00:00,2024-04-13 23:00:00,2024-04-13 17:00:00,2024-04-13 18:00:00,True,False,2.0,0.0,refresh,True,True,
 114,US48,Demand,2024-04-13 20:09:38.245665,2024-04-13 19:00:00,2024-04-13 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
 115,US48,Demand,2024-04-13 21:08:18.463707,2024-04-13 19:00:00,2024-04-13 23:00:00,2024-04-13 19:00:00,2024-04-13 20:00:00,True,False,2.0,0.0,refresh,True,True,
+116,US48,Demand,2024-04-13 22:09:43.157121,2024-04-13 21:00:00,2024-04-13 23:00:00,2024-04-13 21:00:00,2024-04-13 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
