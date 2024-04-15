@@ -134,3 +134,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 133,US48,Demand,2024-04-15 08:11:33.199059,2024-04-15 00:00:00,2024-04-14 23:00:00,,,,,,,refresh,False,False,No new data is available; 
 134,US48,Demand,2024-04-15 09:10:30.202101,2024-04-15 00:00:00,2024-04-15 00:00:00,,,,,,,refresh,False,False,No new data is available; 
 135,US48,Demand,2024-04-15 10:10:09.519760,2024-04-15 00:00:00,2024-04-15 01:00:00,2024-04-15 00:00:00,2024-04-15 01:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+136,US48,Demand,2024-04-15 11:08:03.252727,2024-04-15 02:00:00,2024-04-15 02:00:00,,,,,,,refresh,False,False,No new data is available; 
