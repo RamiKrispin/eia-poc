@@ -1,8 +1,9 @@
 artifact_uri: /workspaces/eia-poc/metadata/dac650b4ab004794a6024f5c9246cf66/artifacts
+deleted_time: 1712677277810
 end_time: 1712636491976
 entry_point_name: ''
 experiment_id: '383089046861946171'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: dac650b4ab004794a6024f5c9246cf66
 run_name: '2022-04-08'
 run_uuid: dac650b4ab004794a6024f5c9246cf66
