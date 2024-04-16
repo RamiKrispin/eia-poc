@@ -170,3 +170,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 169,US48,Demand,2024-04-16 20:10:55.544844,2024-04-16 19:00:00,2024-04-16 23:00:00,2024-04-16 19:00:00,2024-04-16 19:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
 170,US48,Demand,2024-04-16 21:11:00.598928,2024-04-16 19:00:00,2024-04-16 23:00:00,2024-04-16 19:00:00,2024-04-16 20:00:00,True,False,2.0,0.0,refresh,True,True,
 171,US48,Demand,2024-04-16 22:10:33.592031,2024-04-16 21:00:00,2024-04-16 23:00:00,2024-04-16 21:00:00,2024-04-16 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+172,US48,Demand,2024-04-16 23:11:11.609140,2024-04-16 21:00:00,2024-04-16 23:00:00,2024-04-16 21:00:00,2024-04-16 22:00:00,True,False,2.0,0.0,refresh,True,True,
