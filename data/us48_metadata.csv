@@ -189,3 +189,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 188,US48,Demand,2024-04-17 15:12:34.934522,2024-04-17 12:00:00,2024-04-17 23:00:00,2024-04-17 12:00:00,2024-04-17 14:00:00,True,False,3.0,0.0,refresh,True,True,
 189,US48,Demand,2024-04-17 16:13:54.990935,2024-04-17 15:00:00,2024-04-17 23:00:00,2024-04-17 15:00:00,2024-04-17 15:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
 190,US48,Demand,2024-04-17 17:09:30.056564,2024-04-17 15:00:00,2024-04-17 23:00:00,2024-04-17 15:00:00,2024-04-17 16:00:00,True,False,2.0,0.0,refresh,True,True,
+191,US48,Demand,2024-04-17 18:13:30.172817,2024-04-17 17:00:00,2024-04-17 23:00:00,2024-04-17 17:00:00,2024-04-17 17:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
