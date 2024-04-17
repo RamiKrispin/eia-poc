@@ -187,3 +187,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 186,US48,Demand,2024-04-17 13:11:12.688255,2024-04-17 03:00:00,2024-04-17 03:00:00,,,,,,,refresh,False,False,No new data is available; 
 187,US48,Demand,2024-04-17 14:10:08.844479,2024-04-17 03:00:00,2024-04-17 23:00:00,2024-04-17 03:00:00,2024-04-17 11:00:00,True,False,9.0,0.0,refresh,True,True,
 188,US48,Demand,2024-04-17 15:12:34.934522,2024-04-17 12:00:00,2024-04-17 23:00:00,2024-04-17 12:00:00,2024-04-17 14:00:00,True,False,3.0,0.0,refresh,True,True,
+189,US48,Demand,2024-04-17 16:13:54.990935,2024-04-17 15:00:00,2024-04-17 23:00:00,2024-04-17 15:00:00,2024-04-17 15:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
