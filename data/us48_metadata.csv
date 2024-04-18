@@ -212,3 +212,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 211,US48,Demand,2024-04-18 14:09:57.637894,2024-04-18 00:00:00,2024-04-17 23:00:00,,,,,,,refresh,False,False,No new data is available; 
 212,US48,Demand,2024-04-18 15:11:05.924345,2024-04-18 00:00:00,2024-04-17 23:00:00,,,,,,,refresh,False,False,No new data is available; 
 213,US48,Demand,2024-04-18 16:12:26.432937,2024-04-18 00:00:00,2024-04-17 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+214,US48,Demand,2024-04-18 17:09:48.572731,2024-04-18 00:00:00,2024-04-18 23:00:00,2024-04-18 00:00:00,2024-04-18 16:00:00,True,False,17.0,0.0,refresh,True,True,
