@@ -286,3 +286,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 285,US48,Demand,2024-04-21 16:12:57.311471,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
 286,US48,Demand,2024-04-21 17:10:15.233741,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
 287,US48,Demand,2024-04-21 18:13:43.614901,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+288,US48,Demand,2024-04-21 19:10:05.764317,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
