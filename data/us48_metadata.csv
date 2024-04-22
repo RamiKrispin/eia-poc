@@ -306,3 +306,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 305,US48,Demand,2024-04-22 12:19:57.299511,2024-04-22 02:00:00,2024-04-22 03:00:00,2024-04-22 02:00:00,2024-04-22 03:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
 306,US48,Demand,2024-04-22 13:11:47.244771,2024-04-22 04:00:00,2024-04-22 03:00:00,,,,,,,refresh,False,False,No new data is available; 
 307,US48,Demand,2024-04-22 14:10:39.695140,2024-04-22 04:00:00,2024-04-22 23:00:00,2024-04-22 04:00:00,2024-04-22 11:00:00,True,False,8.0,0.0,refresh,True,True,
+308,US48,Demand,2024-04-22 15:11:32.354643,2024-04-22 12:00:00,2024-04-22 23:00:00,2024-04-22 12:00:00,2024-04-22 14:00:00,True,False,3.0,0.0,refresh,True,True,
