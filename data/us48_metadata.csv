@@ -310,3 +310,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 309,US48,Demand,2024-04-22 16:13:11.828896,2024-04-22 15:00:00,2024-04-22 23:00:00,2024-04-22 15:00:00,2024-04-22 15:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
 310,US48,Demand,2024-04-22 17:09:33.758438,2024-04-22 15:00:00,2024-04-22 23:00:00,2024-04-22 15:00:00,2024-04-22 16:00:00,True,False,2.0,0.0,refresh,True,True,
 311,US48,Demand,2024-04-22 18:12:52.721458,2024-04-22 17:00:00,2024-04-22 23:00:00,2024-04-22 17:00:00,2024-04-22 17:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+312,US48,Demand,2024-04-22 19:10:03.792993,2024-04-22 17:00:00,2024-04-22 23:00:00,2024-04-22 17:00:00,2024-04-22 18:00:00,True,False,2.0,0.0,refresh,True,True,
