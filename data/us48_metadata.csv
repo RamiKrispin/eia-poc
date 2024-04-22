@@ -307,3 +307,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 306,US48,Demand,2024-04-22 13:11:47.244771,2024-04-22 04:00:00,2024-04-22 03:00:00,,,,,,,refresh,False,False,No new data is available; 
 307,US48,Demand,2024-04-22 14:10:39.695140,2024-04-22 04:00:00,2024-04-22 23:00:00,2024-04-22 04:00:00,2024-04-22 11:00:00,True,False,8.0,0.0,refresh,True,True,
 308,US48,Demand,2024-04-22 15:11:32.354643,2024-04-22 12:00:00,2024-04-22 23:00:00,2024-04-22 12:00:00,2024-04-22 14:00:00,True,False,3.0,0.0,refresh,True,True,
+309,US48,Demand,2024-04-22 16:13:11.828896,2024-04-22 15:00:00,2024-04-22 23:00:00,2024-04-22 15:00:00,2024-04-22 15:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
