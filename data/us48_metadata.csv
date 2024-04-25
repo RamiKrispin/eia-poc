@@ -379,3 +379,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 378,US48,Demand,2024-04-25 13:09:37.213814,2024-04-25 04:00:00,2024-04-25 03:00:00,,,,,,,refresh,False,False,No new data is available; 
 379,US48,Demand,2024-04-25 14:08:36.095047,2024-04-25 04:00:00,2024-04-25 23:00:00,2024-04-25 04:00:00,2024-04-25 11:00:00,True,False,8.0,0.0,refresh,True,True,
 380,US48,Demand,2024-04-25 15:10:20.722686,2024-04-25 12:00:00,2024-04-25 23:00:00,2024-04-25 12:00:00,2024-04-25 14:00:00,True,False,3.0,0.0,refresh,True,True,
+381,US48,Demand,2024-04-25 16:13:29.322480,2024-04-25 15:00:00,2024-04-25 23:00:00,2024-04-25 15:00:00,2024-04-25 15:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
