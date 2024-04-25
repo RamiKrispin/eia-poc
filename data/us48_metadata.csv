@@ -364,3 +364,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 363,US48,Demand,2024-04-24 22:11:53.196866,2024-04-24 20:00:00,2024-04-24 23:00:00,2024-04-24 20:00:00,2024-04-24 21:00:00,True,False,2.0,0.0,refresh,True,True,
 364,US48,Demand,2024-04-24 23:12:56.632931,2024-04-24 22:00:00,2024-04-24 23:00:00,2024-04-24 22:00:00,2024-04-24 22:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
 365,US48,Demand,2024-04-25 00:48:09.311444,2024-04-24 22:00:00,2024-04-24 23:00:00,2024-04-24 22:00:00,2024-04-24 23:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+366,US48,Demand,2024-04-25 02:21:53.499264,2024-04-25 00:00:00,2024-04-24 23:00:00,,,,,,,refresh,False,False,No new data is available; 
