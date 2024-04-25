@@ -366,3 +366,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 365,US48,Demand,2024-04-25 00:48:09.311444,2024-04-24 22:00:00,2024-04-24 23:00:00,2024-04-24 22:00:00,2024-04-24 23:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
 366,US48,Demand,2024-04-25 02:21:53.499264,2024-04-25 00:00:00,2024-04-24 23:00:00,,,,,,,refresh,False,False,No new data is available; 
 367,US48,Demand,2024-04-25 02:27:18.365610,2024-04-25 00:00:00,2024-04-24 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+368,US48,Demand,2024-04-25 03:11:57.510566,2024-04-25 00:00:00,2024-04-24 23:00:00,,,,,,,refresh,False,False,No new data is available; 
