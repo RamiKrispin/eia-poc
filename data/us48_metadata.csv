@@ -428,3 +428,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 427,US48,Demand,2024-04-27 14:09:01.920062,2024-04-27 03:00:00,2024-04-27 23:00:00,2024-04-27 03:00:00,2024-04-27 11:00:00,True,False,9.0,0.0,refresh,True,True,
 428,US48,Demand,2024-04-27 15:09:57.087633,2024-04-27 12:00:00,2024-04-27 23:00:00,2024-04-27 12:00:00,2024-04-27 14:00:00,True,False,3.0,0.0,refresh,True,True,
 429,US48,Demand,2024-04-27 16:11:23.524840,2024-04-27 15:00:00,2024-04-27 23:00:00,2024-04-27 15:00:00,2024-04-27 15:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+430,US48,Demand,2024-04-27 17:09:40.645846,2024-04-27 15:00:00,2024-04-27 23:00:00,2024-04-27 15:00:00,2024-04-27 16:00:00,True,False,2.0,0.0,refresh,True,True,
