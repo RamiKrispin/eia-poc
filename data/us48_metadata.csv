@@ -426,3 +426,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 425,US48,Demand,2024-04-27 12:16:32.989779,2024-04-27 03:00:00,2024-04-27 03:00:00,,,,,,,refresh,False,False,No new data is available; 
 426,US48,Demand,2024-04-27 13:11:46.093554,2024-04-27 03:00:00,2024-04-27 03:00:00,,,,,,,refresh,False,False,No new data is available; 
 427,US48,Demand,2024-04-27 14:09:01.920062,2024-04-27 03:00:00,2024-04-27 23:00:00,2024-04-27 03:00:00,2024-04-27 11:00:00,True,False,9.0,0.0,refresh,True,True,
+428,US48,Demand,2024-04-27 15:09:57.087633,2024-04-27 12:00:00,2024-04-27 23:00:00,2024-04-27 12:00:00,2024-04-27 14:00:00,True,False,3.0,0.0,refresh,True,True,
