@@ -420,3 +420,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 419,US48,Demand,2024-04-27 06:14:15.555825,2024-04-26 23:00:00,2024-04-26 23:00:00,,,,,,,refresh,False,False,No new data is available; 
 420,US48,Demand,2024-04-27 07:09:12.179037,2024-04-26 23:00:00,2024-04-26 23:00:00,,,,,,,refresh,False,False,No new data is available; 
 421,US48,Demand,2024-04-27 08:13:14.754580,2024-04-26 23:00:00,2024-04-26 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+422,US48,Demand,2024-04-27 09:10:03.877826,2024-04-26 23:00:00,2024-04-27 00:00:00,2024-04-26 23:00:00,2024-04-27 00:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
