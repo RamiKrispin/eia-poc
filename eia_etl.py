@@ -49,7 +49,7 @@ def get_api_end(api_key, api_path, offset):
     return meta
     
 
-def eia_data_refresh(start, end, api_key, api_path, facets):
+def eia_data_refresh(start, end, api_key, api_path, facets, offset = None):
     
     class data_refresh:
         def __init__(output, data, status, log):
@@ -63,14 +63,21 @@ def eia_data_refresh(start, end, api_key, api_path, facets):
 
     if(start < end):
         print("Updates are available")
+        if offset is not None:
+            s = start -  datetime.timedelta(hours = offset)
+            o = offset
+            comments = comments + "Offset the start argument by" + offset + "; "
+        else:
+            s = start
+            o = 0
         
         df = eia_api.eia_get(api_key = api_key, 
                              api_path = api_path, 
                              facets = facets, 
-                             start = start,
+                             start = s,
                              end = end) 
         if df is not None and len(df.data) > 0:
-            start_match_flag = df.data["period"].min() == start
+            start_match_flag = df.data["period"].min() == s
             end_match_flag = df.data["period"].max() == end
             start_act = df.data["period"].min()
             end_act = df.data["period"].max()
@@ -115,6 +122,7 @@ def eia_data_refresh(start, end, api_key, api_path, facets):
         "time": datetime.datetime.now(),
         "start": start,
         "end": end,
+        "offset": offset,
         "start_act": start_act,
         "end_act": end_act,
         "start_match": start_match_flag, 
@@ -159,6 +167,9 @@ def append_new_data(data_path,log_path, new_data, save = False):
         pre_data = pd.read_csv(data_path)
         pre_data["period"] = pd.to_datetime(pre_data["period"])
         pre_data["value"] = pd.to_numeric(pre_data["value"])
+        if new_data.log["offset"] > 0 and pre_data["period"].max() > new_data.log["start_act"]:
+            pre_data = pre_data[pre_data["period"] < new_data.log["start_act"]]
+            
         data = pre_data._append(new_data.data)
         data = data.sort_values("period")
 
