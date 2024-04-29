@@ -1,17 +1,20 @@
 Data Pipeline
-- Add window functionality
+- Add window functionality [P1]
+
+
 
 Data validation
 - Modify the failure for end time -> Set warning if end.actual does not match end.api and end > start [DONE]
 
 Metadata
-- Create a function that set logs
+- Create a function that set logs [Done]
     - Initial 
     - Append
 
 
 Forecast 
-- Fix the forecast metadata issue [IN TEST]
+- Fix the forecast metadata issue [Done]
+- Set logs using MLflow
 
 MLflow
 - delete experiment if name exists [DONE]
