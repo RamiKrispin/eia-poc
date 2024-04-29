@@ -43,7 +43,7 @@ In addition, we will use the following libraries:
 #| label: load libraries
 import eia_api
 import eia_etl as etl
-# import eia_forecast as fc
+import eia_forecast as fc_old
 import dev_fc as fc
 import os
 import datetime
@@ -185,9 +185,15 @@ log_path = "data/fc48_metadata.csv"
 fc_path = "data/fc48.csv"
 
 forecast_start = data["period"].max().floor(freq = "d")
-last_start = fc.get_last_fc_start(log_path = log_path)
+if os.path.isfile(log_path):
+    last_start = fc.get_last_fc_start(log_path = log_path)
+    create_new_fc = last_start < forecast_start
+else:
+    create_new_fc = True
 
-if last_start < forecast_start:
+
+if create_new_fc:
+    print("Create new forecast")
     end = forecast_start - datetime.timedelta(hours = 1)
     start = end - datetime.timedelta(hours = md_params.train_length)
     print(start, end)
@@ -200,7 +206,7 @@ if last_start < forecast_start:
 
     print(f.model_meta)
     log = fc.append_log(log_path= log_path, new_log = f.model_meta, save = True, init = True)
-    new_fc = fc.append_forecast(fc_path =  "data/fc48.csv", fc_new = f, save = True, init = True)
+    new_fc = fc.append_forecast(fc_path =  fc_path, fc_new = f, save = True, init = True)
 ```
 
 
@@ -208,6 +214,6 @@ if last_start < forecast_start:
 Score past forecasts
 
 ```{python}
-forecast_archive = fc.load_forecast(fc_path)
-new_log = fc.score_forecast(log_path = "data/fc48_metadata.csv", actual = data, forecast = forecast_archive, save = True)
+forecast_archive = fc_old.load_forecast(fc_path)
+new_log = fc_old.score_forecast(log_path = "data/fc48_metadata.csv", actual = data, forecast = forecast_archive, save = True)
 ```

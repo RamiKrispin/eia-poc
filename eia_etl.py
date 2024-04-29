@@ -66,7 +66,7 @@ def eia_data_refresh(start, end, api_key, api_path, facets, offset = None):
         if offset is not None:
             s = start -  datetime.timedelta(hours = offset)
             o = offset
-            comments = comments + "Offset the start argument by" + offset + "; "
+            comments = comments + "Offset the start argument by" + str(offset) + "; "
         else:
             s = start
             o = 0
