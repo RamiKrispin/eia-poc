@@ -1,2 +1,466 @@
 index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,end_match,n_obs,na,type,update,success,comments
+<<<<<<< HEAD
 1,US48,Demand,2024-04-29 01:38:38.669084,2015-07-01 05:00:00,2024-04-26 14:00:00,2015-07-01 05:00:00,2024-04-26 14:00:00,True,True,77338,0,backfill,True,True,Initial data backfill
+=======
+1,US48,Demand,2024-04-09 04:48:42.466770,2015-07-01 05:00:00,2024-04-07 01:00:00,2015-07-01 05:00:00,2024-04-07 01:00:00,True,True,76869.0,0.0,backfill,True,True,Initial data backfill
+2,US48,Demand,2024-04-09 04:49:11.006799,2024-04-07 02:00:00,2024-04-08 23:00:00,2024-04-07 02:00:00,2024-04-08 19:00:00,True,False,42.0,0.0,refresh,True,True,
+3,US48,Demand,2024-04-09 05:10:19.997935,2024-04-08 20:00:00,2024-04-08 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+4,US48,Demand,2024-04-09 06:14:23.579778,2024-04-08 20:00:00,2024-04-08 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+5,US48,Demand,2024-04-09 07:11:47.820446,2024-04-08 20:00:00,2024-04-08 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+6,US48,Demand,2024-04-09 08:13:25.545392,2024-04-08 20:00:00,2024-04-08 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+7,US48,Demand,2024-04-09 09:11:44.486853,2024-04-08 20:00:00,2024-04-08 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+8,US48,Demand,2024-04-09 10:12:48.127720,2024-04-08 20:00:00,2024-04-08 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+9,US48,Demand,2024-04-09 11:08:47.997131,2024-04-08 20:00:00,2024-04-08 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+10,US48,Demand,2024-04-09 12:18:43.848630,2024-04-08 20:00:00,2024-04-09 03:00:00,2024-04-08 20:00:00,2024-04-09 03:00:00,True,True,8.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+11,US48,Demand,2024-04-09 13:10:57.254033,2024-04-09 04:00:00,2024-04-09 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+12,US48,Demand,2024-04-09 14:10:07.427379,2024-04-09 04:00:00,2024-04-09 23:00:00,2024-04-09 04:00:00,2024-04-09 11:00:00,True,False,8.0,0.0,refresh,True,True,
+13,US48,Demand,2024-04-09 15:10:47.152772,2024-04-09 12:00:00,2024-04-09 23:00:00,2024-04-09 12:00:00,2024-04-09 14:00:00,True,False,3.0,0.0,refresh,True,True,
+14,US48,Demand,2024-04-09 16:12:15.302834,2024-04-09 15:00:00,2024-04-09 23:00:00,2024-04-09 15:00:00,2024-04-09 15:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+15,US48,Demand,2024-04-09 17:09:52.731991,2024-04-09 15:00:00,2024-04-09 23:00:00,2024-04-09 15:00:00,2024-04-09 16:00:00,True,False,2.0,0.0,refresh,True,True,
+16,US48,Demand,2024-04-09 18:12:42.052149,2024-04-09 17:00:00,2024-04-09 23:00:00,2024-04-09 17:00:00,2024-04-09 17:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+17,US48,Demand,2024-04-09 19:08:25.261624,2024-04-09 17:00:00,2024-04-09 23:00:00,2024-04-09 17:00:00,2024-04-09 18:00:00,True,False,2.0,0.0,refresh,True,True,
+18,US48,Demand,2024-04-09 20:11:04.484364,2024-04-09 19:00:00,2024-04-09 23:00:00,2024-04-09 19:00:00,2024-04-09 19:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+19,US48,Demand,2024-04-09 21:10:42.972623,2024-04-09 19:00:00,2024-04-09 23:00:00,2024-04-09 19:00:00,2024-04-09 20:00:00,True,False,2.0,0.0,refresh,True,True,
+20,US48,Demand,2024-04-09 22:09:29.685497,2024-04-09 21:00:00,2024-04-09 23:00:00,2024-04-09 21:00:00,2024-04-09 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+21,US48,Demand,2024-04-09 23:11:05.243786,2024-04-09 21:00:00,2024-04-09 23:00:00,2024-04-09 21:00:00,2024-04-09 22:00:00,True,False,2.0,0.0,refresh,True,True,
+22,US48,Demand,2024-04-10 00:45:55.380688,2024-04-09 23:00:00,2024-04-09 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+23,US48,Demand,2024-04-10 01:44:08.310757,2024-04-09 23:00:00,2024-04-09 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+24,US48,Demand,2024-04-10 02:18:52.216443,2024-04-09 23:00:00,2024-04-09 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+25,US48,Demand,2024-04-10 03:12:54.710674,2024-04-09 23:00:00,2024-04-09 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+26,US48,Demand,2024-04-10 04:12:23.156021,2024-04-09 23:00:00,2024-04-09 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+27,US48,Demand,2024-04-10 05:10:32.743473,2024-04-09 23:00:00,2024-04-09 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+28,US48,Demand,2024-04-10 06:13:55.980242,2024-04-09 23:00:00,2024-04-09 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+29,US48,Demand,2024-04-10 07:11:52.105004,2024-04-09 23:00:00,2024-04-09 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+30,US48,Demand,2024-04-10 08:14:28.005089,2024-04-09 23:00:00,2024-04-09 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+31,US48,Demand,2024-04-10 09:12:35.945746,2024-04-09 23:00:00,2024-04-10 00:00:00,2024-04-09 23:00:00,2024-04-10 00:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+32,US48,Demand,2024-04-10 10:10:58.086452,2024-04-10 01:00:00,2024-04-10 01:00:00,,,,,,,refresh,False,False,No new data is available; 
+33,US48,Demand,2024-04-10 11:11:18.762895,2024-04-10 01:00:00,2024-04-10 02:00:00,2024-04-10 01:00:00,2024-04-10 02:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+34,US48,Demand,2024-04-10 12:18:25.327181,2024-04-10 03:00:00,2024-04-10 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+35,US48,Demand,2024-04-10 13:11:37.101373,2024-04-10 03:00:00,2024-04-10 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+36,US48,Demand,2024-04-10 14:09:44.886272,2024-04-10 03:00:00,2024-04-10 23:00:00,2024-04-10 03:00:00,2024-04-10 11:00:00,True,False,9.0,0.0,refresh,True,True,
+37,US48,Demand,2024-04-10 15:11:00.655144,2024-04-10 12:00:00,2024-04-10 23:00:00,2024-04-10 12:00:00,2024-04-10 14:00:00,True,False,3.0,0.0,refresh,True,True,
+38,US48,Demand,2024-04-10 16:15:22.579839,2024-04-10 15:00:00,2024-04-10 23:00:00,2024-04-10 15:00:00,2024-04-10 15:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+39,US48,Demand,2024-04-10 17:09:32.397021,2024-04-10 15:00:00,2024-04-10 23:00:00,2024-04-10 15:00:00,2024-04-10 16:00:00,True,False,2.0,0.0,refresh,True,True,
+40,US48,Demand,2024-04-10 18:14:42.795981,2024-04-10 17:00:00,2024-04-10 23:00:00,2024-04-10 17:00:00,2024-04-10 17:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+41,US48,Demand,2024-04-10 19:09:41.012020,2024-04-10 17:00:00,2024-04-10 23:00:00,2024-04-10 17:00:00,2024-04-10 18:00:00,True,False,2.0,0.0,refresh,True,True,
+42,US48,Demand,2024-04-10 20:11:19.165045,2024-04-10 19:00:00,2024-04-10 23:00:00,2024-04-10 19:00:00,2024-04-10 19:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+43,US48,Demand,2024-04-10 21:10:08.187192,2024-04-10 19:00:00,2024-04-10 23:00:00,2024-04-10 19:00:00,2024-04-10 20:00:00,True,False,2.0,0.0,refresh,True,True,
+44,US48,Demand,2024-04-10 22:11:51.669108,2024-04-10 21:00:00,2024-04-10 23:00:00,2024-04-10 21:00:00,2024-04-10 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+45,US48,Demand,2024-04-10 23:12:00.154402,2024-04-10 21:00:00,2024-04-10 23:00:00,2024-04-10 21:00:00,2024-04-10 22:00:00,True,False,2.0,0.0,refresh,True,True,
+46,US48,Demand,2024-04-11 00:45:38.254992,2024-04-10 23:00:00,2024-04-10 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+47,US48,Demand,2024-04-11 01:46:20.291671,2024-04-10 23:00:00,2024-04-10 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+48,US48,Demand,2024-04-11 02:31:00.979907,2024-04-10 23:00:00,2024-04-10 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+49,US48,Demand,2024-04-11 03:11:29.536268,2024-04-10 23:00:00,2024-04-10 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+50,US48,Demand,2024-04-11 04:12:21.053150,2024-04-10 23:00:00,2024-04-10 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+51,US48,Demand,2024-04-11 05:11:11.135638,2024-04-10 23:00:00,2024-04-10 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+52,US48,Demand,2024-04-11 06:13:48.116433,2024-04-10 23:00:00,2024-04-10 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+53,US48,Demand,2024-04-11 07:11:09.052902,2024-04-10 23:00:00,2024-04-10 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+54,US48,Demand,2024-04-11 08:13:47.976044,2024-04-10 23:00:00,2024-04-10 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+55,US48,Demand,2024-04-11 09:11:36.512729,2024-04-10 23:00:00,2024-04-11 00:00:00,2024-04-10 23:00:00,2024-04-11 00:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+56,US48,Demand,2024-04-11 10:11:55.711136,2024-04-11 01:00:00,2024-04-11 01:00:00,,,,,,,refresh,False,False,No new data is available; 
+57,US48,Demand,2024-04-11 11:09:20.501572,2024-04-11 01:00:00,2024-04-11 02:00:00,2024-04-11 01:00:00,2024-04-11 02:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+58,US48,Demand,2024-04-11 12:18:06.594403,2024-04-11 03:00:00,2024-04-11 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+59,US48,Demand,2024-04-11 13:11:07.970791,2024-04-11 03:00:00,2024-04-11 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+60,US48,Demand,2024-04-11 14:10:21.663618,2024-04-11 03:00:00,2024-04-11 23:00:00,2024-04-11 03:00:00,2024-04-11 11:00:00,True,False,9.0,0.0,refresh,True,True,
+61,US48,Demand,2024-04-11 15:11:25.670685,2024-04-11 12:00:00,2024-04-11 23:00:00,2024-04-11 12:00:00,2024-04-11 14:00:00,True,False,3.0,0.0,refresh,True,True,
+62,US48,Demand,2024-04-11 16:11:32.261978,2024-04-11 15:00:00,2024-04-11 23:00:00,2024-04-11 15:00:00,2024-04-11 15:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+63,US48,Demand,2024-04-11 17:09:57.435402,2024-04-11 15:00:00,2024-04-11 23:00:00,2024-04-11 15:00:00,2024-04-11 16:00:00,True,False,2.0,0.0,refresh,True,True,
+64,US48,Demand,2024-04-11 18:12:50.964637,2024-04-11 17:00:00,2024-04-11 23:00:00,2024-04-11 17:00:00,2024-04-11 17:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+65,US48,Demand,2024-04-11 19:16:42.991121,2024-04-11 17:00:00,2024-04-11 23:00:00,2024-04-11 17:00:00,2024-04-11 18:00:00,True,False,2.0,0.0,refresh,True,True,
+66,US48,Demand,2024-04-11 20:10:41.337769,2024-04-11 19:00:00,2024-04-11 23:00:00,2024-04-11 19:00:00,2024-04-11 19:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+67,US48,Demand,2024-04-11 21:10:25.384463,2024-04-11 19:00:00,2024-04-11 23:00:00,2024-04-11 19:00:00,2024-04-11 20:00:00,True,False,2.0,0.0,refresh,True,True,
+68,US48,Demand,2024-04-11 22:09:38.248175,2024-04-11 21:00:00,2024-04-11 23:00:00,2024-04-11 21:00:00,2024-04-11 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+69,US48,Demand,2024-04-11 23:12:10.859905,2024-04-11 21:00:00,2024-04-11 23:00:00,2024-04-11 21:00:00,2024-04-11 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+70,US48,Demand,2024-04-12 00:44:38.243262,2024-04-11 21:00:00,2024-04-11 23:00:00,2024-04-11 21:00:00,2024-04-11 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+71,US48,Demand,2024-04-12 01:44:34.710195,2024-04-11 21:00:00,2024-04-11 23:00:00,2024-04-11 21:00:00,2024-04-11 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+72,US48,Demand,2024-04-12 02:22:15.236777,2024-04-11 21:00:00,2024-04-11 23:00:00,2024-04-11 21:00:00,2024-04-11 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+73,US48,Demand,2024-04-12 03:12:19.156666,2024-04-11 21:00:00,2024-04-11 23:00:00,2024-04-11 21:00:00,2024-04-11 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+74,US48,Demand,2024-04-12 04:12:27.323122,2024-04-11 21:00:00,2024-04-11 23:00:00,2024-04-11 21:00:00,2024-04-11 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+75,US48,Demand,2024-04-12 05:11:32.858667,2024-04-11 21:00:00,2024-04-11 23:00:00,2024-04-11 21:00:00,2024-04-11 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+76,US48,Demand,2024-04-12 06:14:01.615804,2024-04-11 21:00:00,2024-04-11 23:00:00,2024-04-11 21:00:00,2024-04-11 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+77,US48,Demand,2024-04-12 07:12:19.638067,2024-04-11 21:00:00,2024-04-11 23:00:00,2024-04-11 21:00:00,2024-04-11 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+78,US48,Demand,2024-04-12 08:13:08.908892,2024-04-11 21:00:00,2024-04-11 23:00:00,2024-04-11 21:00:00,2024-04-11 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+79,US48,Demand,2024-04-12 09:11:48.968723,2024-04-11 21:00:00,2024-04-11 23:00:00,2024-04-11 21:00:00,2024-04-11 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+80,US48,Demand,2024-04-12 10:11:38.887693,2024-04-11 21:00:00,2024-04-11 23:00:00,2024-04-11 21:00:00,2024-04-11 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+81,US48,Demand,2024-04-12 11:11:49.143582,2024-04-11 21:00:00,2024-04-12 02:00:00,2024-04-11 21:00:00,2024-04-12 02:00:00,True,True,6.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+82,US48,Demand,2024-04-12 12:17:55.489281,2024-04-12 03:00:00,2024-04-12 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+83,US48,Demand,2024-04-12 13:10:55.069565,2024-04-12 03:00:00,2024-04-12 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+84,US48,Demand,2024-04-12 14:09:56.185127,2024-04-12 03:00:00,2024-04-12 23:00:00,2024-04-12 03:00:00,2024-04-12 11:00:00,True,False,9.0,0.0,refresh,True,True,
+85,US48,Demand,2024-04-12 15:10:15.409717,2024-04-12 12:00:00,2024-04-12 23:00:00,2024-04-12 12:00:00,2024-04-12 14:00:00,True,False,3.0,0.0,refresh,True,True,
+86,US48,Demand,2024-04-12 16:12:26.172070,2024-04-12 15:00:00,2024-04-12 23:00:00,2024-04-12 15:00:00,2024-04-12 15:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+87,US48,Demand,2024-04-12 17:11:23.721550,2024-04-12 15:00:00,2024-04-12 23:00:00,2024-04-12 15:00:00,2024-04-12 16:00:00,True,False,2.0,0.0,refresh,True,True,
+88,US48,Demand,2024-04-12 18:11:31.403859,2024-04-12 17:00:00,2024-04-12 23:00:00,2024-04-12 17:00:00,2024-04-12 17:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+89,US48,Demand,2024-04-12 19:09:33.056145,2024-04-12 17:00:00,2024-04-12 23:00:00,2024-04-12 17:00:00,2024-04-12 18:00:00,True,False,2.0,0.0,refresh,True,True,
+90,US48,Demand,2024-04-12 20:11:29.681436,2024-04-12 19:00:00,2024-04-12 23:00:00,2024-04-12 19:00:00,2024-04-12 19:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+91,US48,Demand,2024-04-12 21:09:49.983665,2024-04-12 19:00:00,2024-04-12 23:00:00,2024-04-12 19:00:00,2024-04-12 20:00:00,True,False,2.0,0.0,refresh,True,True,
+92,US48,Demand,2024-04-12 22:08:59.511991,2024-04-12 21:00:00,2024-04-12 23:00:00,2024-04-12 21:00:00,2024-04-12 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+93,US48,Demand,2024-04-12 23:08:21.167393,2024-04-12 21:00:00,2024-04-12 23:00:00,2024-04-12 21:00:00,2024-04-12 22:00:00,True,False,2.0,0.0,refresh,True,True,
+94,US48,Demand,2024-04-13 00:37:46.795591,2024-04-12 23:00:00,2024-04-12 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+95,US48,Demand,2024-04-13 01:30:20.943866,2024-04-12 23:00:00,2024-04-12 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+96,US48,Demand,2024-04-13 02:10:28.169256,2024-04-12 23:00:00,2024-04-12 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+97,US48,Demand,2024-04-13 03:09:44.325732,2024-04-12 23:00:00,2024-04-12 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+98,US48,Demand,2024-04-13 04:12:33.759790,2024-04-12 23:00:00,2024-04-12 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+99,US48,Demand,2024-04-13 05:12:52.715152,2024-04-12 23:00:00,2024-04-12 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+100,US48,Demand,2024-04-13 06:10:46.163989,2024-04-12 23:00:00,2024-04-12 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+101,US48,Demand,2024-04-13 07:10:52.751666,2024-04-12 23:00:00,2024-04-12 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+102,US48,Demand,2024-04-13 08:10:17.138183,2024-04-12 23:00:00,2024-04-12 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+103,US48,Demand,2024-04-13 09:09:05.319023,2024-04-12 23:00:00,2024-04-13 00:00:00,2024-04-12 23:00:00,2024-04-13 00:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+104,US48,Demand,2024-04-13 10:09:30.454063,2024-04-13 01:00:00,2024-04-13 01:00:00,,,,,,,refresh,False,False,No new data is available; 
+105,US48,Demand,2024-04-13 11:08:21.533736,2024-04-13 01:00:00,2024-04-13 02:00:00,2024-04-13 01:00:00,2024-04-13 02:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+106,US48,Demand,2024-04-13 12:14:38.340675,2024-04-13 03:00:00,2024-04-13 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+107,US48,Demand,2024-04-13 13:10:33.310353,2024-04-13 03:00:00,2024-04-13 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+108,US48,Demand,2024-04-13 14:09:16.209685,2024-04-13 03:00:00,2024-04-13 23:00:00,2024-04-13 03:00:00,2024-04-13 11:00:00,True,False,9.0,0.0,refresh,True,True,
+109,US48,Demand,2024-04-13 15:08:01.669737,2024-04-13 12:00:00,2024-04-13 23:00:00,2024-04-13 12:00:00,2024-04-13 14:00:00,True,False,3.0,0.0,refresh,True,True,
+110,US48,Demand,2024-04-13 16:12:23.828111,2024-04-13 15:00:00,2024-04-13 23:00:00,2024-04-13 15:00:00,2024-04-13 15:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+111,US48,Demand,2024-04-13 17:07:15.637805,2024-04-13 15:00:00,2024-04-13 23:00:00,2024-04-13 15:00:00,2024-04-13 16:00:00,True,False,2.0,0.0,refresh,True,True,
+112,US48,Demand,2024-04-13 18:10:51.780111,2024-04-13 17:00:00,2024-04-13 23:00:00,2024-04-13 17:00:00,2024-04-13 17:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+113,US48,Demand,2024-04-13 19:07:45.438197,2024-04-13 17:00:00,2024-04-13 23:00:00,2024-04-13 17:00:00,2024-04-13 18:00:00,True,False,2.0,0.0,refresh,True,True,
+114,US48,Demand,2024-04-13 20:09:38.245665,2024-04-13 19:00:00,2024-04-13 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+115,US48,Demand,2024-04-13 21:08:18.463707,2024-04-13 19:00:00,2024-04-13 23:00:00,2024-04-13 19:00:00,2024-04-13 20:00:00,True,False,2.0,0.0,refresh,True,True,
+116,US48,Demand,2024-04-13 22:09:43.157121,2024-04-13 21:00:00,2024-04-13 23:00:00,2024-04-13 21:00:00,2024-04-13 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+117,US48,Demand,2024-04-13 23:11:27.130964,2024-04-13 21:00:00,2024-04-13 23:00:00,2024-04-13 21:00:00,2024-04-13 22:00:00,True,False,2.0,0.0,refresh,True,True,
+118,US48,Demand,2024-04-14 00:37:41.898384,2024-04-13 23:00:00,2024-04-13 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+119,US48,Demand,2024-04-14 02:54:26.550046,2024-04-13 23:00:00,2024-04-13 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+120,US48,Demand,2024-04-14 03:51:01.911943,2024-04-13 23:00:00,2024-04-13 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+121,US48,Demand,2024-04-14 04:35:05.145983,2024-04-13 23:00:00,2024-04-13 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+122,US48,Demand,2024-04-14 05:56:45.645160,2024-04-13 23:00:00,2024-04-13 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+123,US48,Demand,2024-04-14 07:52:58.316733,2024-04-13 23:00:00,2024-04-13 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+124,US48,Demand,2024-04-14 10:38:02.833556,2024-04-13 23:00:00,2024-04-14 01:00:00,2024-04-13 23:00:00,2024-04-14 01:00:00,True,True,3.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+125,US48,Demand,2024-04-14 14:27:53.568995,2024-04-14 02:00:00,2024-04-14 23:00:00,2024-04-14 02:00:00,2024-04-14 11:00:00,True,False,10.0,0.0,refresh,True,True,
+126,US48,Demand,2024-04-14 22:03:59.852107,2024-04-14 12:00:00,2024-04-14 23:00:00,2024-04-14 12:00:00,2024-04-14 21:00:00,True,False,10.0,0.0,refresh,True,True,
+127,US48,Demand,2024-04-14 23:34:00.236300,2024-04-14 22:00:00,2024-04-14 23:00:00,2024-04-14 22:00:00,2024-04-14 22:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+128,US48,Demand,2024-04-15 03:11:19.370486,2024-04-14 22:00:00,2024-04-14 23:00:00,2024-04-14 22:00:00,2024-04-14 23:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+129,US48,Demand,2024-04-15 04:26:55.643094,2024-04-15 00:00:00,2024-04-14 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+130,US48,Demand,2024-04-15 05:10:00.459837,2024-04-15 00:00:00,2024-04-14 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+131,US48,Demand,2024-04-15 06:15:01.670114,2024-04-15 00:00:00,2024-04-14 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+132,US48,Demand,2024-04-15 07:08:58.159411,2024-04-15 00:00:00,2024-04-14 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+133,US48,Demand,2024-04-15 08:11:33.199059,2024-04-15 00:00:00,2024-04-14 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+134,US48,Demand,2024-04-15 09:10:30.202101,2024-04-15 00:00:00,2024-04-15 00:00:00,,,,,,,refresh,False,False,No new data is available; 
+135,US48,Demand,2024-04-15 10:10:09.519760,2024-04-15 00:00:00,2024-04-15 01:00:00,2024-04-15 00:00:00,2024-04-15 01:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+136,US48,Demand,2024-04-15 11:08:03.252727,2024-04-15 02:00:00,2024-04-15 02:00:00,,,,,,,refresh,False,False,No new data is available; 
+137,US48,Demand,2024-04-15 12:20:06.080643,2024-04-15 02:00:00,2024-04-15 03:00:00,2024-04-15 02:00:00,2024-04-15 03:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+138,US48,Demand,2024-04-15 13:12:35.715197,2024-04-15 04:00:00,2024-04-15 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+139,US48,Demand,2024-04-15 14:09:51.966629,2024-04-15 04:00:00,2024-04-15 23:00:00,2024-04-15 04:00:00,2024-04-15 11:00:00,True,False,8.0,0.0,refresh,True,True,
+140,US48,Demand,2024-04-15 15:11:51.488359,2024-04-15 12:00:00,2024-04-15 23:00:00,2024-04-15 12:00:00,2024-04-15 14:00:00,True,False,3.0,0.0,refresh,True,True,
+141,US48,Demand,2024-04-15 16:12:06.240043,2024-04-15 15:00:00,2024-04-15 23:00:00,2024-04-15 15:00:00,2024-04-15 15:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+142,US48,Demand,2024-04-15 17:09:55.681095,2024-04-15 15:00:00,2024-04-15 23:00:00,2024-04-15 15:00:00,2024-04-15 16:00:00,True,False,2.0,0.0,refresh,True,True,
+143,US48,Demand,2024-04-15 18:13:29.185672,2024-04-15 17:00:00,2024-04-15 23:00:00,2024-04-15 17:00:00,2024-04-15 17:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+144,US48,Demand,2024-04-15 19:09:42.225087,2024-04-15 17:00:00,2024-04-15 23:00:00,2024-04-15 17:00:00,2024-04-15 18:00:00,True,False,2.0,0.0,refresh,True,True,
+145,US48,Demand,2024-04-15 20:10:41.700127,2024-04-15 19:00:00,2024-04-15 23:00:00,2024-04-15 19:00:00,2024-04-15 19:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+146,US48,Demand,2024-04-15 21:11:43.727854,2024-04-15 19:00:00,2024-04-15 23:00:00,2024-04-15 19:00:00,2024-04-15 20:00:00,True,False,2.0,0.0,refresh,True,True,
+147,US48,Demand,2024-04-15 22:09:30.494232,2024-04-15 21:00:00,2024-04-15 23:00:00,2024-04-15 21:00:00,2024-04-15 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+148,US48,Demand,2024-04-15 23:10:24.135320,2024-04-15 21:00:00,2024-04-15 23:00:00,2024-04-15 21:00:00,2024-04-15 22:00:00,True,False,2.0,0.0,refresh,True,True,
+149,US48,Demand,2024-04-16 00:44:09.457357,2024-04-15 23:00:00,2024-04-15 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+150,US48,Demand,2024-04-16 01:44:44.996100,2024-04-15 23:00:00,2024-04-15 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+151,US48,Demand,2024-04-16 02:18:33.252201,2024-04-15 23:00:00,2024-04-15 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+152,US48,Demand,2024-04-16 03:12:29.365483,2024-04-15 23:00:00,2024-04-15 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+153,US48,Demand,2024-04-16 04:12:56.225012,2024-04-15 23:00:00,2024-04-15 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+154,US48,Demand,2024-04-16 05:11:37.253216,2024-04-15 23:00:00,2024-04-15 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+155,US48,Demand,2024-04-16 06:13:32.996034,2024-04-15 23:00:00,2024-04-15 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+156,US48,Demand,2024-04-16 07:13:07.367908,2024-04-15 23:00:00,2024-04-15 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+157,US48,Demand,2024-04-16 08:13:35.020471,2024-04-15 23:00:00,2024-04-15 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+158,US48,Demand,2024-04-16 09:11:07.812908,2024-04-15 23:00:00,2024-04-16 00:00:00,2024-04-15 23:00:00,2024-04-16 00:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+159,US48,Demand,2024-04-16 10:11:24.751090,2024-04-16 01:00:00,2024-04-16 01:00:00,,,,,,,refresh,False,False,No new data is available; 
+160,US48,Demand,2024-04-16 11:08:55.523847,2024-04-16 01:00:00,2024-04-16 02:00:00,2024-04-16 01:00:00,2024-04-16 02:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+161,US48,Demand,2024-04-16 12:18:09.398763,2024-04-16 03:00:00,2024-04-16 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+162,US48,Demand,2024-04-16 13:11:21.286307,2024-04-16 03:00:00,2024-04-16 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+163,US48,Demand,2024-04-16 14:10:50.753604,2024-04-16 03:00:00,2024-04-16 23:00:00,2024-04-16 03:00:00,2024-04-16 11:00:00,True,False,9.0,0.0,refresh,True,True,
+164,US48,Demand,2024-04-16 15:11:26.752222,2024-04-16 12:00:00,2024-04-16 23:00:00,2024-04-16 12:00:00,2024-04-16 14:00:00,True,False,3.0,0.0,refresh,True,True,
+165,US48,Demand,2024-04-16 16:13:35.687285,2024-04-16 15:00:00,2024-04-16 23:00:00,2024-04-16 15:00:00,2024-04-16 15:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+166,US48,Demand,2024-04-16 17:10:37.952364,2024-04-16 15:00:00,2024-04-16 23:00:00,2024-04-16 15:00:00,2024-04-16 16:00:00,True,False,2.0,0.0,refresh,True,True,
+167,US48,Demand,2024-04-16 18:13:11.063806,2024-04-16 17:00:00,2024-04-16 23:00:00,2024-04-16 17:00:00,2024-04-16 17:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+168,US48,Demand,2024-04-16 19:08:58.068805,2024-04-16 17:00:00,2024-04-16 23:00:00,2024-04-16 17:00:00,2024-04-16 18:00:00,True,False,2.0,0.0,refresh,True,True,
+169,US48,Demand,2024-04-16 20:10:55.544844,2024-04-16 19:00:00,2024-04-16 23:00:00,2024-04-16 19:00:00,2024-04-16 19:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+170,US48,Demand,2024-04-16 21:11:00.598928,2024-04-16 19:00:00,2024-04-16 23:00:00,2024-04-16 19:00:00,2024-04-16 20:00:00,True,False,2.0,0.0,refresh,True,True,
+171,US48,Demand,2024-04-16 22:10:33.592031,2024-04-16 21:00:00,2024-04-16 23:00:00,2024-04-16 21:00:00,2024-04-16 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+172,US48,Demand,2024-04-16 23:11:11.609140,2024-04-16 21:00:00,2024-04-16 23:00:00,2024-04-16 21:00:00,2024-04-16 22:00:00,True,False,2.0,0.0,refresh,True,True,
+173,US48,Demand,2024-04-17 00:44:59.180123,2024-04-16 23:00:00,2024-04-16 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+174,US48,Demand,2024-04-17 01:44:28.704395,2024-04-16 23:00:00,2024-04-16 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+175,US48,Demand,2024-04-17 02:21:03.001532,2024-04-16 23:00:00,2024-04-16 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+176,US48,Demand,2024-04-17 03:11:20.541545,2024-04-16 23:00:00,2024-04-16 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+177,US48,Demand,2024-04-17 04:13:55.354339,2024-04-16 23:00:00,2024-04-16 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+178,US48,Demand,2024-04-17 05:11:01.334199,2024-04-16 23:00:00,2024-04-16 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+179,US48,Demand,2024-04-17 06:16:10.554220,2024-04-16 23:00:00,2024-04-16 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+180,US48,Demand,2024-04-17 07:11:10.252575,2024-04-16 23:00:00,2024-04-16 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+181,US48,Demand,2024-04-17 08:13:21.801544,2024-04-16 23:00:00,2024-04-16 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+182,US48,Demand,2024-04-17 09:10:48.956598,2024-04-16 23:00:00,2024-04-17 00:00:00,2024-04-16 23:00:00,2024-04-17 00:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+183,US48,Demand,2024-04-17 10:12:12.645619,2024-04-17 01:00:00,2024-04-17 01:00:00,,,,,,,refresh,False,False,No new data is available; 
+184,US48,Demand,2024-04-17 11:09:35.695114,2024-04-17 01:00:00,2024-04-17 02:00:00,2024-04-17 01:00:00,2024-04-17 02:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+185,US48,Demand,2024-04-17 12:18:25.500360,2024-04-17 03:00:00,2024-04-17 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+186,US48,Demand,2024-04-17 13:11:12.688255,2024-04-17 03:00:00,2024-04-17 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+187,US48,Demand,2024-04-17 14:10:08.844479,2024-04-17 03:00:00,2024-04-17 23:00:00,2024-04-17 03:00:00,2024-04-17 11:00:00,True,False,9.0,0.0,refresh,True,True,
+188,US48,Demand,2024-04-17 15:12:34.934522,2024-04-17 12:00:00,2024-04-17 23:00:00,2024-04-17 12:00:00,2024-04-17 14:00:00,True,False,3.0,0.0,refresh,True,True,
+189,US48,Demand,2024-04-17 16:13:54.990935,2024-04-17 15:00:00,2024-04-17 23:00:00,2024-04-17 15:00:00,2024-04-17 15:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+190,US48,Demand,2024-04-17 17:09:30.056564,2024-04-17 15:00:00,2024-04-17 23:00:00,2024-04-17 15:00:00,2024-04-17 16:00:00,True,False,2.0,0.0,refresh,True,True,
+191,US48,Demand,2024-04-17 18:13:30.172817,2024-04-17 17:00:00,2024-04-17 23:00:00,2024-04-17 17:00:00,2024-04-17 17:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+192,US48,Demand,2024-04-17 19:07:59.905829,2024-04-17 17:00:00,2024-04-17 23:00:00,2024-04-17 17:00:00,2024-04-17 18:00:00,True,False,2.0,0.0,refresh,True,True,
+193,US48,Demand,2024-04-17 20:10:59.079800,2024-04-17 19:00:00,2024-04-17 23:00:00,2024-04-17 19:00:00,2024-04-17 19:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+194,US48,Demand,2024-04-17 21:11:16.162476,2024-04-17 19:00:00,2024-04-17 23:00:00,2024-04-17 19:00:00,2024-04-17 20:00:00,True,False,2.0,0.0,refresh,True,True,
+195,US48,Demand,2024-04-17 22:09:40.611695,2024-04-17 21:00:00,2024-04-17 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+196,US48,Demand,2024-04-17 23:11:34.384787,2024-04-17 21:00:00,2024-04-17 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+197,US48,Demand,2024-04-18 00:44:07.934129,2024-04-17 21:00:00,2024-04-17 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+198,US48,Demand,2024-04-18 01:44:04.565620,2024-04-17 21:00:00,2024-04-17 23:00:00,2024-04-17 21:00:00,2024-04-17 23:00:00,True,True,3.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+199,US48,Demand,2024-04-18 02:19:44.846200,2024-04-18 00:00:00,2024-04-17 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+200,US48,Demand,2024-04-18 03:11:23.090339,2024-04-18 00:00:00,2024-04-17 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+201,US48,Demand,2024-04-18 04:12:44.667223,2024-04-18 00:00:00,2024-04-17 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+202,US48,Demand,2024-04-18 05:11:40.418667,2024-04-18 00:00:00,2024-04-17 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+203,US48,Demand,2024-04-18 06:14:05.087994,2024-04-18 00:00:00,2024-04-17 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+204,US48,Demand,2024-04-18 07:11:11.398651,2024-04-18 00:00:00,2024-04-17 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+205,US48,Demand,2024-04-18 08:14:17.352452,2024-04-18 00:00:00,2024-04-17 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+206,US48,Demand,2024-04-18 09:11:26.689586,2024-04-18 00:00:00,2024-04-17 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+207,US48,Demand,2024-04-18 10:12:47.052045,2024-04-18 00:00:00,2024-04-17 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+208,US48,Demand,2024-04-18 11:08:47.842258,2024-04-18 00:00:00,2024-04-17 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+209,US48,Demand,2024-04-18 12:18:16.766154,2024-04-18 00:00:00,2024-04-17 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+210,US48,Demand,2024-04-18 13:10:58.454353,2024-04-18 00:00:00,2024-04-17 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+211,US48,Demand,2024-04-18 14:09:57.637894,2024-04-18 00:00:00,2024-04-17 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+212,US48,Demand,2024-04-18 15:11:05.924345,2024-04-18 00:00:00,2024-04-17 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+213,US48,Demand,2024-04-18 16:12:26.432937,2024-04-18 00:00:00,2024-04-17 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+214,US48,Demand,2024-04-18 17:09:48.572731,2024-04-18 00:00:00,2024-04-18 23:00:00,2024-04-18 00:00:00,2024-04-18 16:00:00,True,False,17.0,0.0,refresh,True,True,
+215,US48,Demand,2024-04-18 18:13:33.750775,2024-04-18 17:00:00,2024-04-18 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+216,US48,Demand,2024-04-18 19:09:15.672083,2024-04-18 17:00:00,2024-04-18 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+217,US48,Demand,2024-04-18 20:11:32.346774,2024-04-18 17:00:00,2024-04-18 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+218,US48,Demand,2024-04-18 21:09:56.850577,2024-04-18 17:00:00,2024-04-18 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+219,US48,Demand,2024-04-18 22:09:55.407048,2024-04-18 17:00:00,2024-04-18 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+220,US48,Demand,2024-04-18 23:11:22.614291,2024-04-18 17:00:00,2024-04-18 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+221,US48,Demand,2024-04-19 00:44:45.136824,2024-04-18 17:00:00,2024-04-18 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+222,US48,Demand,2024-04-19 01:46:02.687481,2024-04-18 17:00:00,2024-04-18 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+223,US48,Demand,2024-04-19 02:21:45.286016,2024-04-18 17:00:00,2024-04-18 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+224,US48,Demand,2024-04-19 03:11:16.954412,2024-04-18 17:00:00,2024-04-18 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+225,US48,Demand,2024-04-19 04:12:36.359081,2024-04-18 17:00:00,2024-04-18 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+226,US48,Demand,2024-04-19 05:11:14.767174,2024-04-18 17:00:00,2024-04-18 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+227,US48,Demand,2024-04-19 06:14:20.894979,2024-04-18 17:00:00,2024-04-18 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+228,US48,Demand,2024-04-19 07:11:30.008064,2024-04-18 17:00:00,2024-04-18 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+229,US48,Demand,2024-04-19 08:13:43.258889,2024-04-18 17:00:00,2024-04-18 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+230,US48,Demand,2024-04-19 09:10:57.545622,2024-04-18 17:00:00,2024-04-18 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+231,US48,Demand,2024-04-19 10:12:01.253397,2024-04-18 17:00:00,2024-04-18 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+232,US48,Demand,2024-04-19 11:08:58.861494,2024-04-18 17:00:00,2024-04-18 23:00:00,2024-04-18 17:00:00,2024-04-18 20:00:00,True,False,4.0,0.0,refresh,True,True,
+233,US48,Demand,2024-04-19 12:18:19.887469,2024-04-18 21:00:00,2024-04-19 02:00:00,2024-04-18 21:00:00,2024-04-19 02:00:00,True,True,6.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+234,US48,Demand,2024-04-19 13:11:53.693225,2024-04-19 03:00:00,2024-04-19 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+235,US48,Demand,2024-04-19 14:09:52.806590,2024-04-19 03:00:00,2024-04-19 23:00:00,2024-04-19 03:00:00,2024-04-19 11:00:00,True,False,9.0,0.0,refresh,True,True,
+236,US48,Demand,2024-04-19 15:12:19.317986,2024-04-19 12:00:00,2024-04-19 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+237,US48,Demand,2024-04-19 16:12:50.123746,2024-04-19 12:00:00,2024-04-19 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+238,US48,Demand,2024-04-19 17:10:12.762025,2024-04-19 12:00:00,2024-04-19 23:00:00,2024-04-19 12:00:00,2024-04-19 16:00:00,True,False,5.0,0.0,refresh,True,True,
+239,US48,Demand,2024-04-19 18:12:50.397584,2024-04-19 17:00:00,2024-04-19 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+240,US48,Demand,2024-04-19 19:09:37.906745,2024-04-19 17:00:00,2024-04-19 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+241,US48,Demand,2024-04-19 20:11:10.339249,2024-04-19 17:00:00,2024-04-19 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+242,US48,Demand,2024-04-19 21:10:07.888854,2024-04-19 17:00:00,2024-04-19 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+243,US48,Demand,2024-04-19 22:09:33.344983,2024-04-19 17:00:00,2024-04-19 23:00:00,2024-04-19 17:00:00,2024-04-19 21:00:00,True,False,5.0,0.0,refresh,True,True,
+244,US48,Demand,2024-04-19 23:12:23.278166,2024-04-19 22:00:00,2024-04-19 23:00:00,2024-04-19 22:00:00,2024-04-19 22:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+245,US48,Demand,2024-04-20 00:45:26.478919,2024-04-19 22:00:00,2024-04-19 23:00:00,2024-04-19 22:00:00,2024-04-19 22:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+246,US48,Demand,2024-04-20 01:44:09.868504,2024-04-19 22:00:00,2024-04-19 23:00:00,2024-04-19 22:00:00,2024-04-19 23:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+247,US48,Demand,2024-04-20 02:18:10.920202,2024-04-20 00:00:00,2024-04-19 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+248,US48,Demand,2024-04-20 03:12:29.646375,2024-04-20 00:00:00,2024-04-19 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+249,US48,Demand,2024-04-20 04:14:09.746390,2024-04-20 00:00:00,2024-04-19 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+250,US48,Demand,2024-04-20 05:10:42.138059,2024-04-20 00:00:00,2024-04-19 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+251,US48,Demand,2024-04-20 06:12:47.172426,2024-04-20 00:00:00,2024-04-19 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+252,US48,Demand,2024-04-20 07:09:24.489526,2024-04-20 00:00:00,2024-04-19 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+253,US48,Demand,2024-04-20 08:12:17.037157,2024-04-20 00:00:00,2024-04-19 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+254,US48,Demand,2024-04-20 09:09:38.461950,2024-04-20 00:00:00,2024-04-19 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+255,US48,Demand,2024-04-20 10:10:27.796187,2024-04-20 00:00:00,2024-04-19 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+256,US48,Demand,2024-04-20 11:08:12.683047,2024-04-20 00:00:00,2024-04-20 01:00:00,2024-04-20 00:00:00,2024-04-20 01:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+257,US48,Demand,2024-04-20 12:17:21.467344,2024-04-20 02:00:00,2024-04-20 02:00:00,,,,,,,refresh,False,False,No new data is available; 
+258,US48,Demand,2024-04-20 13:11:29.998401,2024-04-20 02:00:00,2024-04-20 02:00:00,,,,,,,refresh,False,False,No new data is available; 
+259,US48,Demand,2024-04-20 14:08:40.583484,2024-04-20 02:00:00,2024-04-20 23:00:00,2024-04-20 02:00:00,2024-04-20 12:00:00,True,False,11.0,0.0,refresh,True,True,
+260,US48,Demand,2024-04-20 15:10:37.338657,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+261,US48,Demand,2024-04-20 16:12:35.033491,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+262,US48,Demand,2024-04-20 17:08:42.718035,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+263,US48,Demand,2024-04-20 18:13:35.753494,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+264,US48,Demand,2024-04-20 19:08:55.785958,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+265,US48,Demand,2024-04-20 20:10:23.420234,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+266,US48,Demand,2024-04-20 21:09:16.070696,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+267,US48,Demand,2024-04-20 22:10:35.232316,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+268,US48,Demand,2024-04-20 23:10:05.730283,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+269,US48,Demand,2024-04-21 00:49:18.307888,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+270,US48,Demand,2024-04-21 01:52:58.977570,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+271,US48,Demand,2024-04-21 02:22:35.514512,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+272,US48,Demand,2024-04-21 03:11:15.175887,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+273,US48,Demand,2024-04-21 04:12:15.530053,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+274,US48,Demand,2024-04-21 05:10:51.405442,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+275,US48,Demand,2024-04-21 06:14:29.108942,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+276,US48,Demand,2024-04-21 07:10:49.025643,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+277,US48,Demand,2024-04-21 08:12:33.052111,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+278,US48,Demand,2024-04-21 09:10:57.792058,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+279,US48,Demand,2024-04-21 10:10:07.914190,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+280,US48,Demand,2024-04-21 11:08:44.599223,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+281,US48,Demand,2024-04-21 12:18:16.310319,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+282,US48,Demand,2024-04-21 13:11:36.030469,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+283,US48,Demand,2024-04-21 14:10:01.325629,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+284,US48,Demand,2024-04-21 15:10:43.066827,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+285,US48,Demand,2024-04-21 16:12:57.311471,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+286,US48,Demand,2024-04-21 17:10:15.233741,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+287,US48,Demand,2024-04-21 18:13:43.614901,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+288,US48,Demand,2024-04-21 19:10:05.764317,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+289,US48,Demand,2024-04-21 20:11:08.536503,2024-04-20 13:00:00,2024-04-20 23:00:00,,,,,,,refresh,False,False,"The refresh process failed, something went wrong with the data request; "
+290,US48,Demand,2024-04-21 21:10:08.943536,2024-04-20 13:00:00,2024-04-21 12:00:00,2024-04-20 13:00:00,2024-04-21 12:00:00,True,True,24.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+291,US48,Demand,2024-04-21 22:10:23.840160,2024-04-21 13:00:00,2024-04-21 12:00:00,,,,,,,refresh,False,False,No new data is available; 
+292,US48,Demand,2024-04-21 23:11:08.813279,2024-04-21 13:00:00,2024-04-21 23:00:00,2024-04-21 13:00:00,2024-04-21 20:00:00,True,False,8.0,0.0,refresh,True,True,
+293,US48,Demand,2024-04-22 00:46:52.522414,2024-04-21 21:00:00,2024-04-21 23:00:00,2024-04-21 21:00:00,2024-04-21 23:00:00,True,True,3.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+294,US48,Demand,2024-04-22 01:51:42.893027,2024-04-22 00:00:00,2024-04-21 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+295,US48,Demand,2024-04-22 02:22:11.970735,2024-04-22 00:00:00,2024-04-21 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+296,US48,Demand,2024-04-22 03:11:51.150119,2024-04-22 00:00:00,2024-04-21 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+297,US48,Demand,2024-04-22 04:12:59.167921,2024-04-22 00:00:00,2024-04-21 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+298,US48,Demand,2024-04-22 05:11:18.828322,2024-04-22 00:00:00,2024-04-21 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+299,US48,Demand,2024-04-22 06:14:24.605847,2024-04-22 00:00:00,2024-04-21 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+300,US48,Demand,2024-04-22 07:10:58.536898,2024-04-22 00:00:00,2024-04-21 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+301,US48,Demand,2024-04-22 08:14:27.661227,2024-04-22 00:00:00,2024-04-21 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+302,US48,Demand,2024-04-22 09:12:08.655633,2024-04-22 00:00:00,2024-04-22 00:00:00,,,,,,,refresh,False,False,No new data is available; 
+303,US48,Demand,2024-04-22 10:12:57.985365,2024-04-22 00:00:00,2024-04-22 01:00:00,2024-04-22 00:00:00,2024-04-22 01:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+304,US48,Demand,2024-04-22 11:09:20.192515,2024-04-22 02:00:00,2024-04-22 02:00:00,,,,,,,refresh,False,False,No new data is available; 
+305,US48,Demand,2024-04-22 12:19:57.299511,2024-04-22 02:00:00,2024-04-22 03:00:00,2024-04-22 02:00:00,2024-04-22 03:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+306,US48,Demand,2024-04-22 13:11:47.244771,2024-04-22 04:00:00,2024-04-22 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+307,US48,Demand,2024-04-22 14:10:39.695140,2024-04-22 04:00:00,2024-04-22 23:00:00,2024-04-22 04:00:00,2024-04-22 11:00:00,True,False,8.0,0.0,refresh,True,True,
+308,US48,Demand,2024-04-22 15:11:32.354643,2024-04-22 12:00:00,2024-04-22 23:00:00,2024-04-22 12:00:00,2024-04-22 14:00:00,True,False,3.0,0.0,refresh,True,True,
+309,US48,Demand,2024-04-22 16:13:11.828896,2024-04-22 15:00:00,2024-04-22 23:00:00,2024-04-22 15:00:00,2024-04-22 15:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+310,US48,Demand,2024-04-22 17:09:33.758438,2024-04-22 15:00:00,2024-04-22 23:00:00,2024-04-22 15:00:00,2024-04-22 16:00:00,True,False,2.0,0.0,refresh,True,True,
+311,US48,Demand,2024-04-22 18:12:52.721458,2024-04-22 17:00:00,2024-04-22 23:00:00,2024-04-22 17:00:00,2024-04-22 17:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+312,US48,Demand,2024-04-22 19:10:03.792993,2024-04-22 17:00:00,2024-04-22 23:00:00,2024-04-22 17:00:00,2024-04-22 18:00:00,True,False,2.0,0.0,refresh,True,True,
+313,US48,Demand,2024-04-22 20:11:54.257921,2024-04-22 19:00:00,2024-04-22 23:00:00,2024-04-22 19:00:00,2024-04-22 19:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+314,US48,Demand,2024-04-22 21:09:31.955769,2024-04-22 19:00:00,2024-04-22 23:00:00,2024-04-22 19:00:00,2024-04-22 20:00:00,True,False,2.0,0.0,refresh,True,True,
+315,US48,Demand,2024-04-22 22:11:55.340555,2024-04-22 21:00:00,2024-04-22 23:00:00,2024-04-22 21:00:00,2024-04-22 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+316,US48,Demand,2024-04-22 23:10:44.515818,2024-04-22 21:00:00,2024-04-22 23:00:00,2024-04-22 21:00:00,2024-04-22 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+317,US48,Demand,2024-04-23 00:45:16.365756,2024-04-22 21:00:00,2024-04-22 23:00:00,2024-04-22 21:00:00,2024-04-22 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+318,US48,Demand,2024-04-23 01:50:07.183666,2024-04-22 21:00:00,2024-04-22 23:00:00,2024-04-22 21:00:00,2024-04-22 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+319,US48,Demand,2024-04-23 02:22:08.530001,2024-04-22 21:00:00,2024-04-22 23:00:00,2024-04-22 21:00:00,2024-04-22 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+320,US48,Demand,2024-04-23 03:11:29.102372,2024-04-22 21:00:00,2024-04-22 23:00:00,2024-04-22 21:00:00,2024-04-22 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+321,US48,Demand,2024-04-23 04:12:35.708995,2024-04-22 21:00:00,2024-04-22 23:00:00,2024-04-22 21:00:00,2024-04-22 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+322,US48,Demand,2024-04-23 05:10:26.400128,2024-04-22 21:00:00,2024-04-22 23:00:00,2024-04-22 21:00:00,2024-04-22 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+323,US48,Demand,2024-04-23 06:14:13.827600,2024-04-22 21:00:00,2024-04-22 23:00:00,2024-04-22 21:00:00,2024-04-22 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+324,US48,Demand,2024-04-23 07:10:13.080920,2024-04-22 21:00:00,2024-04-22 23:00:00,2024-04-22 21:00:00,2024-04-22 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+325,US48,Demand,2024-04-23 08:13:41.982222,2024-04-22 21:00:00,2024-04-22 23:00:00,2024-04-22 21:00:00,2024-04-22 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+326,US48,Demand,2024-04-23 09:11:19.292565,2024-04-22 21:00:00,2024-04-22 23:00:00,2024-04-22 21:00:00,2024-04-22 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+327,US48,Demand,2024-04-23 10:11:14.022898,2024-04-22 21:00:00,2024-04-22 23:00:00,2024-04-22 21:00:00,2024-04-22 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+328,US48,Demand,2024-04-23 11:09:57.578652,2024-04-22 21:00:00,2024-04-23 02:00:00,2024-04-22 21:00:00,2024-04-23 02:00:00,True,True,6.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+329,US48,Demand,2024-04-23 12:19:29.657158,2024-04-23 03:00:00,2024-04-23 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+330,US48,Demand,2024-04-23 13:11:38.034378,2024-04-23 03:00:00,2024-04-23 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+331,US48,Demand,2024-04-23 14:10:11.937628,2024-04-23 03:00:00,2024-04-23 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+332,US48,Demand,2024-04-23 15:11:13.048068,2024-04-23 03:00:00,2024-04-23 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+333,US48,Demand,2024-04-23 16:13:09.401121,2024-04-23 03:00:00,2024-04-23 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+334,US48,Demand,2024-04-23 17:10:34.554668,2024-04-23 03:00:00,2024-04-23 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+335,US48,Demand,2024-04-23 18:13:18.816028,2024-04-23 03:00:00,2024-04-23 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+336,US48,Demand,2024-04-23 19:08:51.365241,2024-04-23 03:00:00,2024-04-23 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+337,US48,Demand,2024-04-23 20:11:12.524523,2024-04-23 03:00:00,2024-04-23 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+338,US48,Demand,2024-04-23 21:10:04.239866,2024-04-23 03:00:00,2024-04-23 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+339,US48,Demand,2024-04-23 22:11:27.019913,2024-04-23 03:00:00,2024-04-23 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+340,US48,Demand,2024-04-23 23:10:17.978245,2024-04-23 03:00:00,2024-04-23 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+341,US48,Demand,2024-04-24 00:45:29.305710,2024-04-23 03:00:00,2024-04-23 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+342,US48,Demand,2024-04-24 01:50:48.546159,2024-04-23 03:00:00,2024-04-23 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+343,US48,Demand,2024-04-24 02:20:54.670605,2024-04-23 03:00:00,2024-04-23 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+344,US48,Demand,2024-04-24 03:12:43.796197,2024-04-23 03:00:00,2024-04-23 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+345,US48,Demand,2024-04-24 04:12:37.617782,2024-04-23 03:00:00,2024-04-23 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+346,US48,Demand,2024-04-24 05:11:44.229950,2024-04-23 03:00:00,2024-04-23 23:00:00,2024-04-23 03:00:00,2024-04-23 23:00:00,True,True,21.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+347,US48,Demand,2024-04-24 06:15:50.417182,2024-04-24 00:00:00,2024-04-23 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+348,US48,Demand,2024-04-24 07:10:18.258199,2024-04-24 00:00:00,2024-04-23 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+349,US48,Demand,2024-04-24 08:14:30.715809,2024-04-24 00:00:00,2024-04-23 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+350,US48,Demand,2024-04-24 09:10:55.913253,2024-04-24 00:00:00,2024-04-24 00:00:00,,,,,,,refresh,False,False,No new data is available; 
+351,US48,Demand,2024-04-24 10:12:43.312864,2024-04-24 00:00:00,2024-04-24 01:00:00,2024-04-24 00:00:00,2024-04-24 01:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+352,US48,Demand,2024-04-24 11:10:24.327593,2024-04-24 02:00:00,2024-04-24 02:00:00,,,,,,,refresh,False,False,No new data is available; 
+353,US48,Demand,2024-04-24 12:21:39.435773,2024-04-24 02:00:00,2024-04-24 03:00:00,2024-04-24 02:00:00,2024-04-24 03:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+354,US48,Demand,2024-04-24 13:17:21.063799,2024-04-24 04:00:00,2024-04-24 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+355,US48,Demand,2024-04-24 14:11:19.418988,2024-04-24 04:00:00,2024-04-24 23:00:00,2024-04-24 04:00:00,2024-04-24 11:00:00,True,False,8.0,0.0,refresh,True,True,
+356,US48,Demand,2024-04-24 15:11:53.335973,2024-04-24 12:00:00,2024-04-24 23:00:00,2024-04-24 12:00:00,2024-04-24 14:00:00,True,False,3.0,0.0,refresh,True,True,
+357,US48,Demand,2024-04-24 16:12:49.061988,2024-04-24 15:00:00,2024-04-24 23:00:00,2024-04-24 15:00:00,2024-04-24 15:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+358,US48,Demand,2024-04-24 17:12:01.303410,2024-04-24 15:00:00,2024-04-24 23:00:00,2024-04-24 15:00:00,2024-04-24 15:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+359,US48,Demand,2024-04-24 18:13:21.154905,2024-04-24 15:00:00,2024-04-24 23:00:00,2024-04-24 15:00:00,2024-04-24 17:00:00,True,False,3.0,0.0,refresh,True,True,
+360,US48,Demand,2024-04-24 19:08:59.459278,2024-04-24 18:00:00,2024-04-24 23:00:00,2024-04-24 18:00:00,2024-04-24 18:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+361,US48,Demand,2024-04-24 20:11:42.342639,2024-04-24 18:00:00,2024-04-24 23:00:00,2024-04-24 18:00:00,2024-04-24 19:00:00,True,False,2.0,0.0,refresh,True,True,
+362,US48,Demand,2024-04-24 21:09:39.662292,2024-04-24 20:00:00,2024-04-24 23:00:00,2024-04-24 20:00:00,2024-04-24 20:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+363,US48,Demand,2024-04-24 22:11:53.196866,2024-04-24 20:00:00,2024-04-24 23:00:00,2024-04-24 20:00:00,2024-04-24 21:00:00,True,False,2.0,0.0,refresh,True,True,
+364,US48,Demand,2024-04-24 23:12:56.632931,2024-04-24 22:00:00,2024-04-24 23:00:00,2024-04-24 22:00:00,2024-04-24 22:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+365,US48,Demand,2024-04-25 00:48:09.311444,2024-04-24 22:00:00,2024-04-24 23:00:00,2024-04-24 22:00:00,2024-04-24 23:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+366,US48,Demand,2024-04-25 02:21:53.499264,2024-04-25 00:00:00,2024-04-24 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+367,US48,Demand,2024-04-25 02:27:18.365610,2024-04-25 00:00:00,2024-04-24 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+368,US48,Demand,2024-04-25 03:11:57.510566,2024-04-25 00:00:00,2024-04-24 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+369,US48,Demand,2024-04-25 04:13:22.074212,2024-04-25 00:00:00,2024-04-24 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+370,US48,Demand,2024-04-25 05:10:34.621338,2024-04-25 00:00:00,2024-04-24 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+371,US48,Demand,2024-04-25 06:14:02.703160,2024-04-25 00:00:00,2024-04-24 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+372,US48,Demand,2024-04-25 07:11:18.291300,2024-04-25 00:00:00,2024-04-24 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+373,US48,Demand,2024-04-25 08:13:35.828473,2024-04-25 00:00:00,2024-04-24 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+374,US48,Demand,2024-04-25 09:11:07.437715,2024-04-25 00:00:00,2024-04-25 00:00:00,,,,,,,refresh,False,False,No new data is available; 
+375,US48,Demand,2024-04-25 10:11:05.650004,2024-04-25 00:00:00,2024-04-25 01:00:00,2024-04-25 00:00:00,2024-04-25 01:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+376,US48,Demand,2024-04-25 11:10:52.392839,2024-04-25 02:00:00,2024-04-25 01:00:00,,,,,,,refresh,False,False,No new data is available; 
+377,US48,Demand,2024-04-25 12:16:23.413129,2024-04-25 02:00:00,2024-04-25 03:00:00,2024-04-25 02:00:00,2024-04-25 03:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+378,US48,Demand,2024-04-25 13:09:37.213814,2024-04-25 04:00:00,2024-04-25 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+379,US48,Demand,2024-04-25 14:08:36.095047,2024-04-25 04:00:00,2024-04-25 23:00:00,2024-04-25 04:00:00,2024-04-25 11:00:00,True,False,8.0,0.0,refresh,True,True,
+380,US48,Demand,2024-04-25 15:10:20.722686,2024-04-25 12:00:00,2024-04-25 23:00:00,2024-04-25 12:00:00,2024-04-25 14:00:00,True,False,3.0,0.0,refresh,True,True,
+381,US48,Demand,2024-04-25 16:13:29.322480,2024-04-25 15:00:00,2024-04-25 23:00:00,2024-04-25 15:00:00,2024-04-25 15:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+382,US48,Demand,2024-04-25 17:12:15.425996,2024-04-25 15:00:00,2024-04-25 23:00:00,2024-04-25 15:00:00,2024-04-25 16:00:00,True,False,2.0,0.0,refresh,True,True,
+383,US48,Demand,2024-04-25 18:13:37.771290,2024-04-25 17:00:00,2024-04-25 23:00:00,2024-04-25 17:00:00,2024-04-25 17:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+384,US48,Demand,2024-04-25 19:09:36.599857,2024-04-25 17:00:00,2024-04-25 23:00:00,2024-04-25 17:00:00,2024-04-25 18:00:00,True,False,2.0,0.0,refresh,True,True,
+385,US48,Demand,2024-04-25 20:10:52.164733,2024-04-25 19:00:00,2024-04-25 23:00:00,2024-04-25 19:00:00,2024-04-25 19:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+386,US48,Demand,2024-04-25 21:12:09.783586,2024-04-25 19:00:00,2024-04-25 23:00:00,2024-04-25 19:00:00,2024-04-25 20:00:00,True,False,2.0,0.0,refresh,True,True,
+387,US48,Demand,2024-04-25 22:09:57.333410,2024-04-25 21:00:00,2024-04-25 23:00:00,2024-04-25 21:00:00,2024-04-25 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+388,US48,Demand,2024-04-25 23:11:06.216692,2024-04-25 21:00:00,2024-04-25 23:00:00,2024-04-25 21:00:00,2024-04-25 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+389,US48,Demand,2024-04-26 00:45:26.775030,2024-04-25 21:00:00,2024-04-25 23:00:00,2024-04-25 21:00:00,2024-04-25 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+390,US48,Demand,2024-04-26 01:48:00.871518,2024-04-25 21:00:00,2024-04-25 23:00:00,2024-04-25 21:00:00,2024-04-25 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+391,US48,Demand,2024-04-26 02:21:08.337393,2024-04-25 21:00:00,2024-04-25 23:00:00,2024-04-25 21:00:00,2024-04-25 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+392,US48,Demand,2024-04-26 03:12:39.286531,2024-04-25 21:00:00,2024-04-25 23:00:00,2024-04-25 21:00:00,2024-04-25 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+393,US48,Demand,2024-04-26 04:12:31.932163,2024-04-25 21:00:00,2024-04-25 23:00:00,2024-04-25 21:00:00,2024-04-25 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+394,US48,Demand,2024-04-26 05:10:47.215542,2024-04-25 21:00:00,2024-04-25 23:00:00,2024-04-25 21:00:00,2024-04-25 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+395,US48,Demand,2024-04-26 06:15:04.554164,2024-04-25 21:00:00,2024-04-25 23:00:00,2024-04-25 21:00:00,2024-04-25 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+396,US48,Demand,2024-04-26 07:11:37.078887,2024-04-25 21:00:00,2024-04-25 23:00:00,2024-04-25 21:00:00,2024-04-25 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+397,US48,Demand,2024-04-26 08:14:00.824931,2024-04-25 21:00:00,2024-04-25 23:00:00,2024-04-25 21:00:00,2024-04-25 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+398,US48,Demand,2024-04-26 09:11:45.887072,2024-04-25 21:00:00,2024-04-25 23:00:00,2024-04-25 21:00:00,2024-04-25 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+399,US48,Demand,2024-04-26 10:11:48.790907,2024-04-25 21:00:00,2024-04-25 23:00:00,2024-04-25 21:00:00,2024-04-25 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+400,US48,Demand,2024-04-26 11:09:28.939001,2024-04-25 21:00:00,2024-04-26 02:00:00,2024-04-25 21:00:00,2024-04-26 02:00:00,True,True,6.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+401,US48,Demand,2024-04-26 12:18:38.192531,2024-04-26 03:00:00,2024-04-26 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+402,US48,Demand,2024-04-26 13:10:54.073072,2024-04-26 03:00:00,2024-04-26 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+403,US48,Demand,2024-04-26 14:09:47.623330,2024-04-26 03:00:00,2024-04-26 23:00:00,2024-04-26 03:00:00,2024-04-26 11:00:00,True,False,9.0,0.0,refresh,True,True,
+404,US48,Demand,2024-04-26 15:11:54.492253,2024-04-26 12:00:00,2024-04-26 23:00:00,2024-04-26 12:00:00,2024-04-26 14:00:00,True,False,3.0,0.0,refresh,True,True,
+405,US48,Demand,2024-04-26 16:14:03.267165,2024-04-26 15:00:00,2024-04-26 23:00:00,2024-04-26 15:00:00,2024-04-26 15:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+406,US48,Demand,2024-04-26 17:11:27.225536,2024-04-26 15:00:00,2024-04-26 23:00:00,2024-04-26 15:00:00,2024-04-26 16:00:00,True,False,2.0,0.0,refresh,True,True,
+407,US48,Demand,2024-04-26 18:13:10.923139,2024-04-26 17:00:00,2024-04-26 23:00:00,2024-04-26 17:00:00,2024-04-26 17:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+408,US48,Demand,2024-04-26 19:09:02.218265,2024-04-26 17:00:00,2024-04-26 23:00:00,2024-04-26 17:00:00,2024-04-26 18:00:00,True,False,2.0,0.0,refresh,True,True,
+409,US48,Demand,2024-04-26 20:11:50.753739,2024-04-26 19:00:00,2024-04-26 23:00:00,2024-04-26 19:00:00,2024-04-26 19:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+410,US48,Demand,2024-04-26 21:09:43.020306,2024-04-26 19:00:00,2024-04-26 23:00:00,2024-04-26 19:00:00,2024-04-26 20:00:00,True,False,2.0,0.0,refresh,True,True,
+411,US48,Demand,2024-04-26 22:10:29.608466,2024-04-26 21:00:00,2024-04-26 23:00:00,2024-04-26 21:00:00,2024-04-26 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+412,US48,Demand,2024-04-26 23:11:10.244787,2024-04-26 21:00:00,2024-04-26 23:00:00,2024-04-26 21:00:00,2024-04-26 22:00:00,True,False,2.0,0.0,refresh,True,True,
+413,US48,Demand,2024-04-27 00:44:45.962809,2024-04-26 23:00:00,2024-04-26 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+414,US48,Demand,2024-04-27 01:44:41.241298,2024-04-26 23:00:00,2024-04-26 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+415,US48,Demand,2024-04-27 02:20:35.623946,2024-04-26 23:00:00,2024-04-26 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+416,US48,Demand,2024-04-27 03:12:31.786842,2024-04-26 23:00:00,2024-04-26 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+417,US48,Demand,2024-04-27 04:12:26.063883,2024-04-26 23:00:00,2024-04-26 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+418,US48,Demand,2024-04-27 05:10:32.146643,2024-04-26 23:00:00,2024-04-26 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+419,US48,Demand,2024-04-27 06:14:15.555825,2024-04-26 23:00:00,2024-04-26 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+420,US48,Demand,2024-04-27 07:09:12.179037,2024-04-26 23:00:00,2024-04-26 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+421,US48,Demand,2024-04-27 08:13:14.754580,2024-04-26 23:00:00,2024-04-26 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+422,US48,Demand,2024-04-27 09:10:03.877826,2024-04-26 23:00:00,2024-04-27 00:00:00,2024-04-26 23:00:00,2024-04-27 00:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+423,US48,Demand,2024-04-27 10:11:59.520902,2024-04-27 01:00:00,2024-04-27 01:00:00,,,,,,,refresh,False,False,No new data is available; 
+424,US48,Demand,2024-04-27 11:08:35.506270,2024-04-27 01:00:00,2024-04-27 02:00:00,2024-04-27 01:00:00,2024-04-27 02:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+425,US48,Demand,2024-04-27 12:16:32.989779,2024-04-27 03:00:00,2024-04-27 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+426,US48,Demand,2024-04-27 13:11:46.093554,2024-04-27 03:00:00,2024-04-27 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+427,US48,Demand,2024-04-27 14:09:01.920062,2024-04-27 03:00:00,2024-04-27 23:00:00,2024-04-27 03:00:00,2024-04-27 11:00:00,True,False,9.0,0.0,refresh,True,True,
+428,US48,Demand,2024-04-27 15:09:57.087633,2024-04-27 12:00:00,2024-04-27 23:00:00,2024-04-27 12:00:00,2024-04-27 14:00:00,True,False,3.0,0.0,refresh,True,True,
+429,US48,Demand,2024-04-27 16:11:23.524840,2024-04-27 15:00:00,2024-04-27 23:00:00,2024-04-27 15:00:00,2024-04-27 15:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+430,US48,Demand,2024-04-27 17:09:40.645846,2024-04-27 15:00:00,2024-04-27 23:00:00,2024-04-27 15:00:00,2024-04-27 16:00:00,True,False,2.0,0.0,refresh,True,True,
+431,US48,Demand,2024-04-27 18:12:00.804623,2024-04-27 17:00:00,2024-04-27 23:00:00,2024-04-27 17:00:00,2024-04-27 17:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+432,US48,Demand,2024-04-27 19:07:55.436025,2024-04-27 17:00:00,2024-04-27 23:00:00,2024-04-27 17:00:00,2024-04-27 18:00:00,True,False,2.0,0.0,refresh,True,True,
+433,US48,Demand,2024-04-27 20:10:04.713210,2024-04-27 19:00:00,2024-04-27 23:00:00,2024-04-27 19:00:00,2024-04-27 19:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+434,US48,Demand,2024-04-27 21:09:21.706749,2024-04-27 19:00:00,2024-04-27 23:00:00,2024-04-27 19:00:00,2024-04-27 20:00:00,True,False,2.0,0.0,refresh,True,True,
+435,US48,Demand,2024-04-27 22:10:18.199454,2024-04-27 21:00:00,2024-04-27 23:00:00,2024-04-27 21:00:00,2024-04-27 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+436,US48,Demand,2024-04-27 23:10:46.128729,2024-04-27 21:00:00,2024-04-27 23:00:00,2024-04-27 21:00:00,2024-04-27 22:00:00,True,False,2.0,0.0,refresh,True,True,
+437,US48,Demand,2024-04-28 00:50:17.042505,2024-04-27 23:00:00,2024-04-27 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+438,US48,Demand,2024-04-28 01:54:52.953274,2024-04-27 23:00:00,2024-04-27 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+439,US48,Demand,2024-04-28 02:25:26.117607,2024-04-27 23:00:00,2024-04-27 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+440,US48,Demand,2024-04-28 03:12:08.452428,2024-04-27 23:00:00,2024-04-27 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+441,US48,Demand,2024-04-28 04:12:14.181631,2024-04-27 23:00:00,2024-04-27 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+442,US48,Demand,2024-04-28 05:11:08.966157,2024-04-27 23:00:00,2024-04-27 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+443,US48,Demand,2024-04-28 06:13:03.292534,2024-04-27 23:00:00,2024-04-27 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+444,US48,Demand,2024-04-28 07:09:52.256095,2024-04-27 23:00:00,2024-04-27 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+445,US48,Demand,2024-04-28 08:14:28.613619,2024-04-27 23:00:00,2024-04-27 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+446,US48,Demand,2024-04-28 09:10:09.440241,2024-04-27 23:00:00,2024-04-28 00:00:00,2024-04-27 23:00:00,2024-04-28 00:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+447,US48,Demand,2024-04-28 10:10:28.175134,2024-04-28 01:00:00,2024-04-28 01:00:00,,,,,,,refresh,False,False,No new data is available; 
+448,US48,Demand,2024-04-28 11:08:48.956787,2024-04-28 01:00:00,2024-04-28 02:00:00,2024-04-28 01:00:00,2024-04-28 02:00:00,True,True,2.0,0.0,refresh,True,True,The end argument does not match the last data point timestamp; 
+449,US48,Demand,2024-04-28 12:18:08.003515,2024-04-28 03:00:00,2024-04-28 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+450,US48,Demand,2024-04-28 13:11:12.731614,2024-04-28 03:00:00,2024-04-28 03:00:00,,,,,,,refresh,False,False,No new data is available; 
+451,US48,Demand,2024-04-28 14:09:18.567617,2024-04-28 03:00:00,2024-04-28 23:00:00,2024-04-28 03:00:00,2024-04-28 11:00:00,True,False,9.0,0.0,refresh,True,True,
+452,US48,Demand,2024-04-28 15:10:42.444807,2024-04-28 12:00:00,2024-04-28 23:00:00,2024-04-28 12:00:00,2024-04-28 14:00:00,True,False,3.0,0.0,refresh,True,True,
+453,US48,Demand,2024-04-28 16:11:36.183446,2024-04-28 15:00:00,2024-04-28 23:00:00,2024-04-28 15:00:00,2024-04-28 15:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+454,US48,Demand,2024-04-28 17:09:47.201852,2024-04-28 15:00:00,2024-04-28 23:00:00,2024-04-28 15:00:00,2024-04-28 16:00:00,True,False,2.0,0.0,refresh,True,True,
+455,US48,Demand,2024-04-28 18:12:44.322188,2024-04-28 17:00:00,2024-04-28 23:00:00,2024-04-28 17:00:00,2024-04-28 17:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+456,US48,Demand,2024-04-28 19:08:33.272212,2024-04-28 17:00:00,2024-04-28 23:00:00,2024-04-28 17:00:00,2024-04-28 18:00:00,True,False,2.0,0.0,refresh,True,True,
+457,US48,Demand,2024-04-28 20:11:30.996497,2024-04-28 19:00:00,2024-04-28 23:00:00,2024-04-28 19:00:00,2024-04-28 19:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+458,US48,Demand,2024-04-28 21:10:06.062593,2024-04-28 19:00:00,2024-04-28 23:00:00,2024-04-28 19:00:00,2024-04-28 20:00:00,True,False,2.0,0.0,refresh,True,True,
+459,US48,Demand,2024-04-28 22:09:34.071597,2024-04-28 21:00:00,2024-04-28 23:00:00,2024-04-28 21:00:00,2024-04-28 21:00:00,True,False,1.0,0.0,refresh,False,False,"The refresh process failed, please check the log's flags; "
+460,US48,Demand,2024-04-28 23:09:58.987101,2024-04-28 21:00:00,2024-04-28 23:00:00,2024-04-28 21:00:00,2024-04-28 22:00:00,True,False,2.0,0.0,refresh,True,True,
+461,US48,Demand,2024-04-29 00:46:34.569152,2024-04-28 23:00:00,2024-04-28 23:00:00,,,,,,,refresh,False,False,No new data is available; 
+>>>>>>> 8ded789b36548654fbf6e629cbb18f8fb0bc057c
