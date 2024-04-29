@@ -1,3 +1,4 @@
 index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,end_match,n_obs,na,type,update,success,comments,offset
 1,US48,Demand,2024-04-29 02:13:32.604744,2015-07-01 05:00:00,2024-04-26 14:00:00,2015-07-01 05:00:00,2024-04-26 14:00:00,True,True,77338,0,backfill,True,True,Initial data backfill,
 2,US48,Demand,2024-04-29 02:14:10.493086,2024-04-26 15:00:00,2024-04-28 23:00:00,2024-04-19 15:00:00,2024-04-28 23:00:00,True,True,225,0,refresh,True,True,Offset the start argument by168; The end argument does not match the last data point timestamp; ,168.0
+3,US48,Demand,2024-04-29 02:22:33.004556,2024-04-29 00:00:00,2024-04-28 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
