@@ -105,7 +105,7 @@ metadata = etl.get_api_end(api_key = eia_api_key,
 api_path = "electricity/rto/region-data/", offset = 8)
 ```
 
-The `end` variable represents the timestamp of the most recent data point available on the API. There is some issue on the API timestampe, a gap of 8 hours between the value of the last data point and the actual, therefore, we will offset the `end` value by 16 hours using the `offset` argument and save it as `end_fix`:
+The `end` variable represents the timestamp of the most recent data point available on the API. There is some issue on the API timestampe, a gap of 8 hours between the value of the last data point and the actual, therefore, we will offset the `end` value by 8 hours using the `offset` argument and save it as `end_fix`:
 
 ```{python}
 print(metadata.end)
@@ -116,7 +116,7 @@ end_fix = metadata.end_fix
 
 
 ``` {python}
-new_data = etl.eia_data_refresh(start = start, end = end_fix, api_key = eia_api_key, api_path = api_path, facets = facets) 
+new_data = etl.eia_data_refresh(start = start, end = end_fix, api_key = eia_api_key, api_path = api_path, facets = facets, offset = 24 * 7) 
 
 ```
 
@@ -208,6 +208,6 @@ if last_start < forecast_start:
 Score past forecasts
 
 ```{python}
-# forecast_archive = fc.load_forecast(fc_path)
-# new_log = fc.score_forecast(log_path = "data/fc48_metadata.csv", actual = data, forecast = forecast_archive, save = True)
+forecast_archive = fc.load_forecast(fc_path)
+new_log = fc.score_forecast(log_path = "data/fc48_metadata.csv", actual = data, forecast = forecast_archive, save = True)
 ```
