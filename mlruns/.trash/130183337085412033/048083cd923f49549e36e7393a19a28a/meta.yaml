@@ -1,8 +1,9 @@
 artifact_uri: /workspaces/eia-poc/metadata/048083cd923f49549e36e7393a19a28a/artifacts
+deleted_time: 1714353933568
 end_time: 1712677278039
 entry_point_name: ''
 experiment_id: '130183337085412033'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 048083cd923f49549e36e7393a19a28a
 run_name: '2022-04-08'
 run_uuid: 048083cd923f49549e36e7393a19a28a
