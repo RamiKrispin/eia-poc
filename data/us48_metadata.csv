@@ -111,3 +111,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 110,US48,Demand,2024-05-03 13:12:20.510217,2024-05-03 03:00:00,2024-05-03 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
 111,US48,Demand,2024-05-03 14:11:15.445732,2024-05-03 03:00:00,2024-05-03 23:00:00,2024-04-26 03:00:00,2024-05-03 11:00:00,True,False,177.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
 112,US48,Demand,2024-05-03 15:11:51.294622,2024-05-03 12:00:00,2024-05-03 23:00:00,2024-04-26 12:00:00,2024-05-03 14:00:00,True,False,171.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+113,US48,Demand,2024-05-03 16:13:58.252043,2024-05-03 15:00:00,2024-05-03 23:00:00,2024-04-26 15:00:00,2024-05-03 15:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
