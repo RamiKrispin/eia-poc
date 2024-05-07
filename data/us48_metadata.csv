@@ -21,3 +21,186 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 20,US48,Demand,2024-04-29 19:08:52.212638,2024-04-29 18:00:00,2024-04-29 23:00:00,2024-04-22 18:00:00,2024-04-29 18:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
 21,US48,Demand,2024-04-29 20:11:25.747117,2024-04-29 19:00:00,2024-04-29 23:00:00,2024-04-22 19:00:00,2024-04-29 19:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
 22,US48,Demand,2024-04-29 21:10:28.838003,2024-04-29 20:00:00,2024-04-29 23:00:00,2024-04-22 20:00:00,2024-04-29 20:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+23,US48,Demand,2024-04-29 22:10:38.459588,2024-04-29 21:00:00,2024-04-29 23:00:00,2024-04-22 21:00:00,2024-04-29 21:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+24,US48,Demand,2024-04-29 23:10:06.943314,2024-04-29 22:00:00,2024-04-29 23:00:00,2024-04-22 22:00:00,2024-04-29 22:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+25,US48,Demand,2024-04-30 00:45:15.871777,2024-04-29 23:00:00,2024-04-29 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+26,US48,Demand,2024-04-30 01:48:17.366272,2024-04-29 23:00:00,2024-04-29 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+27,US48,Demand,2024-04-30 02:20:46.144202,2024-04-29 23:00:00,2024-04-29 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+28,US48,Demand,2024-04-30 03:11:52.400994,2024-04-29 23:00:00,2024-04-29 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+29,US48,Demand,2024-04-30 04:14:02.030767,2024-04-29 23:00:00,2024-04-29 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+30,US48,Demand,2024-04-30 05:10:51.890425,2024-04-29 23:00:00,2024-04-29 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+31,US48,Demand,2024-04-30 06:14:19.745807,2024-04-29 23:00:00,2024-04-29 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+32,US48,Demand,2024-04-30 07:11:17.386515,2024-04-29 23:00:00,2024-04-29 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+33,US48,Demand,2024-04-30 08:14:14.303608,2024-04-29 23:00:00,2024-04-29 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+34,US48,Demand,2024-04-30 09:12:24.883943,2024-04-29 23:00:00,2024-04-30 00:00:00,2024-04-22 23:00:00,2024-04-30 00:00:00,True,True,170.0,0.0,refresh,True,True,Offset the start argument by168; The end argument does not match the last data point timestamp; ,168.0
+35,US48,Demand,2024-04-30 10:12:18.539026,2024-04-30 01:00:00,2024-04-30 01:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+36,US48,Demand,2024-04-30 11:10:38.487454,2024-04-30 01:00:00,2024-04-30 02:00:00,2024-04-23 01:00:00,2024-04-30 02:00:00,True,True,170.0,0.0,refresh,True,True,Offset the start argument by168; The end argument does not match the last data point timestamp; ,168.0
+37,US48,Demand,2024-04-30 12:18:17.986309,2024-04-30 03:00:00,2024-04-30 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+38,US48,Demand,2024-04-30 13:11:26.293149,2024-04-30 03:00:00,2024-04-30 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+39,US48,Demand,2024-04-30 14:10:38.260641,2024-04-30 03:00:00,2024-04-30 23:00:00,2024-04-23 03:00:00,2024-04-30 11:00:00,True,False,177.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+40,US48,Demand,2024-04-30 15:09:39.295059,2024-04-30 12:00:00,2024-04-30 23:00:00,2024-04-23 12:00:00,2024-04-30 14:00:00,True,False,171.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+41,US48,Demand,2024-04-30 16:14:15.271469,2024-04-30 15:00:00,2024-04-30 23:00:00,2024-04-23 15:00:00,2024-04-30 15:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+42,US48,Demand,2024-04-30 17:09:57.134141,2024-04-30 16:00:00,2024-04-30 23:00:00,2024-04-23 16:00:00,2024-04-30 16:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+43,US48,Demand,2024-04-30 18:15:40.785648,2024-04-30 17:00:00,2024-04-30 23:00:00,2024-04-23 17:00:00,2024-04-30 17:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+44,US48,Demand,2024-04-30 19:08:39.568791,2024-04-30 18:00:00,2024-04-30 23:00:00,2024-04-23 18:00:00,2024-04-30 18:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+45,US48,Demand,2024-04-30 20:11:13.779128,2024-04-30 19:00:00,2024-04-30 23:00:00,2024-04-23 19:00:00,2024-04-30 19:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+46,US48,Demand,2024-04-30 21:11:39.295124,2024-04-30 20:00:00,2024-04-30 23:00:00,2024-04-23 20:00:00,2024-04-30 20:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+47,US48,Demand,2024-04-30 22:10:49.202429,2024-04-30 21:00:00,2024-04-30 23:00:00,2024-04-23 21:00:00,2024-04-30 21:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+48,US48,Demand,2024-04-30 23:10:53.791699,2024-04-30 22:00:00,2024-04-30 23:00:00,2024-04-23 22:00:00,2024-04-30 22:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+49,US48,Demand,2024-05-01 00:50:29.175409,2024-04-30 23:00:00,2024-04-30 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+50,US48,Demand,2024-05-01 01:55:47.889129,2024-04-30 23:00:00,2024-04-30 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+51,US48,Demand,2024-05-01 02:26:17.224290,2024-04-30 23:00:00,2024-04-30 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+52,US48,Demand,2024-05-01 03:12:19.979031,2024-04-30 23:00:00,2024-04-30 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+53,US48,Demand,2024-05-01 04:12:47.047398,2024-04-30 23:00:00,2024-04-30 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+54,US48,Demand,2024-05-01 05:10:42.782767,2024-04-30 23:00:00,2024-04-30 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+55,US48,Demand,2024-05-01 06:14:52.229225,2024-04-30 23:00:00,2024-04-30 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+56,US48,Demand,2024-05-01 07:13:23.137249,2024-04-30 23:00:00,2024-04-30 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+57,US48,Demand,2024-05-01 08:16:31.541146,2024-04-30 23:00:00,2024-04-30 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+58,US48,Demand,2024-05-01 09:12:05.960394,2024-04-30 23:00:00,2024-05-01 00:00:00,2024-04-23 23:00:00,2024-05-01 00:00:00,True,True,170.0,0.0,refresh,True,True,Offset the start argument by168; The end argument does not match the last data point timestamp; ,168.0
+59,US48,Demand,2024-05-01 10:12:20.144899,2024-05-01 01:00:00,2024-05-01 01:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+60,US48,Demand,2024-05-01 11:09:02.325474,2024-05-01 01:00:00,2024-05-01 02:00:00,2024-04-24 01:00:00,2024-05-01 02:00:00,True,True,170.0,0.0,refresh,True,True,Offset the start argument by168; The end argument does not match the last data point timestamp; ,168.0
+61,US48,Demand,2024-05-01 12:19:34.924174,2024-05-01 03:00:00,2024-05-01 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+62,US48,Demand,2024-05-01 13:11:41.476625,2024-05-01 03:00:00,2024-05-01 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+63,US48,Demand,2024-05-01 14:12:19.901072,2024-05-01 03:00:00,2024-05-01 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+64,US48,Demand,2024-05-01 15:10:35.013568,2024-05-01 03:00:00,2024-05-01 23:00:00,2024-04-24 03:00:00,2024-05-01 11:00:00,True,False,177.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+65,US48,Demand,2024-05-01 16:13:27.022176,2024-05-01 12:00:00,2024-05-01 23:00:00,2024-04-24 12:00:00,2024-05-01 15:00:00,True,False,172.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+66,US48,Demand,2024-05-01 17:10:34.591700,2024-05-01 16:00:00,2024-05-01 23:00:00,2024-04-24 16:00:00,2024-05-01 16:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+67,US48,Demand,2024-05-01 18:13:43.679840,2024-05-01 17:00:00,2024-05-01 23:00:00,2024-04-24 17:00:00,2024-05-01 17:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+68,US48,Demand,2024-05-01 19:10:29.992465,2024-05-01 18:00:00,2024-05-01 23:00:00,2024-04-24 18:00:00,2024-05-01 18:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+69,US48,Demand,2024-05-01 20:13:06.363272,2024-05-01 19:00:00,2024-05-01 23:00:00,2024-04-24 19:00:00,2024-05-01 19:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+70,US48,Demand,2024-05-01 21:10:39.487116,2024-05-01 20:00:00,2024-05-01 23:00:00,2024-04-24 20:00:00,2024-05-01 20:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+71,US48,Demand,2024-05-01 22:11:12.787084,2024-05-01 21:00:00,2024-05-01 23:00:00,2024-04-24 21:00:00,2024-05-01 21:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+72,US48,Demand,2024-05-01 23:11:47.111123,2024-05-01 22:00:00,2024-05-01 23:00:00,2024-04-24 22:00:00,2024-05-01 22:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+73,US48,Demand,2024-05-02 00:45:05.379706,2024-05-01 23:00:00,2024-05-01 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+74,US48,Demand,2024-05-02 01:48:49.225967,2024-05-01 23:00:00,2024-05-01 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+75,US48,Demand,2024-05-02 02:21:21.880447,2024-05-01 23:00:00,2024-05-01 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+76,US48,Demand,2024-05-02 03:11:52.256279,2024-05-01 23:00:00,2024-05-01 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+77,US48,Demand,2024-05-02 04:13:15.512710,2024-05-01 23:00:00,2024-05-01 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+78,US48,Demand,2024-05-02 05:12:10.408663,2024-05-01 23:00:00,2024-05-01 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+79,US48,Demand,2024-05-02 06:14:05.353819,2024-05-01 23:00:00,2024-05-01 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+80,US48,Demand,2024-05-02 07:11:32.796657,2024-05-01 23:00:00,2024-05-01 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+81,US48,Demand,2024-05-02 08:13:50.692682,2024-05-01 23:00:00,2024-05-01 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+82,US48,Demand,2024-05-02 09:11:56.379648,2024-05-01 23:00:00,2024-05-02 00:00:00,2024-04-24 23:00:00,2024-05-02 00:00:00,True,True,170.0,0.0,refresh,True,True,Offset the start argument by168; The end argument does not match the last data point timestamp; ,168.0
+83,US48,Demand,2024-05-02 10:12:20.107430,2024-05-02 01:00:00,2024-05-02 01:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+84,US48,Demand,2024-05-02 11:09:44.684163,2024-05-02 01:00:00,2024-05-02 02:00:00,2024-04-25 01:00:00,2024-05-02 02:00:00,True,True,170.0,0.0,refresh,True,True,Offset the start argument by168; The end argument does not match the last data point timestamp; ,168.0
+85,US48,Demand,2024-05-02 12:19:22.821580,2024-05-02 03:00:00,2024-05-02 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+86,US48,Demand,2024-05-02 13:12:00.911832,2024-05-02 03:00:00,2024-05-02 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+87,US48,Demand,2024-05-02 14:10:22.964349,2024-05-02 03:00:00,2024-05-02 23:00:00,2024-04-25 03:00:00,2024-05-02 11:00:00,True,False,177.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+88,US48,Demand,2024-05-02 15:11:52.626914,2024-05-02 12:00:00,2024-05-02 23:00:00,2024-04-25 12:00:00,2024-05-02 14:00:00,True,False,171.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+89,US48,Demand,2024-05-02 16:12:52.713202,2024-05-02 15:00:00,2024-05-02 23:00:00,2024-04-25 15:00:00,2024-05-02 15:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+90,US48,Demand,2024-05-02 17:10:34.802025,2024-05-02 16:00:00,2024-05-02 23:00:00,2024-04-25 16:00:00,2024-05-02 16:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+91,US48,Demand,2024-05-02 18:13:42.350599,2024-05-02 17:00:00,2024-05-02 23:00:00,2024-04-25 17:00:00,2024-05-02 17:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+92,US48,Demand,2024-05-02 19:08:48.258366,2024-05-02 18:00:00,2024-05-02 23:00:00,2024-04-25 18:00:00,2024-05-02 18:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+93,US48,Demand,2024-05-02 20:12:09.409161,2024-05-02 19:00:00,2024-05-02 23:00:00,2024-04-25 19:00:00,2024-05-02 19:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+94,US48,Demand,2024-05-02 21:10:05.074718,2024-05-02 20:00:00,2024-05-02 23:00:00,2024-04-25 20:00:00,2024-05-02 20:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+95,US48,Demand,2024-05-02 22:11:06.795305,2024-05-02 21:00:00,2024-05-02 23:00:00,2024-04-25 21:00:00,2024-05-02 21:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+96,US48,Demand,2024-05-02 23:12:57.300587,2024-05-02 22:00:00,2024-05-02 23:00:00,2024-04-25 22:00:00,2024-05-02 21:00:00,True,False,168.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+97,US48,Demand,2024-05-03 00:49:43.725598,2024-05-02 22:00:00,2024-05-02 23:00:00,2024-04-25 22:00:00,2024-05-02 21:00:00,True,False,168.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+98,US48,Demand,2024-05-03 01:53:15.550806,2024-05-02 22:00:00,2024-05-02 23:00:00,2024-04-25 22:00:00,2024-05-02 21:00:00,True,False,168.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+99,US48,Demand,2024-05-03 02:24:05.826035,2024-05-02 22:00:00,2024-05-02 23:00:00,2024-04-25 22:00:00,2024-05-02 21:00:00,True,False,168.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+100,US48,Demand,2024-05-03 03:12:48.818869,2024-05-02 22:00:00,2024-05-02 23:00:00,2024-04-25 22:00:00,2024-05-02 21:00:00,True,False,168.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+101,US48,Demand,2024-05-03 04:14:29.622013,2024-05-02 22:00:00,2024-05-02 23:00:00,2024-04-25 22:00:00,2024-05-02 21:00:00,True,False,168.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+102,US48,Demand,2024-05-03 05:11:07.289312,2024-05-02 22:00:00,2024-05-02 23:00:00,2024-04-25 22:00:00,2024-05-02 21:00:00,True,False,168.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+103,US48,Demand,2024-05-03 06:14:19.214004,2024-05-02 22:00:00,2024-05-02 23:00:00,2024-04-25 22:00:00,2024-05-02 21:00:00,True,False,168.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+104,US48,Demand,2024-05-03 07:10:38.919812,2024-05-02 22:00:00,2024-05-02 23:00:00,2024-04-25 22:00:00,2024-05-02 21:00:00,True,False,168.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+105,US48,Demand,2024-05-03 08:13:39.984882,2024-05-02 22:00:00,2024-05-02 23:00:00,2024-04-25 22:00:00,2024-05-02 21:00:00,True,False,168.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+106,US48,Demand,2024-05-03 09:12:02.544167,2024-05-02 22:00:00,2024-05-02 23:00:00,2024-04-25 22:00:00,2024-05-02 21:00:00,True,False,168.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+107,US48,Demand,2024-05-03 10:11:46.401884,2024-05-02 22:00:00,2024-05-02 23:00:00,2024-04-25 22:00:00,2024-05-02 21:00:00,True,False,168.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+108,US48,Demand,2024-05-03 11:09:28.483278,2024-05-02 22:00:00,2024-05-03 02:00:00,2024-04-25 22:00:00,2024-05-03 02:00:00,True,True,173.0,0.0,refresh,True,True,Offset the start argument by168; The end argument does not match the last data point timestamp; ,168.0
+109,US48,Demand,2024-05-03 12:18:11.659777,2024-05-03 03:00:00,2024-05-03 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+110,US48,Demand,2024-05-03 13:12:20.510217,2024-05-03 03:00:00,2024-05-03 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+111,US48,Demand,2024-05-03 14:11:15.445732,2024-05-03 03:00:00,2024-05-03 23:00:00,2024-04-26 03:00:00,2024-05-03 11:00:00,True,False,177.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+112,US48,Demand,2024-05-03 15:11:51.294622,2024-05-03 12:00:00,2024-05-03 23:00:00,2024-04-26 12:00:00,2024-05-03 14:00:00,True,False,171.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+113,US48,Demand,2024-05-03 16:13:58.252043,2024-05-03 15:00:00,2024-05-03 23:00:00,2024-04-26 15:00:00,2024-05-03 15:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+114,US48,Demand,2024-05-03 17:10:19.376215,2024-05-03 16:00:00,2024-05-03 23:00:00,2024-04-26 16:00:00,2024-05-03 16:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+115,US48,Demand,2024-05-03 18:13:24.077143,2024-05-03 17:00:00,2024-05-03 23:00:00,2024-04-26 17:00:00,2024-05-03 17:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+116,US48,Demand,2024-05-03 19:09:10.863758,2024-05-03 18:00:00,2024-05-03 23:00:00,2024-04-26 18:00:00,2024-05-03 18:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+117,US48,Demand,2024-05-03 20:12:03.378054,2024-05-03 19:00:00,2024-05-03 23:00:00,2024-04-26 19:00:00,2024-05-03 19:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+118,US48,Demand,2024-05-03 21:09:27.312998,2024-05-03 20:00:00,2024-05-03 23:00:00,2024-04-26 20:00:00,2024-05-03 20:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+119,US48,Demand,2024-05-03 22:10:35.077000,2024-05-03 21:00:00,2024-05-03 23:00:00,2024-04-26 21:00:00,2024-05-03 21:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+120,US48,Demand,2024-05-03 23:11:19.524313,2024-05-03 22:00:00,2024-05-03 23:00:00,2024-04-26 22:00:00,2024-05-03 22:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+121,US48,Demand,2024-05-04 00:45:25.078706,2024-05-03 23:00:00,2024-05-03 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+122,US48,Demand,2024-05-04 01:45:08.762700,2024-05-03 23:00:00,2024-05-03 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+123,US48,Demand,2024-05-04 02:19:26.181895,2024-05-03 23:00:00,2024-05-03 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+124,US48,Demand,2024-05-04 03:12:18.556390,2024-05-03 23:00:00,2024-05-03 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+125,US48,Demand,2024-05-04 04:13:44.332914,2024-05-03 23:00:00,2024-05-03 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+126,US48,Demand,2024-05-04 05:10:29.535528,2024-05-03 23:00:00,2024-05-03 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+127,US48,Demand,2024-05-04 06:12:49.250434,2024-05-03 23:00:00,2024-05-03 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+128,US48,Demand,2024-05-04 07:10:26.852126,2024-05-03 23:00:00,2024-05-03 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+129,US48,Demand,2024-05-04 08:12:36.715206,2024-05-03 23:00:00,2024-05-03 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+130,US48,Demand,2024-05-04 09:11:40.109347,2024-05-03 23:00:00,2024-05-04 00:00:00,2024-04-26 23:00:00,2024-05-04 00:00:00,True,True,170.0,0.0,refresh,True,True,Offset the start argument by168; The end argument does not match the last data point timestamp; ,168.0
+131,US48,Demand,2024-05-04 10:10:12.723753,2024-05-04 01:00:00,2024-05-04 01:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+132,US48,Demand,2024-05-04 11:08:36.118630,2024-05-04 01:00:00,2024-05-04 02:00:00,2024-04-27 01:00:00,2024-05-04 02:00:00,True,True,170.0,0.0,refresh,True,True,Offset the start argument by168; The end argument does not match the last data point timestamp; ,168.0
+133,US48,Demand,2024-05-04 12:16:59.225327,2024-05-04 03:00:00,2024-05-04 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+134,US48,Demand,2024-05-04 13:11:26.260942,2024-05-04 03:00:00,2024-05-04 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+135,US48,Demand,2024-05-04 14:11:19.036235,2024-05-04 03:00:00,2024-05-04 23:00:00,2024-04-27 03:00:00,2024-05-04 11:00:00,True,False,177.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+136,US48,Demand,2024-05-04 15:10:44.315825,2024-05-04 12:00:00,2024-05-04 23:00:00,2024-04-27 12:00:00,2024-05-04 14:00:00,True,False,171.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+137,US48,Demand,2024-05-04 16:12:48.314329,2024-05-04 15:00:00,2024-05-04 23:00:00,2024-04-27 15:00:00,2024-05-04 15:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+138,US48,Demand,2024-05-04 17:08:46.051730,2024-05-04 16:00:00,2024-05-04 23:00:00,2024-04-27 16:00:00,2024-05-04 16:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+139,US48,Demand,2024-05-04 18:12:30.748716,2024-05-04 17:00:00,2024-05-04 23:00:00,2024-04-27 17:00:00,2024-05-04 17:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+140,US48,Demand,2024-05-04 19:10:12.784108,2024-05-04 18:00:00,2024-05-04 23:00:00,2024-04-27 18:00:00,2024-05-04 18:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+141,US48,Demand,2024-05-04 20:12:04.700567,2024-05-04 19:00:00,2024-05-04 23:00:00,2024-04-27 19:00:00,2024-05-04 19:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+142,US48,Demand,2024-05-04 21:10:28.705885,2024-05-04 20:00:00,2024-05-04 23:00:00,2024-04-27 20:00:00,2024-05-04 20:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+143,US48,Demand,2024-05-04 22:09:56.899063,2024-05-04 21:00:00,2024-05-04 23:00:00,2024-04-27 21:00:00,2024-05-04 21:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+144,US48,Demand,2024-05-04 23:11:09.892708,2024-05-04 22:00:00,2024-05-04 23:00:00,2024-04-27 22:00:00,2024-05-04 22:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+145,US48,Demand,2024-05-05 00:50:04.232857,2024-05-04 23:00:00,2024-05-04 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+146,US48,Demand,2024-05-05 01:54:20.945402,2024-05-04 23:00:00,2024-05-04 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+147,US48,Demand,2024-05-05 02:24:13.421753,2024-05-04 23:00:00,2024-05-04 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+148,US48,Demand,2024-05-05 03:11:59.524731,2024-05-04 23:00:00,2024-05-04 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+149,US48,Demand,2024-05-05 04:13:22.145827,2024-05-04 23:00:00,2024-05-04 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+150,US48,Demand,2024-05-05 05:10:40.892127,2024-05-04 23:00:00,2024-05-04 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+151,US48,Demand,2024-05-05 06:13:55.557478,2024-05-04 23:00:00,2024-05-04 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+152,US48,Demand,2024-05-05 07:09:53.336954,2024-05-04 23:00:00,2024-05-04 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+153,US48,Demand,2024-05-05 08:12:31.391804,2024-05-04 23:00:00,2024-05-04 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+154,US48,Demand,2024-05-05 09:12:13.174687,2024-05-04 23:00:00,2024-05-05 00:00:00,2024-04-27 23:00:00,2024-05-05 00:00:00,True,True,170.0,0.0,refresh,True,True,Offset the start argument by168; The end argument does not match the last data point timestamp; ,168.0
+155,US48,Demand,2024-05-05 10:11:23.825372,2024-05-05 01:00:00,2024-05-05 01:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+156,US48,Demand,2024-05-05 11:09:39.033688,2024-05-05 01:00:00,2024-05-05 02:00:00,2024-04-28 01:00:00,2024-05-05 02:00:00,True,True,170.0,0.0,refresh,True,True,Offset the start argument by168; The end argument does not match the last data point timestamp; ,168.0
+157,US48,Demand,2024-05-05 12:17:39.443417,2024-05-05 03:00:00,2024-05-05 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+158,US48,Demand,2024-05-05 13:10:25.943166,2024-05-05 03:00:00,2024-05-05 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+159,US48,Demand,2024-05-05 14:10:19.000905,2024-05-05 03:00:00,2024-05-05 23:00:00,2024-04-28 03:00:00,2024-05-05 11:00:00,True,False,177.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+160,US48,Demand,2024-05-05 15:12:03.246939,2024-05-05 12:00:00,2024-05-05 23:00:00,2024-04-28 12:00:00,2024-05-05 14:00:00,True,False,171.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+161,US48,Demand,2024-05-05 16:12:48.105755,2024-05-05 15:00:00,2024-05-05 23:00:00,2024-04-28 15:00:00,2024-05-05 15:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+162,US48,Demand,2024-05-05 17:09:08.894483,2024-05-05 16:00:00,2024-05-05 23:00:00,2024-04-28 16:00:00,2024-05-05 16:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+163,US48,Demand,2024-05-05 18:12:32.636316,2024-05-05 17:00:00,2024-05-05 23:00:00,2024-04-28 17:00:00,2024-05-05 17:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+164,US48,Demand,2024-05-05 19:09:32.011357,2024-05-05 18:00:00,2024-05-05 23:00:00,2024-04-28 18:00:00,2024-05-05 18:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+165,US48,Demand,2024-05-05 20:10:39.462499,2024-05-05 19:00:00,2024-05-05 23:00:00,2024-04-28 19:00:00,2024-05-05 19:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+166,US48,Demand,2024-05-05 21:09:38.270566,2024-05-05 20:00:00,2024-05-05 23:00:00,2024-04-28 20:00:00,2024-05-05 20:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+167,US48,Demand,2024-05-05 22:10:32.024829,2024-05-05 21:00:00,2024-05-05 23:00:00,2024-04-28 21:00:00,2024-05-05 21:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+168,US48,Demand,2024-05-05 23:10:15.216685,2024-05-05 22:00:00,2024-05-05 23:00:00,2024-04-28 22:00:00,2024-05-05 22:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+169,US48,Demand,2024-05-06 00:47:24.151444,2024-05-05 23:00:00,2024-05-05 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+170,US48,Demand,2024-05-06 01:52:17.381192,2024-05-05 23:00:00,2024-05-05 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+171,US48,Demand,2024-05-06 02:25:40.235797,2024-05-05 23:00:00,2024-05-05 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+172,US48,Demand,2024-05-06 03:12:40.979689,2024-05-05 23:00:00,2024-05-05 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+173,US48,Demand,2024-05-06 04:13:45.068802,2024-05-05 23:00:00,2024-05-05 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+174,US48,Demand,2024-05-06 05:11:32.092294,2024-05-05 23:00:00,2024-05-05 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+175,US48,Demand,2024-05-06 06:15:03.168072,2024-05-05 23:00:00,2024-05-05 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+176,US48,Demand,2024-05-06 07:10:55.419639,2024-05-05 23:00:00,2024-05-05 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+177,US48,Demand,2024-05-06 08:14:14.063880,2024-05-05 23:00:00,2024-05-05 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+178,US48,Demand,2024-05-06 09:12:36.525926,2024-05-05 23:00:00,2024-05-06 00:00:00,2024-04-28 23:00:00,2024-05-06 00:00:00,True,True,170.0,0.0,refresh,True,True,Offset the start argument by168; The end argument does not match the last data point timestamp; ,168.0
+179,US48,Demand,2024-05-06 10:11:28.869732,2024-05-06 01:00:00,2024-05-06 01:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+180,US48,Demand,2024-05-06 11:09:24.281901,2024-05-06 01:00:00,2024-05-06 02:00:00,2024-04-29 01:00:00,2024-05-06 02:00:00,True,True,170.0,0.0,refresh,True,True,Offset the start argument by168; The end argument does not match the last data point timestamp; ,168.0
+181,US48,Demand,2024-05-06 12:19:04.350388,2024-05-06 03:00:00,2024-05-06 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+182,US48,Demand,2024-05-06 13:12:44.945555,2024-05-06 03:00:00,2024-05-06 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+183,US48,Demand,2024-05-06 14:11:15.053759,2024-05-06 03:00:00,2024-05-06 23:00:00,2024-04-29 03:00:00,2024-05-06 11:00:00,True,False,177.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+184,US48,Demand,2024-05-06 15:11:28.874475,2024-05-06 12:00:00,2024-05-06 23:00:00,2024-04-29 12:00:00,2024-05-06 14:00:00,True,False,171.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+185,US48,Demand,2024-05-06 16:14:02.542423,2024-05-06 15:00:00,2024-05-06 23:00:00,2024-04-29 15:00:00,2024-05-06 15:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+186,US48,Demand,2024-05-06 17:12:58.665143,2024-05-06 16:00:00,2024-05-06 23:00:00,2024-04-29 16:00:00,2024-05-06 16:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+187,US48,Demand,2024-05-06 18:15:59.740371,2024-05-06 17:00:00,2024-05-06 23:00:00,2024-04-29 17:00:00,2024-05-06 17:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+188,US48,Demand,2024-05-06 19:09:56.429687,2024-05-06 18:00:00,2024-05-06 23:00:00,2024-04-29 18:00:00,2024-05-06 18:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+189,US48,Demand,2024-05-06 20:11:09.390031,2024-05-06 19:00:00,2024-05-06 23:00:00,2024-04-29 19:00:00,2024-05-06 19:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+190,US48,Demand,2024-05-06 21:10:50.367595,2024-05-06 20:00:00,2024-05-06 23:00:00,2024-04-29 20:00:00,2024-05-06 20:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+191,US48,Demand,2024-05-06 22:11:06.521326,2024-05-06 21:00:00,2024-05-06 23:00:00,2024-04-29 21:00:00,2024-05-06 21:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+192,US48,Demand,2024-05-06 23:10:57.857915,2024-05-06 22:00:00,2024-05-06 23:00:00,2024-04-29 22:00:00,2024-05-06 22:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+193,US48,Demand,2024-05-07 00:46:25.247074,2024-05-06 23:00:00,2024-05-06 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+194,US48,Demand,2024-05-07 01:52:32.057200,2024-05-06 23:00:00,2024-05-06 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+195,US48,Demand,2024-05-07 02:28:52.930900,2024-05-06 23:00:00,2024-05-06 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+196,US48,Demand,2024-05-07 03:12:58.884193,2024-05-06 23:00:00,2024-05-06 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+197,US48,Demand,2024-05-07 04:14:15.196700,2024-05-06 23:00:00,2024-05-06 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+198,US48,Demand,2024-05-07 05:12:12.055682,2024-05-06 23:00:00,2024-05-06 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+199,US48,Demand,2024-05-07 06:14:52.255670,2024-05-06 23:00:00,2024-05-06 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+200,US48,Demand,2024-05-07 07:16:12.129062,2024-05-06 23:00:00,2024-05-06 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+201,US48,Demand,2024-05-07 08:13:48.762083,2024-05-06 23:00:00,2024-05-06 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+202,US48,Demand,2024-05-07 09:12:20.668710,2024-05-06 23:00:00,2024-05-07 00:00:00,2024-04-29 23:00:00,2024-05-07 00:00:00,True,True,170.0,0.0,refresh,True,True,Offset the start argument by168; The end argument does not match the last data point timestamp; ,168.0
+203,US48,Demand,2024-05-07 10:12:31.051523,2024-05-07 01:00:00,2024-05-07 01:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+204,US48,Demand,2024-05-07 11:10:17.991041,2024-05-07 01:00:00,2024-05-07 02:00:00,2024-04-30 01:00:00,2024-05-07 02:00:00,True,True,170.0,0.0,refresh,True,True,Offset the start argument by168; The end argument does not match the last data point timestamp; ,168.0
+205,US48,Demand,2024-05-07 12:18:55.269331,2024-05-07 03:00:00,2024-05-07 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
