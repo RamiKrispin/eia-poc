@@ -407,3 +407,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 406,US48,Demand,2024-05-15 21:10:34.188540,2024-05-15 20:00:00,2024-05-15 23:00:00,2024-05-08 20:00:00,2024-05-15 20:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
 407,US48,Demand,2024-05-15 22:11:59.003951,2024-05-15 21:00:00,2024-05-15 23:00:00,2024-05-08 21:00:00,2024-05-15 21:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
 408,US48,Demand,2024-05-15 23:11:42.969078,2024-05-15 22:00:00,2024-05-15 23:00:00,2024-05-08 22:00:00,2024-05-15 22:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+409,US48,Demand,2024-05-16 00:47:56.006083,2024-05-15 23:00:00,2024-05-15 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
