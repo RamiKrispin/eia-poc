@@ -421,3 +421,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 420,US48,Demand,2024-05-16 11:09:44.192827,2024-05-16 01:00:00,2024-05-16 02:00:00,2024-05-09 01:00:00,2024-05-16 02:00:00,True,True,170.0,0.0,refresh,True,True,Offset the start argument by168; The end argument does not match the last data point timestamp; ,168.0
 421,US48,Demand,2024-05-16 12:19:54.489985,2024-05-16 03:00:00,2024-05-16 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
 422,US48,Demand,2024-05-16 13:12:44.452970,2024-05-16 03:00:00,2024-05-16 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+423,US48,Demand,2024-05-16 14:11:35.546877,2024-05-16 03:00:00,2024-05-16 23:00:00,2024-05-09 03:00:00,2024-05-16 11:00:00,True,False,177.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
