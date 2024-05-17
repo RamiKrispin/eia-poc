@@ -442,3 +442,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 441,US48,Demand,2024-05-17 08:14:01.911340,2024-05-16 22:00:00,2024-05-16 23:00:00,2024-05-09 22:00:00,2024-05-16 21:00:00,True,False,168.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
 442,US48,Demand,2024-05-17 09:12:57.479583,2024-05-16 22:00:00,2024-05-16 23:00:00,2024-05-09 22:00:00,2024-05-16 21:00:00,True,False,168.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
 443,US48,Demand,2024-05-17 10:11:47.264112,2024-05-16 22:00:00,2024-05-16 23:00:00,2024-05-09 22:00:00,2024-05-16 21:00:00,True,False,168.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+444,US48,Demand,2024-05-17 11:10:19.988663,2024-05-16 22:00:00,2024-05-17 02:00:00,2024-05-09 22:00:00,2024-05-17 02:00:00,True,True,173.0,0.0,refresh,True,True,Offset the start argument by168; The end argument does not match the last data point timestamp; ,168.0
