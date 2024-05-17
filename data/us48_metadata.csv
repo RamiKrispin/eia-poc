@@ -440,3 +440,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 439,US48,Demand,2024-05-17 06:14:53.341288,2024-05-16 22:00:00,2024-05-16 23:00:00,2024-05-09 22:00:00,2024-05-16 21:00:00,True,False,168.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
 440,US48,Demand,2024-05-17 07:10:53.710716,2024-05-16 22:00:00,2024-05-16 23:00:00,2024-05-09 22:00:00,2024-05-16 21:00:00,True,False,168.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
 441,US48,Demand,2024-05-17 08:14:01.911340,2024-05-16 22:00:00,2024-05-16 23:00:00,2024-05-09 22:00:00,2024-05-16 21:00:00,True,False,168.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+442,US48,Demand,2024-05-17 09:12:57.479583,2024-05-16 22:00:00,2024-05-16 23:00:00,2024-05-09 22:00:00,2024-05-16 21:00:00,True,False,168.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
