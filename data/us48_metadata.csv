@@ -480,3 +480,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 479,US48,Demand,2024-05-18 22:09:29.184751,2024-05-18 21:00:00,2024-05-18 23:00:00,2024-05-11 21:00:00,2024-05-18 21:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
 480,US48,Demand,2024-05-18 23:10:16.439111,2024-05-18 22:00:00,2024-05-18 23:00:00,2024-05-11 22:00:00,2024-05-18 22:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
 481,US48,Demand,2024-05-19 00:51:49.381361,2024-05-18 23:00:00,2024-05-18 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+482,US48,Demand,2024-05-19 01:57:24.005156,2024-05-18 23:00:00,2024-05-18 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
