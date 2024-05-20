@@ -504,3 +504,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 503,US48,Demand,2024-05-19 22:12:41.798934,2024-05-19 03:00:00,2024-05-19 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
 504,US48,Demand,2024-05-19 23:12:09.949516,2024-05-19 03:00:00,2024-05-19 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
 505,US48,Demand,2024-05-20 00:48:20.974930,2024-05-19 03:00:00,2024-05-19 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+506,US48,Demand,2024-05-20 01:55:00.092318,2024-05-19 03:00:00,2024-05-19 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
