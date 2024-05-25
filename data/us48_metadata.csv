@@ -639,3 +639,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 638,US48,Demand,2024-05-25 13:10:45.834593,2024-05-25 03:00:00,2024-05-25 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
 639,US48,Demand,2024-05-25 14:09:40.717949,2024-05-25 03:00:00,2024-05-25 23:00:00,2024-05-18 03:00:00,2024-05-25 11:00:00,True,False,177.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
 640,US48,Demand,2024-05-25 15:11:12.300468,2024-05-25 12:00:00,2024-05-25 23:00:00,2024-05-18 12:00:00,2024-05-25 14:00:00,True,False,171.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+641,US48,Demand,2024-05-25 16:12:09.793800,2024-05-25 15:00:00,2024-05-25 23:00:00,2024-05-18 15:00:00,2024-05-25 15:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
