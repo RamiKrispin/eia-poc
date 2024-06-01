@@ -791,3 +791,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 790,US48,Demand,2024-05-31 21:10:59.673729,2024-05-31 20:00:00,2024-05-31 23:00:00,2024-05-24 20:00:00,2024-05-31 20:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
 791,US48,Demand,2024-05-31 22:10:35.223798,2024-05-31 21:00:00,2024-05-31 23:00:00,2024-05-24 21:00:00,2024-05-31 21:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
 792,US48,Demand,2024-05-31 23:10:57.784177,2024-05-31 22:00:00,2024-05-31 23:00:00,2024-05-24 22:00:00,2024-05-31 22:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+793,US48,Demand,2024-06-01 00:52:27.330836,2024-05-31 23:00:00,2024-05-31 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
