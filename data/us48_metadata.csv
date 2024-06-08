@@ -102,3 +102,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 101,US48,Demand,2024-06-08 12:18:23.308808,2024-06-08 03:00:00,2024-06-08 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
 102,US48,Demand,2024-06-08 13:11:24.042368,2024-06-08 03:00:00,2024-06-08 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
 103,US48,Demand,2024-06-08 14:10:40.284302,2024-06-08 03:00:00,2024-06-08 23:00:00,2024-06-01 03:00:00,2024-06-08 11:00:00,True,False,177.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+104,US48,Demand,2024-06-08 15:11:37.029478,2024-06-08 12:00:00,2024-06-08 23:00:00,2024-06-01 12:00:00,2024-06-08 14:00:00,True,False,171.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
