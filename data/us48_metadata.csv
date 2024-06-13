@@ -221,3 +221,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 220,US48,Demand,2024-06-13 12:20:36.402143,2024-06-13 03:00:00,2024-06-13 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
 221,US48,Demand,2024-06-13 13:13:43.010015,2024-06-13 03:00:00,2024-06-13 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
 222,US48,Demand,2024-06-13 14:11:57.616895,2024-06-13 03:00:00,2024-06-13 23:00:00,2024-06-06 03:00:00,2024-06-13 11:00:00,True,False,177.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+223,US48,Demand,2024-06-13 15:12:21.722659,2024-06-13 12:00:00,2024-06-13 23:00:00,2024-06-06 12:00:00,2024-06-13 14:00:00,True,False,171.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
