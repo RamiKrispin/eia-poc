@@ -280,3 +280,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 279,US48,Demand,2024-06-15 23:11:46.119009,2024-06-15 22:00:00,2024-06-15 23:00:00,2024-06-08 22:00:00,2024-06-15 22:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
 280,US48,Demand,2024-06-16 00:54:27.619078,2024-06-15 23:00:00,2024-06-15 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
 281,US48,Demand,2024-06-16 02:03:06.294251,2024-06-15 23:00:00,2024-06-15 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+282,US48,Demand,2024-06-16 03:12:41.816298,2024-06-15 23:00:00,2024-06-15 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
