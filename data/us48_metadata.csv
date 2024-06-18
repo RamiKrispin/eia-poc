@@ -345,3 +345,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 344,US48,Demand,2024-06-18 17:11:30.304306,2024-06-18 16:00:00,2024-06-18 23:00:00,2024-06-11 16:00:00,2024-06-18 16:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
 345,US48,Demand,2024-06-18 18:15:30.213452,2024-06-18 17:00:00,2024-06-18 23:00:00,2024-06-11 17:00:00,2024-06-18 17:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
 346,US48,Demand,2024-06-18 19:09:33.969497,2024-06-18 18:00:00,2024-06-18 23:00:00,2024-06-11 18:00:00,2024-06-18 18:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+347,US48,Demand,2024-06-18 20:12:42.959640,2024-06-18 19:00:00,2024-06-18 23:00:00,2024-06-11 19:00:00,2024-06-18 19:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
