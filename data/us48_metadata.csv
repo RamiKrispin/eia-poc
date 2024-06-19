@@ -370,3 +370,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 369,US48,Demand,2024-06-19 18:13:45.374848,2024-06-19 17:00:00,2024-06-19 23:00:00,2024-06-12 17:00:00,2024-06-19 17:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
 370,US48,Demand,2024-06-19 19:10:14.245611,2024-06-19 18:00:00,2024-06-19 23:00:00,2024-06-12 18:00:00,2024-06-19 18:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
 371,US48,Demand,2024-06-19 20:11:31.784133,2024-06-19 19:00:00,2024-06-19 23:00:00,2024-06-12 19:00:00,2024-06-19 19:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+372,US48,Demand,2024-06-19 21:12:14.789017,2024-06-19 20:00:00,2024-06-19 23:00:00,2024-06-12 20:00:00,2024-06-19 20:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
