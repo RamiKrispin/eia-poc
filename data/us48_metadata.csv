@@ -383,3 +383,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 382,US48,Demand,2024-06-20 07:11:16.498497,2024-06-19 23:00:00,2024-06-19 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
 383,US48,Demand,2024-06-20 08:15:19.076750,2024-06-19 23:00:00,2024-06-19 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
 384,US48,Demand,2024-06-20 09:13:00.546014,2024-06-19 23:00:00,2024-06-20 00:00:00,2024-06-12 23:00:00,2024-06-20 00:00:00,True,True,170.0,0.0,refresh,True,True,Offset the start argument by168; The end argument does not match the last data point timestamp; ,168.0
+385,US48,Demand,2024-06-20 10:12:06.988926,2024-06-20 01:00:00,2024-06-20 01:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
