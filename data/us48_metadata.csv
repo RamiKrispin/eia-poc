@@ -411,3 +411,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 410,US48,Demand,2024-06-21 12:19:43.930748,2024-06-21 03:00:00,2024-06-21 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
 411,US48,Demand,2024-06-21 13:13:30.829488,2024-06-21 03:00:00,2024-06-21 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
 412,US48,Demand,2024-06-21 14:10:57.104980,2024-06-21 03:00:00,2024-06-21 23:00:00,2024-06-14 03:00:00,2024-06-21 11:00:00,True,False,177.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+413,US48,Demand,2024-06-21 15:16:23.386094,2024-06-21 12:00:00,2024-06-21 23:00:00,2024-06-14 12:00:00,2024-06-21 14:00:00,True,False,171.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
