@@ -554,3 +554,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 553,US48,Demand,2024-06-27 13:13:51.242287,2024-06-27 03:00:00,2024-06-27 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
 554,US48,Demand,2024-06-27 14:11:18.966818,2024-06-27 03:00:00,2024-06-27 23:00:00,2024-06-20 03:00:00,2024-06-27 11:00:00,True,False,177.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
 555,US48,Demand,2024-06-27 15:12:59.352392,2024-06-27 12:00:00,2024-06-27 23:00:00,2024-06-20 00:00:00,2024-06-27 00:00:00,False,False,169.0,0.0,refresh,False,False,"Offset the start argument by168; The refresh process failed, please check the log's flags; ",168.0
+556,US48,Demand,2024-06-27 16:14:07.387218,2024-06-27 12:00:00,2024-06-27 23:00:00,2024-06-20 00:00:00,2024-06-27 00:00:00,False,False,169.0,0.0,refresh,False,False,"Offset the start argument by168; The refresh process failed, please check the log's flags; ",168.0
