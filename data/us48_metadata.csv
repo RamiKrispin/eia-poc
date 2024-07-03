@@ -686,3 +686,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 685,US48,Demand,2024-07-03 06:17:30.961800,2024-07-03 00:00:00,2024-07-02 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
 686,US48,Demand,2024-07-03 07:11:06.203928,2024-07-03 00:00:00,2024-07-02 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
 687,US48,Demand,2024-07-03 08:14:58.069712,2024-07-03 00:00:00,2024-07-02 23:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
+688,US48,Demand,2024-07-03 09:12:40.377974,2024-07-03 00:00:00,2024-07-03 00:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
