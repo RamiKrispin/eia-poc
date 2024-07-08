@@ -809,3 +809,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 808,US48,Demand,2024-07-08 13:14:56.403936,2024-07-08 03:00:00,2024-07-08 03:00:00,,,,,,,refresh,False,False,No new data is available; ,168.0
 809,US48,Demand,2024-07-08 14:11:43.665118,2024-07-08 03:00:00,2024-07-08 23:00:00,2024-07-01 03:00:00,2024-07-08 11:00:00,True,False,177.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
 810,US48,Demand,2024-07-08 15:12:30.730196,2024-07-08 12:00:00,2024-07-08 23:00:00,2024-07-01 12:00:00,2024-07-08 14:00:00,True,False,171.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+811,US48,Demand,2024-07-08 16:14:40.429421,2024-07-08 15:00:00,2024-07-08 23:00:00,2024-07-01 15:00:00,2024-07-08 15:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
