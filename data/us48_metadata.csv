@@ -1070,3 +1070,4 @@ index,respondent,respondent_type,time,start,end,start_act,end_act,start_match,en
 1069,US48,Demand,2024-07-19 15:12:46.833163,2024-07-19 12:00:00,2024-07-19 23:00:00,2024-07-12 12:00:00,2024-07-19 14:00:00,True,False,171.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
 1070,US48,Demand,2024-07-19 16:13:53.825726,2024-07-19 15:00:00,2024-07-19 23:00:00,2024-07-12 15:00:00,2024-07-19 15:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
 1071,US48,Demand,2024-07-19 17:11:44.168745,2024-07-19 16:00:00,2024-07-19 23:00:00,2024-07-12 16:00:00,2024-07-19 16:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
+1072,US48,Demand,2024-07-19 18:15:08.445204,2024-07-19 17:00:00,2024-07-19 23:00:00,2024-07-12 17:00:00,2024-07-19 17:00:00,True,False,169.0,0.0,refresh,True,True,Offset the start argument by168; ,168.0
