@@ -122,8 +122,9 @@ def bkt_score(bkt_grid, params, input, meta):
         label = str(test_start.date())
         test = input[(input["period"] >= test_start) &  (input["period"] <= test_end)]
 
-        if params["model"] == "LinearRegressionModel":
-            f = fc.train_lm(input =  ts_train, 
+        if params["model"] == "LinearRegressionModel" or  params["model"] == "XGBModel":
+            f = fc.train_ml(input =  ts_train, 
+                            model = params["model"],
                             lags = params["lags"],
                             likelihood = params["likelihood"],
                             quantiles = params["quantiles"],

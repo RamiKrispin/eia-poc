@@ -2,16 +2,17 @@ import pandas as pd
 import numpy as np
 import datetime
 from darts import TimeSeries
-from darts.models.forecasting.linear_regression_model import LinearRegressionModel
+from darts.models import LinearRegressionModel, XGBModel, RandomForest
 from zoneinfo import ZoneInfo
 from statistics import mean
 
-def train_lm(input, 
+def train_ml(input, 
              lags, 
              likelihood, 
              quantiles, 
              h, 
              num_samples, 
+             model,
              seed = 12345,
              pi = 0.95):
     
@@ -25,21 +26,28 @@ def train_lm(input,
     ts = input.ts
     lower = (1-pi) /2
     upper = 1 - lower
-    lr_model = LinearRegressionModel(lags= lags,
+    if model == "LinearRegressionModel":
+        md = LinearRegressionModel(lags= lags,
                                  likelihood= likelihood, 
                                  random_state = seed,
                                  quantiles = quantiles)
-    lr_model.fit(ts)
-    lr_preds = lr_model.predict(series = ts, 
+    elif model == "XGBModel":
+                md = XGBModel(lags= lags,
+                                 likelihood= likelihood, 
+                                 random_state = seed,
+                                 quantiles = quantiles)
+    md.fit(ts)
+    md_preds = md.predict(series = ts, 
                                 n = h,
                                 num_samples = num_samples)
     
-    pred = lr_preds.pd_dataframe()
+    pred = md_preds.pd_dataframe()
     fc = pred.quantile(axis = 1, q = [lower, 0.5, upper]).transpose().reset_index()
     fc = fc.rename(columns = {lower: "lower", 0.5: "mean", upper: "upper"})
     
     log = {
         "index": None,
+        "model": model,
         "time": datetime.datetime.now(tz=ZoneInfo("UTC")).strftime('%Y-%m-%d %H:%M:%S'),
         "label": str(start.date()),
         "start": start,
@@ -59,7 +67,7 @@ def train_lm(input,
 
     log["success"] = log["start_flag"] and log["n_obs_flag"]
 
-    output = forecast(model = lr_model, forecast = fc, log = log)
+    output = forecast(model = md, forecast = fc, log = log)
 
     return output
 
