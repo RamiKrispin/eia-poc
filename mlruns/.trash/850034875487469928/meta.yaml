@@ -1,0 +1,7 @@
+artifact_location: /workspaces/eia-poc/mlruns
+creation_time: 1716784933136
+experiment_id: '850034875487469928'
+last_update_time: 1716785165860
+lifecycle_stage: deleted
+name: data__refresh
+tags: {}

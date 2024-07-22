@@ -1,0 +1,15 @@
+artifact_uri: /workspaces/eia-poc/mlruns/5aa9d8aa5f8d48b498078c24d967746a/artifacts
+end_time: 1716871190904
+entry_point_name: ''
+experiment_id: '448172592321490307'
+lifecycle_stage: active
+run_id: 5aa9d8aa5f8d48b498078c24d967746a
+run_name: 2024-05-28 04:39 UTC
+run_uuid: 5aa9d8aa5f8d48b498078c24d967746a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1716871190807
+status: 1
+tags: []
+user_id: root
